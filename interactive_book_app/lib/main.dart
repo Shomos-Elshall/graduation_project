@@ -11,9 +11,6 @@ class InteractiveBookApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      
-      home:CustomAppBar() );
+    return MaterialApp(debugShowCheckedModeBanner: false, home: HomePage());
   }
 }
