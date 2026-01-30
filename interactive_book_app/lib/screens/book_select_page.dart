@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:interactive_book_app/widgets/ReadButton.dart';
-import 'package:interactive_book_app/widgets/app_bar.dart';
+import 'package:interactive_book_app/widgets/read_button.dart';
 import 'package:interactive_book_app/widgets/dropdown.dart';
 
 class Selectedbook extends StatefulWidget {
@@ -17,21 +16,23 @@ class SelectedbookState extends State<Selectedbook> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(),
+      appBar: AppBar(
+        backgroundColor: Color(0xFF1D0E53),
+        title: Padding(
+          padding: const EdgeInsets.only(bottom: 8.0),
+          child: Image.asset(
+            "assets/images/image 1 (1).png",
+            width: 170,
+            height: 130,
+          ),
+        ),
+      ),
+
       body: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(16.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-             DropDownButton(),
-             ReadButton(selectedBook: selectedBook),
-  
-
-
-
-
-
-          ],
+          children: [DropDownButton(), ReadButton(selectedBook: selectedBook)],
         ),
       ),
     );
