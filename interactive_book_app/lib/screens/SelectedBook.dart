@@ -24,7 +24,7 @@ class SelectedbookState extends State<Selectedbook> {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
              DropDownButton(),
-            ReadButton(),
+             ReadButton(selectedBook: selectedBook),
   
 
 

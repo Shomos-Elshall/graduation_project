@@ -3,7 +3,7 @@ import 'package:interactive_book_app/screens/Home_Page.dart';
 
 class ReadButton extends StatelessWidget {
   final String? selectedBook;
-  const ReadButton({super.key, required this.selectedBook});
+  const ReadButton({required this.selectedBook});
   @override
   Widget build(BuildContext context) {
     return Center(
