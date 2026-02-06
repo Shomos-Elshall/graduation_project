@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 class DropDownButton extends StatefulWidget {
   const DropDownButton({super.key});
 
@@ -12,54 +13,44 @@ class _DropDownButtonState extends State<DropDownButton> {
     String? selectedBook;
     List<String> books = ["Biology", "Chemistry", "Math"];
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
       decoration: BoxDecoration(
-        color: Color(0xFF1D4A85),
-        borderRadius: BorderRadius.circular(20),
-        border: Border.all(color: Colors.grey),
+        color: Color(0xff1C4A85),
+        borderRadius: BorderRadius.circular(16),
       ),
-      child: DropdownButtonHideUnderline(
-        child: DropdownButtonFormField<String>(
-          dropdownColor: Colors.white,
-
-          decoration: InputDecoration(
-            labelText: "Book",
-            labelStyle: TextStyle(
-              color: Colors.white,
-              fontSize: 30,
-              fontWeight: FontWeight.w500,
-            ),
-
-            /*border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(12.0),
-                    borderSide: const BorderSide(color: Color(0xFF1D4A85))
-
-                    // ),
-                  ),
-                  ),
-                  */
-            border: InputBorder.none,
+      padding: EdgeInsets.all(16),
+      child: (DropdownButton<String>(
+        hint: Text(
+          "Select a Book",
+          style: TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.w700,
+            fontSize: 27,
           ),
-
-          value: selectedBook,
-          items:
-              books
-                  .map(
-                    (book) => DropdownMenuItem<String>(
-                      value: book,
-                      child: Text(book),
-                    ),
-                  )
-                  .toList(),
-          onChanged: (value) {
-            setState(() {
-              selectedBook = value;
-            });
-          },
-          iconEnabledColor: Colors.white,
-          isExpanded: true,
         ),
-      ),
+        value: selectedBook,
+        items:
+            books.map((String book) {
+              return DropdownMenuItem<String>(
+                value: book,
+                child: Text(
+                  book,
+                  style: TextStyle(
+                    color: Color(0xff1C4A85),
+                    fontWeight: FontWeight.w600,
+                    fontSize: 22,
+                  ),
+                ),
+              );
+            }).toList(),
+        onChanged: (String? newValue) {
+          setState(() {
+            selectedBook = newValue;
+          });
+        },
+        iconSize: 50,
+        iconEnabledColor: Colors.white,
+        isExpanded: true,
+      )),
     );
   }
 }
