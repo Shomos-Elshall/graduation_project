@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:interactive_book_app/widgets/ReadButton.dart';
+import 'package:interactive_book_app/widgets/Custom_TextField.dart';
 import 'package:interactive_book_app/widgets/app_bar.dart';
-import 'package:interactive_book_app/widgets/dropdown.dart';
+ 
 
 class Selectedbook extends StatefulWidget {
   const Selectedbook({super.key});
@@ -23,14 +23,9 @@ class SelectedbookState extends State<Selectedbook> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-             DropDownButton(),
-             ReadButton(selectedBook: selectedBook),
-  
-
-
-
-
-
+             ///DropDownButton(),
+             //ReadButton(selectedBook: selectedBook),
+             CustomTextfield(hinttext: "Search for book",) ,
           ],
         ),
       ),
