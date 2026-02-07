@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:interactive_book_app/widgets/Custom_TextField.dart';
 import 'package:interactive_book_app/widgets/read_button.dart';
 import 'package:interactive_book_app/widgets/dropdown.dart';
 
@@ -32,7 +33,7 @@ class SelectedbookState extends State<Selectedbook> {
         padding: const EdgeInsets.all(16.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [DropDownButton(), ReadButton(selectedBook: selectedBook)],
+          children: [CustomTextfield(hinttext: "Search Book")],
         ),
       ),
     );
