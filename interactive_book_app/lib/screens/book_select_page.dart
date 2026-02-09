@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:interactive_book_app/widgets/custom_text_field.dart';
 import 'package:interactive_book_app/widgets/read_button.dart';
-import 'package:interactive_book_app/widgets/drop_down.dart';
+ 
 
 class Selectedbook extends StatefulWidget {
   const Selectedbook({super.key});
@@ -11,8 +11,22 @@ class Selectedbook extends StatefulWidget {
 }
 
 class SelectedbookState extends State<Selectedbook> {
-  String? selectedBook;
+  String hint = "Search book ";
   List<String> books = ["Biology", "Chemistry", "Math"];
+  void searchBooks(String query) {
+    if (query.isEmpty) {
+      setState(() {
+        hint = "Search book ";
+      });
+      return;
+    }
+    bool found = books.any(
+      (book) => book.toLowerCase().contains(query.toLowerCase()),
+    );
+    setState(() {
+      hint = found ? "Found books!" : "No books found ";
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +47,7 @@ class SelectedbookState extends State<Selectedbook> {
         padding: const EdgeInsets.all(16.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [CustomTextfield(hinttext: "Search Book")],
+          children: [CustomTextfield(hinttext:hint,onChanged:searchBooks,)],
         ),
       ),
     );
