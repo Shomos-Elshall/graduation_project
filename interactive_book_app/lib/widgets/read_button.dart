@@ -8,16 +8,14 @@ class ReadButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       onPressed: () {
-        if (selectedBook != null) {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) {
-                return HomePage();
-              },
-            ),
-          );
-        }
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) {
+              return HomePage();
+            },
+          ),
+        );
       },
       style: ElevatedButton.styleFrom(
         maximumSize: Size(180, 70),
