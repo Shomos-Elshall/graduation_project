@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:interactive_book_app/widgets/Custom_TextField.dart';
-import 'package:interactive_book_app/widgets/read_button.dart';
-import 'package:interactive_book_app/widgets/dropdown.dart';
-
 class Selectedbook extends StatefulWidget {
   const Selectedbook({super.key});
 
@@ -11,7 +8,7 @@ class Selectedbook extends StatefulWidget {
 }
 
 class SelectedbookState extends State<Selectedbook> {
-  String? selectedBook;
+   String hint = "Search book ";
   List<String> books = ["Biology", "Chemistry", "Math"];
 
   @override
