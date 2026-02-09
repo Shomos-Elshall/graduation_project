@@ -20,7 +20,7 @@ class _DropDownButtonState extends State<DropDownButton> {
       padding: EdgeInsets.all(16),
       child: (DropdownButton<String>(
         hint: Text(
-          "Select a Book",
+          "Select a book",
           style: TextStyle(
             color: Colors.white,
             fontWeight: FontWeight.w700,
