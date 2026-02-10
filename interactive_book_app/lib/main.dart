@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
+import 'package:interactive_book_app/models/book_model.dart';
+import 'package:interactive_book_app/models/content_model.dart';
 import 'package:interactive_book_app/screens/book_select_page.dart';
 
 void main() async {
