@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
- 
- 
- 
+import 'package:hive_flutter/hive_flutter.dart';
 import 'package:interactive_book_app/screens/book_select_page.dart';
- 
 
-void main() {
+void main() async {
   runApp(const InteractiveBookApp());
+  await Hive.initFlutter();
 }
 
 class InteractiveBookApp extends StatelessWidget {
