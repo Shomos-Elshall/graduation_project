@@ -17,8 +17,8 @@ class TocModelAdapter extends TypeAdapter<TocModel> {
       for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
     };
     return TocModel(
-      fields[4] as int?,
-      fields[3] as int?,
+      parentId: fields[4] as int?,
+      contentId: fields[3] as int?,
       id: fields[0] as int,
       name: fields[1] as String,
       depth: fields[2] as int,
