@@ -25,7 +25,7 @@ class ContentModelAdapter extends TypeAdapter<ContentModel> {
       textAr: fields[5] as String?,
       audioEn: fields[6] as String?,
       audioAr: fields[7] as String?,
-      kewordsWords: (fields[8] as List).cast<String>(),
+      kewords: (fields[8] as List).cast<GlossaryModel>(),
     );
   }
 
@@ -50,7 +50,7 @@ class ContentModelAdapter extends TypeAdapter<ContentModel> {
       ..writeByte(7)
       ..write(obj.audioAr)
       ..writeByte(8)
-      ..write(obj.kewordsWords);
+      ..write(obj.kewords);
   }
 
   @override
