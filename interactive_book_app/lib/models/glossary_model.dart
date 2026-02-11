@@ -27,4 +27,16 @@ class GlossaryModel {
     required this.objTitle,
     required this.sectionIds,
   });
+
+  factory GlossaryModel.fromJson(Map<String, dynamic> json) {
+    return GlossaryModel(
+      word: json['word'] as String,
+      bookId: json['bookId'] as String,
+      defination: json['defination'] as String,
+      abbreviation: json['abbreviation'] as String?,
+      objId: json['objId'] as String?,
+      objTitle: json['objTitle'] as String?,
+      sectionIds: (json['sectionIds'] as List).map((e) => e as int).toList(),
+    );
+  }
 }

@@ -1,4 +1,5 @@
 import 'package:hive/hive.dart';
+import 'package:interactive_book_app/models/glossary_model.dart';
 part 'content_model.g.dart';
 
 @HiveType(typeId: 2)
@@ -20,7 +21,7 @@ class ContentModel extends HiveObject {
   @HiveField(7)
   final String? audioAr;
   @HiveField(8)
-  final List<String> kewordsWords;
+  final List<GlossaryModel> kewords;
 
   ContentModel({
     required this.id,
@@ -31,6 +32,23 @@ class ContentModel extends HiveObject {
     required this.textAr,
     required this.audioEn,
     required this.audioAr,
-    required this.kewordsWords,
+    required this.kewords,
   });
+
+  factory ContentModel.fromJson(Map<String, dynamic> json) {
+    return ContentModel(
+      id: json['id'] as int,
+      name: json['name'] as String,
+      depth: json['depth'] as int,
+      parentId: json['parentId'] as int?,
+      textEn: json['textEn'] as String?,
+      textAr: json['textAr'] as String?,
+      audioEn: json['audioEn'] as String?,
+      audioAr: json['audioAr'] as String?,
+      kewords:
+          (json['kewords'] as List)
+              .map((e) => GlossaryModel.fromJson(e as Map<String, dynamic>))
+              .toList(),
+    );
+  }
 }
