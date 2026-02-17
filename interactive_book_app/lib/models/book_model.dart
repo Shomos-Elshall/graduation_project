@@ -14,7 +14,7 @@ class BookModel extends HiveObject {
   @HiveField(1)
   final String title;
   @HiveField(2)
-  final String coverImageUrl;
+  final String coverPageURL;
   @HiveField(3)
   final String contentsURL;
   @HiveField(4)
@@ -33,7 +33,7 @@ class BookModel extends HiveObject {
   BookModel({
     required this.id,
     required this.title,
-    required this.coverImageUrl,
+    required this.coverPageURL,
     required this.contentsURL,
     required this.glossaryURL,
     required this.authors,
@@ -44,16 +44,16 @@ class BookModel extends HiveObject {
   });
   factory BookModel.fromJson(Map<String, dynamic> json) {
     return BookModel(
-      id: json['id'] as String,
+      id: json['_id'] as String,
       title: json['title'] as String,
-      coverImageUrl: json['coverImageUrl'] as String,
+      coverPageURL: json['coverPageURL'] as String,
       contentsURL: json['contentsURL'] as String,
       glossaryURL: json['glossaryURL'] as String,
       authors: List<String>.from(json['authors'] as List),
       toc:
-          (json['toc'] as List)
-              .map((item) => TocModel.fromJson(item as Map<String, dynamic>))
-              .toList(),
+          json['toc'] == null
+              ? []
+              : (json['toc'] as List).map((e) => TocModel.fromJson(e)).toList(),
       bookObjects:
           (json['bookObjects'] as List)
               .map((item) => BookObjects.fromJson(item as Map<String, dynamic>))
@@ -75,6 +75,6 @@ class BookModel extends HiveObject {
 
   @override
   String toString() {
-    return 'BookModel{id: $id, title: $title, coverImageUrl: $coverImageUrl, contentsURL: $contentsURL, glossaryURL: $glossaryURL, authors: $authors, toc: $toc, bookObjects: $bookObjects, contents: $contents, glossary: $glossary}';
+    return 'BookModel{id: $id, title: $title, ';
   }
 }

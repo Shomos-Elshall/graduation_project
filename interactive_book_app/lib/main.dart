@@ -1,4 +1,7 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:interactive_book_app/constants.dart';
 import 'package:interactive_book_app/screens/book_select_page.dart';
@@ -13,25 +16,49 @@ void main() async {
   runApp(const InteractiveBookApp());
   await Hive.initFlutter();
 
-  await Hive.openBox(bookBox);
+  //book box
   Hive.registerAdapter(BookModelAdapter());
-  await Hive.openBox(tocBox);
+  await Hive.openBox(bookBox);
+
+  // TOC box
   Hive.registerAdapter(TocModelAdapter());
-  await Hive.openBox(contentBox);
+  await Hive.openBox(tocBox);
+
+  //content box
   Hive.registerAdapter(ContentModelAdapter());
-  await Hive.openBox(glossaryBox);
+  await Hive.openBox(contentBox);
+
+  //Glossary box
   Hive.registerAdapter(GlossaryModelAdapter());
-  await Hive.openBox(book_objectBox);
+  await Hive.openBox(glossaryBox);
+
+  //bookObject box
   Hive.registerAdapter(BookObjectsAdapter());
-  await Hive.openBox(keywordsBox);
+  await Hive.openBox(book_objectBox);
+
+  // keywords box
   Hive.registerAdapter(KeywordModelAdapter());
+  await Hive.openBox(keywordsBox);
 }
 
 class InteractiveBookApp extends StatelessWidget {
   const InteractiveBookApp({super.key});
 
+  Future<String> loadJsonData() async {
+    return await rootBundle.loadString('assets/data/data.json');
+  }
+
+  Future<void> loadDataIntoHive() async {
+    final String jsonData = await loadJsonData();
+    var data = jsonDecode(jsonData);
+    BookModel book = BookModel.fromJson(data);
+
+    print(book.title);
+  }
+
   @override
   Widget build(BuildContext context) {
+    loadDataIntoHive();
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: const Selectedbook(),

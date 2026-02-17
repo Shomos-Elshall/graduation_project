@@ -12,23 +12,23 @@ class BookObjects extends HiveObject {
   @HiveField(3)
   final String url;
   @HiveField(4)
-  final String h5pType;
-  @HiveField(5)
+  // final String h5pType;
+  // @HiveField(5)
   BookObjects({
     required this.id,
     required this.title,
     required this.language,
     required this.url,
-    required this.h5pType,
+    // required this.h5pType,
   });
 
   factory BookObjects.fromJson(Map<String, dynamic> json) {
     return BookObjects(
-      id: json['id'] as String,
+      id: json['_id'] as String,
       title: json['title'] as String,
       language: json['language'] as String,
       url: json['url'] as String,
-      h5pType: json['h5pType'] as String,
+      // h5pType: json['h5pType'] as String ?? " ",
     );
   }
 }

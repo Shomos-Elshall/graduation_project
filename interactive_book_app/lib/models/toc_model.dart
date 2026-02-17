@@ -11,10 +11,10 @@ class TocModel extends HiveObject {
   String name;
   @HiveField(2)
   int depth;
-  @HiveField(3)
-  int? contentId;
-  @HiveField(4)
-  int? parentId;
+  // @HiveField(3)
+  // int contentId;
+  // @HiveField(4)
+  // int parentId;
   @HiveField(5)
   List<TocModel> children;
   @HiveField(6)
@@ -25,8 +25,8 @@ class TocModel extends HiveObject {
     required this.name,
     required this.depth,
     required this.children,
-    required this.parentId,
-    required this.contentId,
+    // required this.parentId,
+    // required this.contentId,
     this.text,
   });
 
@@ -34,9 +34,9 @@ class TocModel extends HiveObject {
     return TocModel(
       id: json['id'] as int,
       name: json['name'] as String,
-      contentId: json['contentId'] as int?,
+      // contentId: json['contentId'] as int,
       depth: json['depth'] as int,
-      parentId: json['parentId'] as int?,
+      // parentId: json['parentId'] as int,
       children:
           json['children'] != null
               ? (json['children'] as List)

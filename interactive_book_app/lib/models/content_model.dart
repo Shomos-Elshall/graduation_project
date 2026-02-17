@@ -21,7 +21,7 @@ class ContentModel extends HiveObject {
   @HiveField(7)
   final String? audioAr;
   @HiveField(8)
-  final List<GlossaryModel> kewords;
+  final List<GlossaryModel> keywords;
 
   ContentModel({
     required this.id,
@@ -32,7 +32,7 @@ class ContentModel extends HiveObject {
     required this.textAr,
     required this.audioEn,
     required this.audioAr,
-    required this.kewords,
+    required this.keywords,
   });
 
   factory ContentModel.fromJson(Map<String, dynamic> json) {
@@ -40,15 +40,16 @@ class ContentModel extends HiveObject {
       id: json['id'] as int,
       name: json['name'] as String,
       depth: json['depth'] as int,
-      parentId: json['parentId'] as int?,
-      textEn: json['textEn'] as String?,
-      textAr: json['textAr'] as String?,
-      audioEn: json['audioEn'] as String?,
-      audioAr: json['audioAr'] as String?,
-      kewords:
-          (json['kewords'] as List)
-              .map((e) => GlossaryModel.fromJson(e as Map<String, dynamic>))
-              .toList(),
+      parentId: json['parentId'] ?? 0,
+      textEn: json['textEn'],
+      textAr: json['textAr'],
+      audioEn: json['audioEn'],
+      audioAr: json['audioAr'],
+      keywords:
+          (json['keywords'] as List<dynamic>?)
+              ?.map((e) => GlossaryModel.fromJson(e as Map<String, dynamic>))
+              .toList() ??
+          [],
     );
   }
 }

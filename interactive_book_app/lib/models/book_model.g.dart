@@ -19,7 +19,7 @@ class BookModelAdapter extends TypeAdapter<BookModel> {
     return BookModel(
       id: fields[0] as String,
       title: fields[1] as String,
-      coverImageUrl: fields[2] as String,
+      coverPageURL: fields[2] as String,
       contentsURL: fields[3] as String,
       glossaryURL: fields[4] as String,
       authors: fields[5] as List<String>,
@@ -39,7 +39,7 @@ class BookModelAdapter extends TypeAdapter<BookModel> {
       ..writeByte(1)
       ..write(obj.title)
       ..writeByte(2)
-      ..write(obj.coverImageUrl)
+      ..write(obj.coverPageURL)
       ..writeByte(3)
       ..write(obj.contentsURL)
       ..writeByte(4)
