@@ -18,7 +18,7 @@ class GlossaryModelAdapter extends TypeAdapter<GlossaryModel> {
     };
     return GlossaryModel(
       word: fields[0] as String,
-      bookId: fields[1] as String,
+      //  bookId: fields[1] as String,
       defination: fields[2] as String,
       abbreviation: fields[3] as String?,
       objId: fields[4] as String?,
@@ -34,7 +34,7 @@ class GlossaryModelAdapter extends TypeAdapter<GlossaryModel> {
       ..writeByte(0)
       ..write(obj.word)
       ..writeByte(1)
-      ..write(obj.bookId)
+      // ..write(obj.bookId)
       ..writeByte(2)
       ..write(obj.defination)
       ..writeByte(3)
