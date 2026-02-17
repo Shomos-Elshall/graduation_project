@@ -5,8 +5,7 @@ part 'glossary_model.g.dart';
 class GlossaryModel {
   @HiveField(0)
   final String word;
-  @HiveField(1)
-  final String bookId;
+
   @HiveField(2)
   final String defination;
   @HiveField(3)
@@ -16,27 +15,30 @@ class GlossaryModel {
   @HiveField(5)
   final String? objTitle;
   @HiveField(6)
-  final List<int> sectionIds;
+  final List<int>? sectionIds;
 
   GlossaryModel({
     required this.word,
-    required this.bookId,
     required this.defination,
     required this.abbreviation,
     required this.objId,
     required this.objTitle,
-    required this.sectionIds,
+    this.sectionIds,
   });
 
   factory GlossaryModel.fromJson(Map<String, dynamic> json) {
     return GlossaryModel(
       word: json['word'] as String,
-      bookId: json['bookId'] as String,
-      defination: json['defination'] as String,
-      abbreviation: json['abbreviation'] as String?,
-      objId: json['objId'] as String?,
-      objTitle: json['objTitle'] as String?,
-      sectionIds: (json['sectionIds'] as List).map((e) => e as int).toList(),
+
+      defination: json['defination'] ?? "",
+      abbreviation: json['abbreviation'] ?? " ",
+      objId: json['objId'] ?? "",
+      objTitle: json['objTitle'] ?? "",
+      sectionIds:
+          (json['sectionIds'] as List<dynamic>?)
+              ?.map((e) => e as int)
+              .toList() ??
+          [],
     );
   }
 }
