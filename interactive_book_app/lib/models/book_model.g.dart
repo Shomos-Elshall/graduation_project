@@ -33,7 +33,7 @@ class BookModelAdapter extends TypeAdapter<BookModel> {
   @override
   void write(BinaryWriter writer, BookModel obj) {
     writer
-      ..writeByte(5)
+      ..writeByte(10)
       ..writeByte(0)
       ..write(obj.id)
       ..writeByte(1)
@@ -43,7 +43,17 @@ class BookModelAdapter extends TypeAdapter<BookModel> {
       ..writeByte(3)
       ..write(obj.contentsURL)
       ..writeByte(4)
-      ..write(obj.glossaryURL);
+      ..write(obj.glossaryURL)
+      ..writeByte(5)
+      ..write(obj.authors)
+      ..writeByte(6)
+      ..write(obj.toc)
+      ..writeByte(7)
+      ..write(obj.bookObjects)
+      ..writeByte(8)
+      ..write(obj.contents)
+      ..writeByte(9)
+      ..write(obj.glossary);
   }
 
   @override

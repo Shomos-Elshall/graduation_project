@@ -13,32 +13,26 @@ import 'models/keyword_model.dart';
 import 'models/toc_model.dart';
 
 void main() async {
-  runApp(const InteractiveBookApp());
+  WidgetsFlutterBinding.ensureInitialized();
   await Hive.initFlutter();
 
-  //book box
+  // register adapters
   Hive.registerAdapter(BookModelAdapter());
-  await Hive.openBox(bookBox);
-
-  // TOC box
   Hive.registerAdapter(TocModelAdapter());
-  await Hive.openBox(tocBox);
-
-  //content box
   Hive.registerAdapter(ContentModelAdapter());
-  await Hive.openBox(contentBox);
-
-  //Glossary box
   Hive.registerAdapter(GlossaryModelAdapter());
-  await Hive.openBox(glossaryBox);
-
-  //bookObject box
   Hive.registerAdapter(BookObjectsAdapter());
-  await Hive.openBox(book_objectBox);
-
-  // keywords box
   Hive.registerAdapter(KeywordModelAdapter());
+
+  // open boxes
+  await Hive.openBox<BookModel>(bookBox);
+  await Hive.openBox(tocBox);
+  await Hive.openBox(contentBox);
+  await Hive.openBox(glossaryBox);
+  await Hive.openBox(book_objectBox);
   await Hive.openBox(keywordsBox);
+
+  runApp(const InteractiveBookApp());
 }
 
 class InteractiveBookApp extends StatelessWidget {
@@ -53,7 +47,28 @@ class InteractiveBookApp extends StatelessWidget {
     var data = jsonDecode(jsonData);
     BookModel book = BookModel.fromJson(data);
 
-    print(book.title);
+    print("book title : ${book.title}");
+
+    for (var item in book.toc) {
+      print("TOC name: ${item.name}  and its text: ${item.text?.en}");
+    }
+
+    // storing data in hive
+    final box = Hive.box<BookModel>(bookBox);
+    await box.put('book1', book);
+
+    // reading data from hive
+
+    final bookFromHive = box.get("book1");
+    print(" book title from hive: ${bookFromHive?.title}");
+    print("book id : ${bookFromHive?.id}");
+
+    print("from hive: ");
+    if (bookFromHive != null) {
+      for (var item in bookFromHive.toc) {
+        print(item.name);
+      }
+    }
   }
 
   @override

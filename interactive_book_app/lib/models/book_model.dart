@@ -51,9 +51,9 @@ class BookModel extends HiveObject {
       glossaryURL: json['glossaryURL'] as String,
       authors: List<String>.from(json['authors'] as List),
       toc:
-          json['toc'] == null
-              ? []
-              : (json['toc'] as List).map((e) => TocModel.fromJson(e)).toList(),
+          (json['toc'] as List)
+              .map((e) => TocModel.fromJson(e as Map<String, dynamic>))
+              .toList(),
       bookObjects:
           (json['bookObjects'] as List)
               .map((item) => BookObjects.fromJson(item as Map<String, dynamic>))
