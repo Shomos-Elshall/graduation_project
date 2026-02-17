@@ -1,11 +1,7 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:interactive_book_app/constants.dart';
 import 'package:interactive_book_app/screens/book_select_page.dart';
-
 import 'models/book_model.dart';
 import 'models/book_objects_model.dart';
 import 'models/content_model.dart';
@@ -34,19 +30,11 @@ void main() async {
 class InteractiveBookApp extends StatelessWidget {
   const InteractiveBookApp({super.key});
 
-  Future<String> _loadAsset() async {
-    return await rootBundle.loadString('assets/book_data.json');
-  }
-
-  Future<void> _loadData() async {
-    String jsonString = await _loadAsset();
-    var jsonData = jsonDecode(jsonString);
-    BookModel book = BookModel.fromJson(jsonData);
-    print(book.toString());
-  }
-
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(debugShowCheckedModeBanner: false, home: Selectedbook());
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: const Selectedbook(),
+    );
   }
 }
