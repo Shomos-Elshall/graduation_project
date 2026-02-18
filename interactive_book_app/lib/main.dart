@@ -73,7 +73,6 @@ class InteractiveBookApp extends StatelessWidget {
       }
     }
   }
-
   @override
   Widget build(BuildContext context) {
     loadDataIntoHive();
