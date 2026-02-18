@@ -35,7 +35,6 @@ void main() async {
   await Hive.openBox(keywordsBox);
   await Hive.openBox(textcontent);
 
-
   runApp(const InteractiveBookApp());
 }
 
