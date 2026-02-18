@@ -11,12 +11,11 @@ import 'models/content_model.dart';
 import 'models/glossary_model.dart';
 import 'models/keyword_model.dart';
 import 'models/toc_model.dart';
-
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Hive.initFlutter();
 
-  // register adapters
+  await Hive.openBox(bookBox);
   Hive.registerAdapter(BookModelAdapter());
   Hive.registerAdapter(TocModelAdapter());
   Hive.registerAdapter(ContentModelAdapter());
@@ -38,8 +37,8 @@ void main() async {
 class InteractiveBookApp extends StatelessWidget {
   const InteractiveBookApp({super.key});
 
-  Future<String> loadJsonData() async {
-    return await rootBundle.loadString('assets/data/data.json');
+  Future<String> _loadAsset() async {
+    return await rootBundle.loadString('assets/book_data.json');
   }
 
   Future<void> loadDataIntoHive() async {
@@ -73,10 +72,6 @@ class InteractiveBookApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    loadDataIntoHive();
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: const Selectedbook(),
-    );
+    return MaterialApp(debugShowCheckedModeBanner: false, home: Selectedbook());
   }
 }

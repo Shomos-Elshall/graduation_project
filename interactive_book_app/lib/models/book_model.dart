@@ -10,7 +10,6 @@ part 'book_model.g.dart';
 class BookModel extends HiveObject {
   @HiveField(0)
   final String id;
-
   @HiveField(1)
   final String title;
   @HiveField(2)
