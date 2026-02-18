@@ -22,11 +22,11 @@ class BookModelAdapter extends TypeAdapter<BookModel> {
       coverPageURL: fields[2] as String,
       contentsURL: fields[3] as String,
       glossaryURL: fields[4] as String,
-      authors: fields[5] as List<String>,
-      toc: fields[6] as List<TocModel>,
-      bookObjects: fields[7] as List<BookObjects>,
-      contents: fields[8] as List<ContentModel>,
-      glossary: fields[9] as List<GlossaryModel>,
+      authors: (fields[5] as List).cast<String>(),
+      toc: (fields[6] as List).cast<TocModel>(),
+      bookObjects: (fields[7] as List).cast<BookObjects>(),
+      contents: (fields[8] as List).cast<ContentModel>(),
+      glossary: (fields[9] as List).cast<GlossaryModel>(),
     );
   }
 

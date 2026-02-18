@@ -10,6 +10,7 @@ import 'models/book_objects_model.dart';
 import 'models/content_model.dart';
 import 'models/glossary_model.dart';
 import 'models/keyword_model.dart';
+import 'models/text_content.dart';
 import 'models/toc_model.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -22,6 +23,7 @@ void main() async {
   Hive.registerAdapter(GlossaryModelAdapter());
   Hive.registerAdapter(BookObjectsAdapter());
   Hive.registerAdapter(KeywordModelAdapter());
+  Hive.registerAdapter(TextContentAdapter());
 
   // open boxes
   await Hive.openBox<BookModel>(bookBox);
@@ -30,6 +32,7 @@ void main() async {
   await Hive.openBox(glossaryBox);
   await Hive.openBox(book_objectBox);
   await Hive.openBox(keywordsBox);
+  await Hive.openBox(textcontent);
 
   runApp(const InteractiveBookApp());
 }
@@ -69,7 +72,6 @@ class InteractiveBookApp extends StatelessWidget {
       }
     }
   }
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(debugShowCheckedModeBanner: false, home: Selectedbook());

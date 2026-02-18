@@ -20,7 +20,7 @@ class ContentModelAdapter extends TypeAdapter<ContentModel> {
       id: fields[0] as int,
       name: fields[1] as String,
       depth: fields[2] as int,
-      parentId: fields[3] as int,
+      parentId: fields[3] as int?,
       textEn: fields[4] as String?,
       textAr: fields[5] as String?,
       audioEn: fields[6] as String?,

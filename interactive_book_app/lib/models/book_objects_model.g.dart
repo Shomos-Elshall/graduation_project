@@ -21,7 +21,6 @@ class BookObjectsAdapter extends TypeAdapter<BookObjects> {
       title: fields[1] as String,
       language: fields[2] as String,
       url: fields[3] as String,
-      // h5pType: fields[4] as String,
     );
   }
 

@@ -18,23 +18,20 @@ class GlossaryModelAdapter extends TypeAdapter<GlossaryModel> {
     };
     return GlossaryModel(
       word: fields[0] as String,
-      //  bookId: fields[1] as String,
       defination: fields[2] as String,
       abbreviation: fields[3] as String?,
       objId: fields[4] as String?,
       objTitle: fields[5] as String?,
-      sectionIds: (fields[6] as List).cast<int>(),
+      sectionIds: (fields[6] as List?)?.cast<int>(),
     );
   }
 
   @override
   void write(BinaryWriter writer, GlossaryModel obj) {
     writer
-      ..writeByte(7)
+      ..writeByte(6)
       ..writeByte(0)
       ..write(obj.word)
-      ..writeByte(1)
-      // ..write(obj.bookId)
       ..writeByte(2)
       ..write(obj.defination)
       ..writeByte(3)
