@@ -12,7 +12,7 @@ class BookContentPage extends StatefulWidget {
 }
 
 class _BookContentPageState extends State<BookContentPage> {
-  // متغير لحفظ الفصل الحالي المعروض في الصفحة
+  // متغير لحفظ الفصل الحالي المعروض في الصفح
   TocModel? currentChapter;
 
   @override
