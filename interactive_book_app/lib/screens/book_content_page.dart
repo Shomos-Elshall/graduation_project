@@ -28,9 +28,20 @@ class _BookContentPageState extends State<BookContentPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.book.title),
         backgroundColor: const Color(0xFF1D0E53),
+        title: Padding(
+          padding: const EdgeInsets.only(bottom: 8.0),
+          child: Image.asset(
+            "assets/images/image 1 (1).png",
+            width: 170,
+            height: 130,
+          ),
+
+        ),
+        iconTheme: const IconThemeData(color: Colors.blueAccent,size: 30), // حطي اللون اللي تحبيه هنا
       ),
+
+
       // إضافة الدرور هنا
       drawer: _buildBookDrawer(context),
       body: currentChapter == null
@@ -53,7 +64,7 @@ class _BookContentPageState extends State<BookContentPage> {
               const SizedBox(height: 10),
               // عرض النص الخاص بالفصل (TextContent)
               Text(
-                currentChapter!.text?.en ?? "لا يوجد محتوى متاح لهذا العنوان.",
+                currentChapter!.text?.en ?? "No content avalible",
                 style: const TextStyle(fontSize: 18, height: 1.6),
               ),
             ],
