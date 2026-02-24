@@ -1,21 +1,18 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
-import '../constants.dart';
 import '../models/book_model.dart';
 import '../screens/book_content_page.dart';
 
-class book_title extends StatefulWidget {
-  const book_title({super.key});
+class BookTitle extends StatefulWidget {
+  const BookTitle({super.key});
 
   @override
-  State<book_title> createState() => SelectedbookState();
+  State<BookTitle> createState() => SelectedbookState();
 }
 
-class SelectedbookState extends State<book_title> {
-  String hint = "Search book ";
+class SelectedbookState extends State<BookTitle> {
+  String hint = "Search for a book ";
 
   // هنفتح الـ Box اللي جواه الكتب
   late Box<BookModel> bookBox;
@@ -27,6 +24,7 @@ class SelectedbookState extends State<book_title> {
     bookBox = Hive.box<BookModel>('book');
   }
 
+  @override
   Widget build(BuildContext context) {
     return Expanded(
       child: ValueListenableBuilder(
@@ -41,41 +39,65 @@ class SelectedbookState extends State<book_title> {
             itemBuilder: (context, index) {
               final book = box.getAt(index);
 
-              return GestureDetector(
-                onTap: () {
-                  // هنا بنروح لصفحة المحتوى وبنبعت الكتاب اللي اخترناه
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => BookContentPage(book: book!)));
-                  print("Tapped on ${book?.title}");
-                },
-                child: Container(
-                  margin: const EdgeInsets.only(bottom: 10),
-                  padding: const EdgeInsets.all(20),
-                  decoration: BoxDecoration(
-                    color: const Color(0xFF1D0E53).withOpacity(0.1),
-                    borderRadius: BorderRadius.circular(12),
-                    border: Border.all(color: const Color(0xFF1D0E53)),
+              return Column(
+                spacing: 16,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    "Available Books",
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      color: const Color(0xFF1C0054),
+                    ),
                   ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        book?.title ?? "Unknown Book",
-                        style: const TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
-                          color: Color(0xFF1D0E53),
+                  GestureDetector(
+                    onTap: () {
+                      // هنا بنروح لصفحة المحتوى وبنبعت الكتاب اللي اخترناه
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => BookContentPage(book: book!),
                         ),
+                      );
+                    },
+
+                    child: Container(
+                      margin: const EdgeInsets.only(bottom: 10),
+                      padding: const EdgeInsets.all(20),
+                      decoration: BoxDecoration(
+                        color: const Color(0xFF1D0E53).withOpacity(0.1),
+                        borderRadius: BorderRadius.circular(16),
+                        // border: Border.all(color: const Color(0xFF1D0E53)),
                       ),
-                      const Icon(Icons.arrow_forward_ios, size: 16, color: Color(0xFF1D0E53)),
-                    ],
+
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            book?.title ?? "Unknown Book",
+                            style: const TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                              color: Color(0xFF1D0E53),
+                            ),
+                          ),
+
+                          const Icon(
+                            Icons.arrow_forward_ios,
+                            size: 16,
+                            color: Color(0xFF1D0E53),
+                          ),
+                        ],
+                      ),
+                    ),
                   ),
-                ),
+                ],
               );
             },
           );
         },
       ),
     );
-
   }
 }

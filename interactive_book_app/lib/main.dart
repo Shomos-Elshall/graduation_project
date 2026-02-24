@@ -28,12 +28,6 @@ void main() async {
 
   // open boxes
   await Hive.openBox<BookModel>(bookBox);
-  await Hive.openBox(tocBox);
-  await Hive.openBox(contentBox);
-  await Hive.openBox(glossaryBox);
-  await Hive.openBox(book_objectBox);
-  await Hive.openBox(keywordsBox);
-  await Hive.openBox(textcontent);
 
   runApp(const InteractiveBookApp());
 }
@@ -73,6 +67,7 @@ class InteractiveBookApp extends StatelessWidget {
       }
     }
   }
+
   @override
   Widget build(BuildContext context) {
     loadDataIntoHive();
