@@ -3,6 +3,7 @@ import 'package:interactive_book_app/models/book_model.dart';
 import 'package:interactive_book_app/models/toc_model.dart';
 import 'package:interactive_book_app/models/content_model.dart';
 import 'package:flutter_html/flutter_html.dart';
+import 'package:interactive_book_app/screens/glossary_screen.dart';
 import 'package:interactive_book_app/widgets/video_player_widget.dart';
 
 class BookContentPage extends StatefulWidget {
@@ -55,13 +56,102 @@ class _BookContentPageState extends State<BookContentPage> {
     return Scaffold(
       backgroundColor: const Color(0xFFF5F5F5),
       appBar: AppBar(
+        actions: [
+          PopupMenuButton(
+            iconSize: 32,
+            color: Colors.white,
+            menuPadding: EdgeInsets.symmetric(vertical: 16, horizontal: 16),
+            borderRadius: BorderRadius.circular(64),
+            onSelected: (value) {
+              if (value == 'Glossary') {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder:
+                        (context) => new GlossaryScreen(
+                          glossaryList: widget.book.glossary,
+                        ),
+                  ),
+                );
+              }
+            },
+            itemBuilder: (BuildContext context) {
+              return [
+                PopupMenuItem<String>(
+                  value: "Glossary",
+                  child: Row(
+                    children: [
+                      Icon(
+                        Icons.description_outlined,
+                        color: Color(0xFF1A0054),
+                        size: 29,
+                      ),
+                      SizedBox(width: 16),
+                      Text(
+                        "Glossary",
+                        style: TextStyle(
+                          color: Color(0xFF1A0054),
+                          fontWeight: FontWeight.bold,
+                          fontSize: 22,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+
+                PopupMenuItem<String>(
+                  value: "Bookmarks",
+                  child: Row(
+                    children: [
+                      Icon(
+                        Icons.bookmark_outline,
+                        color: Color(0xFF1A0054),
+                        size: 29,
+                      ),
+                      SizedBox(width: 16),
+                      Text(
+                        "Bookmarks",
+                        style: TextStyle(
+                          color: Color(0xFF1A0054),
+                          fontWeight: FontWeight.bold,
+                          fontSize: 22,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                PopupMenuItem<String>(
+                  value: "Objects",
+                  child: Row(
+                    children: [
+                      Icon(
+                        Icons.extension_outlined,
+                        color: Color(0xFF1A0054),
+                        size: 29,
+                      ),
+                      SizedBox(width: 16),
+                      Text(
+                        "Objects",
+                        style: TextStyle(
+                          color: Color(0xFF1A0054),
+                          fontWeight: FontWeight.bold,
+                          fontSize: 22,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ];
+            },
+          ),
+        ],
         elevation: 0,
         backgroundColor: const Color(0xFF1A0054),
-        title: Image.asset(
-          "assets/images/image 1 (1).png",
-          width: 170,
-          height: 130,
-        ),
+        // title: Image.asset(
+        //   "assets/images/image 1 (1).png",
+        //   width: 170,
+        //   height: 130,
+        // ),
         iconTheme: const IconThemeData(color: Colors.white, size: 35),
       ),
       drawer: _buildBookDrawer(context),
