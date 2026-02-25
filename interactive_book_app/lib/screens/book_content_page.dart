@@ -3,6 +3,7 @@ import 'package:interactive_book_app/models/book_model.dart';
 import 'package:interactive_book_app/models/toc_model.dart';
 import 'package:interactive_book_app/models/content_model.dart';
 import 'package:flutter_html/flutter_html.dart';
+import 'package:interactive_book_app/widgets/video_player_widget.dart';
 
 class BookContentPage extends StatefulWidget {
   final BookModel book;
@@ -117,6 +118,25 @@ class _BookContentPageState extends State<BookContentPage> {
                                     ),
                                     child: Html(
                                       data: section.textEn ?? "",
+                                      extensions: [
+                                        // هذا هو الـ Custom Extension
+                                        TagExtension(
+                                          tagsToExtend: {"iframe"},
+                                          builder: (extensionContext) {
+                                            // استخراج الرابط من وسم الـ iframe
+                                            final videoUrl =
+                                                extensionContext
+                                                    .attributes['src'];
+                                            if (videoUrl != null &&
+                                                videoUrl.isNotEmpty) {
+                                              return AppVideoPlayer(
+                                                videoUrl: videoUrl,
+                                              );
+                                            }
+                                            return const SizedBox.shrink();
+                                          },
+                                        ),
+                                      ],
                                       style: {
                                         "p": Style(
                                           fontSize: FontSize(18.0),
