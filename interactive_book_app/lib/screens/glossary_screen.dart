@@ -13,13 +13,10 @@ class GlossaryScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text(
           'Glossary',
-          style: TextStyle(
-            color: Color(0xFF1A0054),
-            fontWeight: FontWeight.bold,
-          ),
+          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
         ),
-        iconTheme: IconThemeData(color: Color(0xFF1A0054), size: 24),
-        backgroundColor: Colors.white, // لون غامق زي اللي في الصورة
+        iconTheme: IconThemeData(color: Colors.white, size: 24),
+        backgroundColor: Color(0xFF1A0054), // لون غامق زي اللي في الصورة
       ),
       body: ListView.separated(
         itemCount: glossaryList.length,
