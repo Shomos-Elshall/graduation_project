@@ -36,15 +36,20 @@ class ContentModel extends HiveObject {
   });
 
   factory ContentModel.fromJson(Map<String, dynamic> json) {
+    // أولاً نسحب الـ object اللي اسمه text
+    final textMap = json['text'] as Map<String, dynamic>?;
+
     return ContentModel(
       id: json['id'] as int,
       name: json['name'] as String,
       depth: json['depth'] as int,
       parentId: json['parentId'] ?? 0,
-      textEn: json['textEn'],
-      textAr: json['textAr'],
-      audioEn: json['audioEn'],
-      audioAr: json['audioAr'],
+      // هنا التعديل: ندخل جوه الـ textMap ونجيب en و ar
+      textEn: textMap != null ? textMap['en'] : null,
+      textAr: textMap != null ? textMap['ar'] : null,
+      // نفس الكلام للـ audio لو محتاجاه
+      audioEn: json['audio'] != null ? json['audio']['en'] : null,
+      audioAr: json['audio'] != null ? json['audio']['ar'] : null,
       keywords:
           (json['keywords'] as List<dynamic>?)
               ?.map((e) => GlossaryModel.fromJson(e as Map<String, dynamic>))

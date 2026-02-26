@@ -1,26 +1,34 @@
 import 'package:flutter/material.dart';
 
 class CustomTextfield extends StatelessWidget {
-  const CustomTextfield({super.key,required this.hinttext,required this.onChanged});
-  final String hinttext;
+  const CustomTextfield({
+    super.key,
+    required this.hintText,
+    required this.onChanged,
+  });
+  final String hintText;
   final Function(String) onChanged;
 
   @override
   Widget build(BuildContext context) {
-    return TextField(
-      onChanged: onChanged,
-      decoration: InputDecoration(
-        hintText: hinttext,
-        hintStyle: const TextStyle(color: Colors.black,fontSize: 14),
-        prefixIcon: const Icon(Icons.search),
-        fillColor: const Color(0xFF1D4A85),
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 16.0),
+      child: TextField(
+        onChanged: onChanged,
+        decoration: InputDecoration(
+          hintText: hintText,
+          hintStyle: const TextStyle(color: Colors.black, fontSize: 18),
+          prefixIcon: const Icon(Icons.search),
 
-        
-        border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(8),
-          borderSide: BorderSide(color: Color(0xFF1D4A85)),
+          enabledBorder: OutlineInputBorder(
+            borderSide: BorderSide(color: Color(0xff1C0054)),
+            borderRadius: BorderRadius.circular(16),
+          ),
 
-          
+          focusedBorder: OutlineInputBorder(
+            borderSide: BorderSide(color: Color(0xFF1C0054)),
+            borderRadius: BorderRadius.circular(16),
+          ),
         ),
       ),
     );

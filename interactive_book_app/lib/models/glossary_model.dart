@@ -30,7 +30,7 @@ class GlossaryModel {
     return GlossaryModel(
       word: json['word'] as String,
 
-      defination: json['defination'] ?? "",
+      defination: json['definition'] ?? "",
       abbreviation: json['abbreviation'] ?? " ",
       objId: json['objId'] ?? "",
       objTitle: json['objTitle'] ?? "",
