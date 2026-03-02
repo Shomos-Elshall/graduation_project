@@ -16,6 +16,7 @@ class BookContentPage extends StatefulWidget {
 }
 
 class _BookContentPageState extends State<BookContentPage> {
+  bool isArabic = false; // افتراضياً بيعرض إنجليزي
   TocModel? currentChapter;
   // هنغير ده ليكون List عشان لو الشابتر جواه كذا Section يعرضهم كلهم
   List<ContentModel> displaySections = [];
@@ -57,6 +58,23 @@ class _BookContentPageState extends State<BookContentPage> {
       backgroundColor: const Color(0xFFF5F5F5),
       appBar: AppBar(
         actions: [
+          TextButton.icon(
+            onPressed: () {
+              setState(() {
+                isArabic = !isArabic; // بيعكس اللغة لما تضغطي
+              });
+            },
+            icon: const Icon(Icons.translate, color: Colors.white, size: 27),
+            label: Text(
+              isArabic ? "AR" : "EN",
+              style: const TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+                fontSize: 16,
+              ),
+            ),
+          ),
+          SizedBox(width: 24),
           PopupMenuButton(
             iconSize: 32,
             color: Colors.white,
@@ -147,11 +165,7 @@ class _BookContentPageState extends State<BookContentPage> {
         ],
         elevation: 0,
         backgroundColor: const Color(0xFF1A0054),
-        // title: Image.asset(
-        //   "assets/images/image 1 (1).png",
-        //   width: 170,
-        //   height: 130,
-        // ),
+
         iconTheme: const IconThemeData(color: Colors.white, size: 35),
       ),
       drawer: _buildBookDrawer(context),
@@ -207,7 +221,10 @@ class _BookContentPageState extends State<BookContentPage> {
                                       ],
                                     ),
                                     child: Html(
-                                      data: section.textEn ?? "",
+                                      data:
+                                          isArabic
+                                              ? (section.textAr ?? "")
+                                              : (section.textEn ?? ""),
                                       extensions: [
                                         // هذا هو الـ Custom Extension
                                         TagExtension(
@@ -228,6 +245,16 @@ class _BookContentPageState extends State<BookContentPage> {
                                         ),
                                       ],
                                       style: {
+                                        "body": Style(
+                                          direction:
+                                              isArabic
+                                                  ? TextDirection.rtl
+                                                  : TextDirection.ltr,
+                                          textAlign:
+                                              isArabic
+                                                  ? TextAlign.right
+                                                  : TextAlign.left,
+                                        ),
                                         "p": Style(
                                           fontSize: FontSize(18.0),
                                           textAlign: TextAlign.justify,
