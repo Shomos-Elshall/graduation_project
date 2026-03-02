@@ -64,7 +64,6 @@ class GlossaryScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                // Divider(thickness: 1),
               ],
             ),
           );

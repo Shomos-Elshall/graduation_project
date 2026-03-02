@@ -44,28 +44,9 @@ class InteractiveBookApp extends StatelessWidget {
     var data = jsonDecode(jsonData);
     BookModel book = BookModel.fromJson(data);
 
-    // print("book title : ${book.title}");
-
-    // for (var item in book.toc) {
-    //   print("TOC name: ${item.name}  and its text: ${item.text?.en}");
-    // }
-
     // storing data in hive
     final box = Hive.box<BookModel>(bookBox);
     await box.put('book1', book);
-
-    // reading data from hive
-
-    //final bookFromHive = box.get("book1");
-    // print(" book title from hive: ${bookFromHive?.title}");
-    // print("book id : ${bookFromHive?.id}");
-
-    // print("from hive: ");
-    // if (bookFromHive != null) {
-    //   for (var item in bookFromHive.toc) {
-    //     print(item.name);
-    //   }
-    // }
   }
 
   @override
