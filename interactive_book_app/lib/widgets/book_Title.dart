@@ -57,7 +57,7 @@ class SelectedbookState extends State<BookTitle> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => BookContentPage(book: book!),
+                          builder: (context) => BookContentPage(book: book!, currentChapter: book.toc.first,),
                         ),
                       );
                     },

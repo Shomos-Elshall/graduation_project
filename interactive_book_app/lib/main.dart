@@ -27,6 +27,7 @@ void main() async {
 
   // open boxes
   await Hive.openBox<BookModel>(bookBox);
+  await Hive.openBox<TocModel>('bookmarks_box');
 
   runApp(const InteractiveBookApp());
 }
