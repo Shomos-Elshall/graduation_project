@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
+
+
 import 'package:hive_flutter/hive_flutter.dart';
+
 import 'package:interactive_book_app/models/book_model.dart';
 import 'package:interactive_book_app/models/toc_model.dart';
 import 'package:interactive_book_app/models/content_model.dart';
@@ -24,6 +27,7 @@ class BookContentPage extends StatefulWidget {
 class _BookContentPageState extends State<BookContentPage> {
   bool isArabic = false; // افتراضياً بيعرض إنجليزي
   TocModel? currentChapter;
+  String? _currentSelectedText;
   // هنغير ده ليكون List عشان لو الشابتر جواه كذا Section يعرضهم كلهم
   List<ContentModel> displaySections = [];
 
@@ -59,6 +63,145 @@ class _BookContentPageState extends State<BookContentPage> {
             }).toList();
       }
     });
+  }
+
+  String _processHtmlContent(String originalHtml, dynamic section) {
+    var box = Hive.box('highlights');
+    String sectionKey = "section_${section.id}";
+    List<String> savedEntries = List<String>.from(
+      box.get(sectionKey, defaultValue: []),
+    );
+
+    if (savedEntries.isEmpty) return originalHtml;
+
+    String modifiedHtml = originalHtml;
+    for (String entry in savedEntries) {
+      if (entry.contains('|')) {
+        var parts = entry.split('|');
+        String word = parts[0];
+        String colorValue = parts[1];
+
+        // تحويل رقم اللون إلى Hex ليفهمه الـ HTML
+        String hexColor =
+            '#${int.parse(colorValue).toRadixString(16).substring(2)}';
+
+        // استبدال الكلمة بـ span ملون
+        modifiedHtml = modifiedHtml.replaceAll(
+          word,
+          '<span style="background-color: $hexColor; border-radius: 4px; padding: 0 2px;">$word</span>',
+        );
+      }
+    }
+    return modifiedHtml;
+  }
+
+  // دالة الحفظ مع اللون
+  void _saveHighlightToHive(
+    String text,
+    dynamic section,
+    Color selectedColor,
+  ) async {
+    var box = Hive.box('highlights');
+    String sectionKey = "section_${section.id}";
+    List<String> currentHighlights = List<String>.from(
+      box.get(sectionKey, defaultValue: []),
+    );
+
+    // نمسح أي تظليل قديم لنفس الكلمة قبل إضافة اللون الجديد (عشان ميحصلش تكرار)
+    currentHighlights.removeWhere(
+      (entry) => entry.startsWith("${text.trim()}|"),
+    );
+
+    // إضافة الكلمة مع كود اللون الجديد
+    currentHighlights.add("${text.trim()}|${selectedColor.value}");
+
+    await box.put(sectionKey, currentHighlights);
+    setState(() {}); // تحديث الشاشة فوراً
+  }
+
+  // دالة إلغاء التظليل
+  void _clearHighlight(String text, dynamic section) async {
+    var box = Hive.box('highlights');
+    String sectionKey = "section_${section.id}";
+    List<String> currentHighlights = List<String>.from(
+      box.get(sectionKey, defaultValue: []),
+    );
+
+    // حذف المدخل الذي يبدأ بهذه الكلمة
+    currentHighlights.removeWhere(
+      (entry) => entry.startsWith("${text.trim()}|"),
+    );
+
+    await box.put(sectionKey, currentHighlights);
+    setState(() {}); // تحديث الشاشة لإخفاء اللون
+  }
+
+  void _showHighlightOptions(
+    BuildContext context,
+    String text,
+    dynamic section,
+  ) {
+    showDialog(
+      context: context,
+      builder:
+          (context) => AlertDialog(
+            backgroundColor: Colors.white,
+            title: Text("Highlight Options", style: TextStyle(fontSize: 16)),
+            content: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                // صف الألوان
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    _colorOption(context, text, section, Colors.yellow),
+                    _colorOption(context, text, section, Colors.greenAccent),
+                    _colorOption(
+                      context,
+                      text,
+                      section,
+                      Colors.lightBlueAccent,
+                    ),
+                    _colorOption(context, text, section, Colors.pinkAccent),
+                  ],
+                ),
+                SizedBox(height: 20),
+                // زر إلغاء التظليل
+                TextButton.icon(
+                  onPressed: () {
+                    _clearHighlight(text, section);
+                    Navigator.pop(context); // إغلاق الدايالوج
+                  },
+                  icon: Icon(Icons.format_color_reset, color: Colors.red),
+                  label: Text(
+                    "Unhighlight",
+                    style: TextStyle(color: Colors.red),
+                  ),
+                ),
+              ],
+            ),
+          ),
+    );
+  }
+
+  // ويدجت مساعد لرسم الدوائر الملونة
+  Widget _colorOption(
+    BuildContext context,
+    String text,
+    dynamic section,
+    Color color,
+  ) {
+    return GestureDetector(
+      onTap: () {
+        _saveHighlightToHive(text, section, color);
+        Navigator.pop(context); // إغلاق الدايالوج بعد الاختيار
+      },
+      child: CircleAvatar(
+        backgroundColor: color,
+        radius: 20,
+        child: Icon(Icons.format_paint, size: 15, color: Colors.black54),
+      ),
+    );
   }
 
   @override
@@ -261,47 +404,94 @@ class _BookContentPageState extends State<BookContentPage> {
                                         ),
                                       ],
                                     ),
-                                    child: Html(
-                                      data:
+                                    child: SelectionArea(
+                                      // هتخليني قادره احدد نص معين
+                                      onSelectionChanged: (content) {
+                                        _currentSelectedText =
+                                            content?.plainText;
+                                      },
+
+                                      contextMenuBuilder: (
+                                        context,
+                                        selectableRegionState,
+                                      ) {
+                                        return AdaptiveTextSelectionToolbar.buttonItems(
+                                          anchors:
+                                              selectableRegionState
+                                                  .contextMenuAnchors,
+                                          buttonItems: [
+                                            ...selectableRegionState
+                                                .contextMenuButtonItems,
+                                            ContextMenuButtonItem(
+                                              label: 'Highlight',
+                                              onPressed: () {
+                                                if (_currentSelectedText !=
+                                                        null &&
+                                                    _currentSelectedText!
+                                                        .isNotEmpty) {
+                                                  // إخفاء القائمة الأصلية أولاً
+                                                  selectableRegionState
+                                                      .hideToolbar();
+                                                  // فتح قائمة الألوان وإلغاء التظليل
+                                                  _showHighlightOptions(
+                                                    context,
+                                                    _currentSelectedText!,
+                                                    section,
+                                                  );
+                                                }
+                                              },
+                                            ),
+                                          ],
+                                        );
+                                      },
+                                      child: Html(
+                                        data: _processHtmlContent(
                                           isArabic
                                               ? (section.textAr ?? "")
                                               : (section.textEn ?? ""),
-                                      extensions: [
-                                        // هذا هو الـ Custom Extension
-                                        TagExtension(
-                                          tagsToExtend: {"iframe"},
-                                          builder: (extensionContext) {
-                                            // استخراج الرابط من وسم الـ iframe
-                                            final videoUrl =
-                                                extensionContext
-                                                    .attributes['src'];
-                                            if (videoUrl != null &&
-                                                videoUrl.isNotEmpty) {
-                                              return AppVideoPlayer(
-                                                videoUrl: videoUrl,
-                                              );
-                                            }
-                                            return const SizedBox.shrink();
-                                          },
+                                          section,
                                         ),
-                                      ],
-                                      style: {
-                                        "body": Style(
-                                          direction:
-                                              isArabic
-                                                  ? TextDirection.rtl
-                                                  : TextDirection.ltr,
-                                          textAlign:
-                                              isArabic
-                                                  ? TextAlign.right
-                                                  : TextAlign.left,
-                                        ),
-                                        "p": Style(
-                                          fontSize: FontSize(18.0),
-                                          textAlign: TextAlign.justify,
-                                        ),
-                                        "li": Style(fontSize: FontSize(16.0)),
-                                      },
+                                        extensions: [
+                                          // هذا هو الـ Custom Extension
+                                          TagExtension(
+                                            tagsToExtend: {"iframe"},
+                                            builder: (extensionContext) {
+                                              // استخراج الرابط من وسم الـ iframe
+                                              final videoUrl =
+                                                  extensionContext
+                                                      .attributes['src'];
+                                              if (videoUrl != null &&
+                                                  videoUrl.isNotEmpty) {
+                                                return AppVideoPlayer(
+                                                  videoUrl: videoUrl,
+                                                );
+                                              }
+                                              return const SizedBox.shrink();
+                                            },
+                                          ),
+                                        ],
+                                        style: {
+                                          "mark": Style(
+                                            backgroundColor: Colors.yellow,
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                          "body": Style(
+                                            direction:
+                                                isArabic
+                                                    ? TextDirection.rtl
+                                                    : TextDirection.ltr,
+                                            textAlign:
+                                                isArabic
+                                                    ? TextAlign.right
+                                                    : TextAlign.left,
+                                          ),
+                                          "p": Style(
+                                            fontSize: FontSize(18.0),
+                                            textAlign: TextAlign.justify,
+                                          ),
+                                          "li": Style(fontSize: FontSize(16.0)),
+                                        },
+                                      ),
                                     ),
                                   );
                                 },
