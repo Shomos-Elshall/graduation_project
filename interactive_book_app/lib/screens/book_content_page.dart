@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
+
+
+import 'package:hive_flutter/hive_flutter.dart';
+
 import 'package:interactive_book_app/models/book_model.dart';
 import 'package:interactive_book_app/models/toc_model.dart';
 import 'package:interactive_book_app/models/content_model.dart';
@@ -7,10 +11,14 @@ import 'package:flutter_html/flutter_html.dart';
 import 'package:interactive_book_app/screens/glossary_screen.dart';
 import 'package:interactive_book_app/widgets/video_player_widget.dart';
 
+import '../Services/bookmark_service.dart';
+import 'bookmarks_screen.dart';
+
 class BookContentPage extends StatefulWidget {
   final BookModel book;
+  final TocModel currentChapter;
 
-  const BookContentPage({super.key, required this.book});
+  const BookContentPage({super.key, required this.book, required this.currentChapter});
 
   @override
   State<BookContentPage> createState() => _BookContentPageState();
@@ -26,7 +34,10 @@ class _BookContentPageState extends State<BookContentPage> {
   @override
   void initState() {
     super.initState();
-    if (widget.book.toc.isNotEmpty) {
+    if (widget.currentChapter != null) {
+      _loadContent(widget.currentChapter);
+    } else if (widget.book.toc.isNotEmpty) {
+      // ده احتياطي لو لسبب ما الشابتر المرسل كان null
       _loadContent(widget.book.toc[0]);
     }
   }
@@ -216,6 +227,25 @@ class _BookContentPageState extends State<BookContentPage> {
             ),
           ),
           SizedBox(width: 24),
+
+          ValueListenableBuilder(
+            valueListenable: Hive.box<TocModel>('bookmarks_box').listenable(),
+            builder: (context, Box<TocModel> box, _) {
+              final isMarked = box.containsKey(currentChapter?.id.toString());
+
+              return IconButton(
+                icon: Icon(
+                  isMarked ? Icons.bookmark : Icons.bookmark_border,
+                  color: isMarked ? Colors.amber : Colors.white, // ذهبي لو محفوظ
+                ),
+                onPressed: () {
+                  // استدعاء خدمة الحفظ عند الضغط
+                  BookmarkService.toggleBookmark(currentChapter!);
+                },
+              );
+            },
+          ),
+          SizedBox(width: 24),
           PopupMenuButton(
             iconSize: 32,
             color: Colors.white,
@@ -223,85 +253,98 @@ class _BookContentPageState extends State<BookContentPage> {
             borderRadius: BorderRadius.circular(64),
             onSelected: (value) {
               if (value == 'Glossary') {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder:
-                        (context) => new GlossaryScreen(
-                          glossaryList: widget.book.glossary,
-                        ),
-                  ),
-                );
+              Navigator.push(
+              context,
+              MaterialPageRoute(
+              builder:
+              (context) =>
+              new GlossaryScreen(
+              glossaryList: widget.book.glossary,
+              ),
+              ),
+              );
               }
-            },
-            itemBuilder: (BuildContext context) {
-              return [
-                PopupMenuItem<String>(
-                  value: "Glossary",
-                  child: Row(
-                    children: [
-                      Icon(
-                        Icons.description_outlined,
-                        color: Color(0xFF1A0054),
-                        size: 29,
-                      ),
-                      SizedBox(width: 16),
-                      Text(
-                        "Glossary",
-                        style: TextStyle(
-                          color: Color(0xFF1A0054),
-                          fontWeight: FontWeight.bold,
-                          fontSize: 22,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
 
-                PopupMenuItem<String>(
-                  value: "Bookmarks",
-                  child: Row(
-                    children: [
-                      Icon(
-                        Icons.bookmark_outline,
-                        color: Color(0xFF1A0054),
-                        size: 29,
-                      ),
-                      SizedBox(width: 16),
-                      Text(
-                        "Bookmarks",
-                        style: TextStyle(
+              else if (value == "Bookmarks") {
+              Navigator.push(
+              context,
+              MaterialPageRoute(
+              // تأكدي إنك بتبعتي الكتاب معاكي لو صفحة البوك مارك محتاجاه
+              builder: (context) => BookmarksScreen(book: widget.book),
+              ),
+              );
+              }
+              },
+
+              itemBuilder:
+                  (BuildContext context) {
+                return [
+                  PopupMenuItem<String>(
+                    value: "Glossary",
+                    child: Row(
+                      children: [
+                        Icon(
+                          Icons.description_outlined,
                           color: Color(0xFF1A0054),
-                          fontWeight: FontWeight.bold,
-                          fontSize: 22,
+                          size: 29,
                         ),
-                      ),
-                    ],
+                        SizedBox(width: 16),
+                        Text(
+                          "Glossary",
+                          style: TextStyle(
+                            color: Color(0xFF1A0054),
+                            fontWeight: FontWeight.bold,
+                            fontSize: 22,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
-                ),
-                PopupMenuItem<String>(
-                  value: "Objects",
-                  child: Row(
-                    children: [
-                      Icon(
-                        Icons.extension_outlined,
-                        color: Color(0xFF1A0054),
-                        size: 29,
-                      ),
-                      SizedBox(width: 16),
-                      Text(
-                        "Objects",
-                        style: TextStyle(
+
+                  PopupMenuItem<String>(
+                    value: "Bookmarks",
+                    child: Row(
+                      children: [
+                        Icon(
+                          Icons.bookmark_outline,
                           color: Color(0xFF1A0054),
-                          fontWeight: FontWeight.bold,
-                          fontSize: 22,
+                          size: 29,
                         ),
-                      ),
-                    ],
+                        SizedBox(width: 16),
+                        Text(
+                          "Bookmarks",
+                          style: TextStyle(
+                            color: Color(0xFF1A0054),
+                            fontWeight: FontWeight.bold,
+                            fontSize: 22,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
-                ),
-              ];
-            },
+                  PopupMenuItem<String>(
+                    value: "Objects",
+                    child: Row(
+                      children: [
+                        Icon(
+                          Icons.extension_outlined,
+                          color: Color(0xFF1A0054),
+                          size: 29,
+                        ),
+                        SizedBox(width: 16),
+                        Text(
+                          "Objects",
+                          style: TextStyle(
+                            color: Color(0xFF1A0054),
+                            fontWeight: FontWeight.bold,
+                            fontSize: 22,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ];
+    },
           ),
         ],
         elevation: 0,
