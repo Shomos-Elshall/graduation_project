@@ -28,6 +28,9 @@ void main() async {
   // open boxes
   await Hive.openBox<BookModel>(bookBox);
 
+  //highlight box
+  await Hive.openBox('highlights');
+
   runApp(const InteractiveBookApp());
 }
 
