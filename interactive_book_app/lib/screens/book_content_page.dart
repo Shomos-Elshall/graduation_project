@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 
-
 import 'package:hive_flutter/hive_flutter.dart';
 
 import 'package:interactive_book_app/models/book_model.dart';
@@ -18,7 +17,11 @@ class BookContentPage extends StatefulWidget {
   final BookModel book;
   final TocModel currentChapter;
 
-  const BookContentPage({super.key, required this.book, required this.currentChapter});
+  const BookContentPage({
+    super.key,
+    required this.book,
+    required this.currentChapter,
+  });
 
   @override
   State<BookContentPage> createState() => _BookContentPageState();
@@ -235,8 +238,10 @@ class _BookContentPageState extends State<BookContentPage> {
 
               return IconButton(
                 icon: Icon(
+                  size: 27,
                   isMarked ? Icons.bookmark : Icons.bookmark_border,
-                  color: isMarked ? Colors.amber : Colors.white, // ذهبي لو محفوظ
+                  color:
+                      isMarked ? Colors.white : Colors.white, // ذهبي لو محفوظ
                 ),
                 onPressed: () {
                   // استدعاء خدمة الحفظ عند الضغط
@@ -253,98 +258,94 @@ class _BookContentPageState extends State<BookContentPage> {
             borderRadius: BorderRadius.circular(64),
             onSelected: (value) {
               if (value == 'Glossary') {
-              Navigator.push(
-              context,
-              MaterialPageRoute(
-              builder:
-              (context) =>
-              new GlossaryScreen(
-              glossaryList: widget.book.glossary,
-              ),
-              ),
-              );
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder:
+                        (context) => new GlossaryScreen(
+                          glossaryList: widget.book.glossary,
+                        ),
+                  ),
+                );
+              } else if (value == "Bookmarks") {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    // تأكدي إنك بتبعتي الكتاب معاكي لو صفحة البوك مارك محتاجاه
+                    builder: (context) => BookmarksScreen(book: widget.book),
+                  ),
+                );
               }
+            },
 
-              else if (value == "Bookmarks") {
-              Navigator.push(
-              context,
-              MaterialPageRoute(
-              // تأكدي إنك بتبعتي الكتاب معاكي لو صفحة البوك مارك محتاجاه
-              builder: (context) => BookmarksScreen(book: widget.book),
-              ),
-              );
-              }
-              },
+            itemBuilder: (BuildContext context) {
+              return [
+                PopupMenuItem<String>(
+                  value: "Glossary",
+                  child: Row(
+                    children: [
+                      Icon(
+                        Icons.description_outlined,
+                        color: Color(0xFF1A0054),
+                        size: 29,
+                      ),
+                      SizedBox(width: 16),
+                      Text(
+                        "Glossary",
+                        style: TextStyle(
+                          color: Color(0xFF1A0054),
+                          fontWeight: FontWeight.bold,
+                          fontSize: 22,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
 
-              itemBuilder:
-                  (BuildContext context) {
-                return [
-                  PopupMenuItem<String>(
-                    value: "Glossary",
-                    child: Row(
-                      children: [
-                        Icon(
-                          Icons.description_outlined,
+                PopupMenuItem<String>(
+                  value: "Bookmarks",
+                  child: Row(
+                    children: [
+                      Icon(
+                        Icons.bookmark_outline,
+                        color: Color(0xFF1A0054),
+                        size: 29,
+                      ),
+                      SizedBox(width: 16),
+                      Text(
+                        "Bookmarks",
+                        style: TextStyle(
                           color: Color(0xFF1A0054),
-                          size: 29,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 22,
                         ),
-                        SizedBox(width: 16),
-                        Text(
-                          "Glossary",
-                          style: TextStyle(
-                            color: Color(0xFF1A0054),
-                            fontWeight: FontWeight.bold,
-                            fontSize: 22,
-                          ),
-                        ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
-
-                  PopupMenuItem<String>(
-                    value: "Bookmarks",
-                    child: Row(
-                      children: [
-                        Icon(
-                          Icons.bookmark_outline,
+                ),
+                PopupMenuItem<String>(
+                  value: "Objects",
+                  child: Row(
+                    children: [
+                      Icon(
+                        Icons.extension_outlined,
+                        color: Color(0xFF1A0054),
+                        size: 29,
+                      ),
+                      SizedBox(width: 16),
+                      Text(
+                        "Objects",
+                        style: TextStyle(
                           color: Color(0xFF1A0054),
-                          size: 29,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 22,
                         ),
-                        SizedBox(width: 16),
-                        Text(
-                          "Bookmarks",
-                          style: TextStyle(
-                            color: Color(0xFF1A0054),
-                            fontWeight: FontWeight.bold,
-                            fontSize: 22,
-                          ),
-                        ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
-                  PopupMenuItem<String>(
-                    value: "Objects",
-                    child: Row(
-                      children: [
-                        Icon(
-                          Icons.extension_outlined,
-                          color: Color(0xFF1A0054),
-                          size: 29,
-                        ),
-                        SizedBox(width: 16),
-                        Text(
-                          "Objects",
-                          style: TextStyle(
-                            color: Color(0xFF1A0054),
-                            fontWeight: FontWeight.bold,
-                            fontSize: 22,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ];
-    },
+                ),
+              ];
+            },
           ),
         ],
         elevation: 0,
