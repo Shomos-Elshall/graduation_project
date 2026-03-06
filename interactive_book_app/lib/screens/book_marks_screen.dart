@@ -141,12 +141,12 @@ class BookmarksScreen extends StatelessWidget {
                           // زر الحذف
                           IconButton(
                             icon: const Icon(
-                              Icons.delete_sweep_rounded,
-                              color: Colors.redAccent,
+                              Icons.bookmark_remove,
+                              color: Color(0xff1C0054),
                               size: 28,
                             ),
                             onPressed: () {
-                              _showDeleteConfirmDialog(context, box, chapter);
+                              box.delete(chapter.id.toString());
                             },
                           ),
                         ],
@@ -159,42 +159,6 @@ class BookmarksScreen extends StatelessWidget {
           );
         },
       ),
-    );
-  }
-
-  // إضافة دالة لتأكيد الحذف (اختياري لزيادة الاحترافية)
-  void _showDeleteConfirmDialog(
-    BuildContext context,
-    Box<TocModel> box,
-    TocModel chapter,
-  ) {
-    showDialog(
-      context: context,
-      builder:
-          (context) => AlertDialog(
-            backgroundColor: Colors.white,
-            title: const Text("Remove Bookmark"),
-            content: Text(
-              "Are you sure you want to delete '${chapter.name}'?",
-              style: TextStyle(fontSize: 19),
-            ),
-            actions: [
-              TextButton(
-                onPressed: () => Navigator.pop(context),
-                child: const Text("Cancel", style: TextStyle(fontSize: 17)),
-              ),
-              TextButton(
-                onPressed: () {
-                  box.delete(chapter.id.toString());
-                  Navigator.pop(context);
-                },
-                child: const Text(
-                  "Delete",
-                  style: TextStyle(color: Colors.red, fontSize: 17),
-                ),
-              ),
-            ],
-          ),
     );
   }
 }

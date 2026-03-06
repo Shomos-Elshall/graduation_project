@@ -7,11 +7,12 @@ import 'package:interactive_book_app/models/book_model.dart';
 import 'package:interactive_book_app/models/toc_model.dart';
 import 'package:interactive_book_app/models/content_model.dart';
 import 'package:flutter_html/flutter_html.dart';
+import 'package:interactive_book_app/screens/book_objects_screen.dart';
 import 'package:interactive_book_app/screens/glossary_screen.dart';
 import 'package:interactive_book_app/widgets/video_player_widget.dart';
 
 import '../Services/bookmark_service.dart';
-import 'bookmarks_screen.dart';
+import 'book_marks_screen.dart';
 
 class BookContentPage extends StatefulWidget {
   final BookModel book;
@@ -262,17 +263,24 @@ class _BookContentPageState extends State<BookContentPage> {
                   context,
                   MaterialPageRoute(
                     builder:
-                        (context) => new GlossaryScreen(
-                          glossaryList: widget.book.glossary,
-                        ),
+                        (context) =>
+                            GlossaryScreen(glossaryList: widget.book.glossary),
                   ),
                 );
               } else if (value == "Bookmarks") {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    // تأكدي إنك بتبعتي الكتاب معاكي لو صفحة البوك مارك محتاجاه
                     builder: (context) => BookmarksScreen(book: widget.book),
+                  ),
+                );
+              } else if (value == "Objects") {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder:
+                        (context) =>
+                            ObjectScreen(objectList: widget.book.bookObjects),
                   ),
                 );
               }
@@ -506,6 +514,7 @@ class _BookContentPageState extends State<BookContentPage> {
 
   Widget _buildBookDrawer(BuildContext context) {
     return Drawer(
+      backgroundColor: Colors.white,
       child: Column(
         children: [
           DrawerHeader(
