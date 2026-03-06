@@ -27,6 +27,7 @@ void main() async {
 
   // open boxes
   await Hive.openBox<BookModel>(bookBox);
+  // bookMark box
   await Hive.openBox<TocModel>('bookmarks_box');
 
   //highlight box

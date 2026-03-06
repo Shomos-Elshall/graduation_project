@@ -39,7 +39,7 @@ dependencies:
   flutter_html: ^3.0.0
   video_player: any
   chewie: any
-  url_launcher: ^6.3.2
+  webview_flutter: ^4.8.0
 
 
   
