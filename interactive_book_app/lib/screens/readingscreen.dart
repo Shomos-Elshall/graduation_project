@@ -1,15 +1,13 @@
  import 'package:flutter/material.dart';
 import '../models/book_model.dart';
 import '../models/content_model.dart';
-import '../widgets/content_section_widget.dart';
+import 'book_content_page.dart'; // تأكدي إن المسار ده صح لصفحتك الأصلية
 
-/// [ReadingScreen] هي الشاشة المسؤولة عن عرض محتوى الكتاب بشكل صفحات قابلة للتقليب.
-/// تستخدم هذه الشاشة [PageView] لتمكين المستخدم من السحب (Swipe) يمين ويسار.
 class ReadingScreen extends StatefulWidget {
-  final BookModel book;           // كائن الكتاب اللي جاي من قاعدة البيانات (Hive)
-  final List<ContentModel> sections; // قائمة الصفحات أو المحتويات المراد عرضها
-  final int initialIndex;        // الصفحة اللي هيبدأ من عندها (غالباً صفر)
-  final bool isArabic;           // متغير لتحديد لغة العرض (عربي/إنجليزي)
+  final BookModel book;
+  final List<ContentModel> sections; // المحتوى اللي جاي من الـ Navigator
+  final int initialIndex; // صفحة البداية
+  final bool isArabic; // اللغة
 
   const ReadingScreen({
     super.key,
@@ -24,92 +22,101 @@ class ReadingScreen extends StatefulWidget {
 }
 
 class _ReadingScreenState extends State<ReadingScreen> {
-  // [PageController] هو المحرك المسؤول عن التحكم في حركة الصفحات والقفز لصفحة معينة
   late PageController _pageController;
-  
-  // [currentIndex] متغير بيحفظ رقم الصفحة اللي الطالب واقف عليها حالياً
   late int currentIndex;
 
   @override
   void initState() {
     super.initState();
-    // بنعرف الـ Controller ونخليه يبدأ من الصفحة المحددة
+    // بنخلي العداد والمحرك يبدأوا من الصفحة اللي جات من الـ Navigator (غالباً صفر)
     currentIndex = widget.initialIndex;
     _pageController = PageController(initialPage: currentIndex);
   }
 
   @override
+  void dispose() {
+    _pageController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFF5F5F5),
-      
-      // الـ body عبارة عن PageView وده اللي بيعمل ميزة "تقليب الصفحات"
+      // 1. الجزء اللي فوق وفي النص (بيعرض صفحتك الأصلية)
       body: PageView.builder(
         controller: _pageController,
-        itemCount: widget.sections.length, // عدد الصفحات الكلي
+        itemCount: widget.sections.length,
         onPageChanged: (index) {
-          // دالة بتشتغل كل ما الطالب يقلب الصفحة عشان نحدث رقم الصفحة تحت
+          // لما الطالب يسحب الشاشة يمين أو شمال، بنحدث العداد اللي تحت
           setState(() {
             currentIndex = index;
           });
         },
         itemBuilder: (context, index) {
-          // هنا بنعرض "الويجدت" بتاعك الأصلي لكل صفحة
-          return SingleChildScrollView(
-            child: ContentSectionWidget(
-              section: widget.sections[index], // بيانات الصفحة الحالية
-              isArabic: widget.isArabic,       // اللغة المختارة
-              onRefresh: () => setState(() {}), // تحديث الواجهة عند حدوث تغيير (تظليل مثلاً)
-            ),
+          // بنستدعي صفحتك الأصلية بكل مكوناتها (AppBar, Drawer, Content)
+          return BookContentPage(
+            book: widget.book,
+            // بنبعت الفصل أو السيكشن المناسب لرقم الصفحة الحالي
+            currentChapter: widget.book.toc[index], 
           );
         },
       ),
 
-      // شريط التنقل السفلي اللي فيه الأسهم والعداد
-      bottomNavigationBar: _buildBottomNav(),
-    );
-  }
+      // 2. الجزء اللي تحت (شريط الأسهم والعداد)
+      bottomNavigationBar: Container(
+        height: 70, // ارتفاع الشريط
+        decoration: const BoxDecoration(
+          color: Colors.white,
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black12, 
+              blurRadius: 6, 
+              offset: Offset(0, -2), // ظل خفيف لفوق عشان يفصل عن المحتوى
+            )
+          ],
+        ),
+        child: SafeArea( // عشان الزراير متخبطش في شريط زراير الموبايل اللي تحت
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              // --- زرار الصفحة السابقة ---
+              IconButton(
+                icon: const Icon(Icons.arrow_back_ios, color: Color(0xFF1A0054)),
+                onPressed: currentIndex > 0
+                    ? () {
+                        _pageController.previousPage(
+                          duration: const Duration(milliseconds: 300),
+                          curve: Curves.easeInOut,
+                        );
+                      }
+                    : null, // بيقفل الزرار لو إحنا في أول صفحة
+              ),
 
-  /// دالة [_buildBottomNav] مسؤولة عن بناء شريط التحكم (الأسهم ورقم الصفحة)
-  Widget _buildBottomNav() {
-    return Container(
-      height: 70,
-      decoration: BoxDecoration(
-        color: Colors.white,
-        boxShadow: [
-          BoxShadow(color: Colors.black12, blurRadius: 4, offset: Offset(0, -2))
-        ],
-      ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          // زرار الصفحة السابقة
-          IconButton(
-            icon: const Icon(Icons.arrow_back_ios, color: Color(0xFF1A0054)),
-            onPressed: currentIndex > 0
-                ? () => _pageController.previousPage(
-                    duration: const Duration(milliseconds: 300),
-                    curve: Curves.easeInOut)
-                : null, // الزرار بيطفي لو إحنا في أول صفحة
+              // --- عداد الصفحات ---
+              Text(
+                "صفحة ${currentIndex + 1} من ${widget.sections.length}",
+                style: const TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 16,
+                  color: Color(0xFF1A0054),
+                ),
+              ),
+
+              // --- زرار الصفحة التالية ---
+              IconButton(
+                icon: const Icon(Icons.arrow_forward_ios, color: Color(0xFF1A0054)),
+                onPressed: currentIndex < widget.sections.length - 1
+                    ? () {
+                        _pageController.nextPage(
+                          duration: const Duration(milliseconds: 300),
+                          curve: Curves.easeInOut,
+                        );
+                      }
+                    : null, // بيقفل الزرار لو إحنا في آخر صفحة
+              ),
+            ],
           ),
-          
-          // نص بيعرض الصفحة الحالية من الإجمالي
-          Text(
-            "صفحة ${currentIndex + 1} من ${widget.sections.length}",
-            style: const TextStyle(
-                fontWeight: FontWeight.bold, color: Color(0xFF1A0054)),
-          ),
-          
-          // زرار الصفحة التالية
-          IconButton(
-            icon: const Icon(Icons.arrow_forward_ios, color: Color(0xFF1A0054)),
-            onPressed: currentIndex < widget.sections.length - 1
-                ? () => _pageController.nextPage(
-                    duration: const Duration(milliseconds: 300),
-                    curve: Curves.easeInOut)
-                : null, // الزرار بيطفي لو إحنا في آخر صفحة
-          ),
-        ],
+        ),
       ),
     );
   }
