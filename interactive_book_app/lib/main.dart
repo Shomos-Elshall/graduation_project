@@ -32,6 +32,8 @@ void main() async {
 
   //highlight box
   await Hive.openBox('highlights');
+  //addnote box
+  await Hive.openBox('notes_box');
 
   runApp(const InteractiveBookApp());
 }
