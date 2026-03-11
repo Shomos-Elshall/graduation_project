@@ -25,6 +25,7 @@ class SelectedbookState extends State<Selectedbook> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color(0xFFF5F5F5),
       appBar: AppBar(
         backgroundColor: const Color(0xFF1D0E53),
         title: Padding(
