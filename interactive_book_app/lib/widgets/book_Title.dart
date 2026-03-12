@@ -55,7 +55,7 @@ class SelectedbookState extends State<BookTitle> {
                   GestureDetector(
                     onTap: () {
                       // هنا بنروح لصفحة المحتوى وبنبعت الكتاب اللي اخترناه
-                      /* Navigator.push(
+                      /*Navigator.push(
                         context,
                         MaterialPageRoute(
                           builder: (context) => BookContentPage(book: book!, currentChapter: book.toc.first,),
@@ -77,6 +77,7 @@ class SelectedbookState extends State<BookTitle> {
                           ),
                         );
                       }
+                      
                     },
 
                     child: Container(

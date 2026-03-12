@@ -1,15 +1,14 @@
  import 'package:flutter/material.dart';
 import '../models/book_model.dart';
 import '../models/content_model.dart';
-import '../widgets/content_section_widget.dart';
+import '../models/toc_model.dart'; 
+import 'book_content_page.dart'; 
 
-/// [ReadingScreen] هي الشاشة المسؤولة عن عرض محتوى الكتاب بشكل صفحات قابلة للتقليب.
-/// تستخدم هذه الشاشة [PageView] لتمكين المستخدم من السحب (Swipe) يمين ويسار.
 class ReadingScreen extends StatefulWidget {
-  final BookModel book;           // كائن الكتاب اللي جاي من قاعدة البيانات (Hive)
-  final List<ContentModel> sections; // قائمة الصفحات أو المحتويات المراد عرضها
-  final int initialIndex;        // الصفحة اللي هيبدأ من عندها (غالباً صفر)
-  final bool isArabic;           // متغير لتحديد لغة العرض (عربي/إنجليزي)
+  final BookModel book;
+  final List<ContentModel> sections;
+  final int initialIndex;
+  final bool isArabic;
 
   const ReadingScreen({
     super.key,
@@ -24,16 +23,12 @@ class ReadingScreen extends StatefulWidget {
 }
 
 class _ReadingScreenState extends State<ReadingScreen> {
-  // [PageController] هو المحرك المسؤول عن التحكم في حركة الصفحات والقفز لصفحة معينة
   late PageController _pageController;
-  
-  // [currentIndex] متغير بيحفظ رقم الصفحة اللي الطالب واقف عليها حالياً
   late int currentIndex;
 
   @override
   void initState() {
     super.initState();
-    // بنعرف الـ Controller ونخليه يبدأ من الصفحة المحددة
     currentIndex = widget.initialIndex;
     _pageController = PageController(initialPage: currentIndex);
   }
@@ -43,71 +38,85 @@ class _ReadingScreenState extends State<ReadingScreen> {
     return Scaffold(
       backgroundColor: const Color(0xFFF5F5F5),
       
-      // الـ body عبارة عن PageView وده اللي بيعمل ميزة "تقليب الصفحات"
+      // الـ PageView اللي بيعمل حركة الـ Swipe (التقليب)
       body: PageView.builder(
         controller: _pageController,
-        itemCount: widget.sections.length, // عدد الصفحات الكلي
+        itemCount: widget.sections.length,
         onPageChanged: (index) {
-          // دالة بتشتغل كل ما الطالب يقلب الصفحة عشان نحدث رقم الصفحة تحت
           setState(() {
             currentIndex = index;
           });
         },
         itemBuilder: (context, index) {
-          // هنا بنعرض "الويجدت" بتاعك الأصلي لكل صفحة
-          return SingleChildScrollView(
-            child: ContentSectionWidget(
-              section: widget.sections[index], // بيانات الصفحة الحالية
-              isArabic: widget.isArabic,       // اللغة المختارة
-              onRefresh: () => setState(() {}), // تحديث الواجهة عند حدوث تغيير (تظليل مثلاً)
-            ),
+          // هنا بنعمل الـ الفصل الوهمي بالمواصفات اللي طلبها الـ TocModel بتاعك
+          // بعتنا الـ id والاسم والـ depth والـ children عشان الإيرور يروح
+          final tempChapter = TocModel(
+            id: widget.sections[index].id, 
+            name: widget.book.title, // هيعرض اسم الكتاب فوق في الـ AppBar
+            depth: 0, 
+            children: [],
+          );
+
+          // بنادي على صفحة صاحبتك (اللي فيها الـ AppBar والـ Drawer والترجمة)
+          return BookContentPage(
+            book: widget.book,
+            currentChapter: tempChapter,
           );
         },
       ),
 
-      // شريط التنقل السفلي اللي فيه الأسهم والعداد
+      // شريط الأسهم والعداد تحت
       bottomNavigationBar: _buildBottomNav(),
     );
   }
 
-  /// دالة [_buildBottomNav] مسؤولة عن بناء شريط التحكم (الأسهم ورقم الصفحة)
   Widget _buildBottomNav() {
     return Container(
       height: 70,
       decoration: BoxDecoration(
         color: Colors.white,
         boxShadow: [
-          BoxShadow(color: Colors.black12, blurRadius: 4, offset: Offset(0, -2))
+          BoxShadow(
+            color: Colors.black12, 
+            blurRadius: 4, 
+            offset: const Offset(0, -2)
+          )
         ],
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          // زرار الصفحة السابقة
+          // سهم الرجوع
           IconButton(
             icon: const Icon(Icons.arrow_back_ios, color: Color(0xFF1A0054)),
             onPressed: currentIndex > 0
                 ? () => _pageController.previousPage(
                     duration: const Duration(milliseconds: 300),
                     curve: Curves.easeInOut)
-                : null, // الزرار بيطفي لو إحنا في أول صفحة
+                : null,
           ),
           
-          // نص بيعرض الصفحة الحالية من الإجمالي
-          Text(
-            "صفحة ${currentIndex + 1} من ${widget.sections.length}",
-            style: const TextStyle(
-                fontWeight: FontWeight.bold, color: Color(0xFF1A0054)),
+          // العداد (رقم الصفحة الحالي / الإجمالي)
+          Directionality(
+            textDirection: TextDirection.ltr,
+            child: Text(
+              "${currentIndex + 1} / ${widget.sections.length}",
+              style: const TextStyle(
+                fontWeight: FontWeight.bold, 
+                color: Color(0xFF1A0054),
+                fontSize: 18,
+              ),
+            ),
           ),
           
-          // زرار الصفحة التالية
+          // سهم التالي
           IconButton(
             icon: const Icon(Icons.arrow_forward_ios, color: Color(0xFF1A0054)),
             onPressed: currentIndex < widget.sections.length - 1
                 ? () => _pageController.nextPage(
                     duration: const Duration(milliseconds: 300),
                     curve: Curves.easeInOut)
-                : null, // الزرار بيطفي لو إحنا في آخر صفحة
+                : null,
           ),
         ],
       ),
