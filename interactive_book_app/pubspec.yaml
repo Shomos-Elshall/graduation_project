@@ -40,7 +40,7 @@ dependencies:
   video_player: any
   chewie: any
   webview_flutter: ^4.8.0
-  scrollable_positioned_list: ^0.3.8
+
 
   
 

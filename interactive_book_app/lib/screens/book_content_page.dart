@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:hive/hive.dart';
 import 'package:interactive_book_app/widgets/book_mark_button.dart';
 import 'package:interactive_book_app/widgets/pop_up_menu_button.dart';
 import '../models/book_model.dart';
 import '../models/toc_model.dart';
 import '../models/content_model.dart';
 import '../widgets/book_drawer.dart';
-import '../widgets/content_section_widget.dart';
+import 'package:interactive_book_app/widgets/content_section_widget.dart';
 
 class BookContentPage extends StatefulWidget {
   final BookModel book;
