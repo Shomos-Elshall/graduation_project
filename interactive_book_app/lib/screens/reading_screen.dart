@@ -1,8 +1,8 @@
- import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import '../models/book_model.dart';
 import '../models/content_model.dart';
-import '../models/toc_model.dart'; 
-import 'book_content_page.dart'; 
+import '../models/toc_model.dart';
+import 'book_content_page.dart';
 
 class ReadingScreen extends StatefulWidget {
   final BookModel book;
@@ -37,7 +37,7 @@ class _ReadingScreenState extends State<ReadingScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xFFF5F5F5),
-      
+
       // الـ PageView اللي بيعمل حركة الـ Swipe (التقليب)
       body: PageView.builder(
         controller: _pageController,
@@ -51,9 +51,12 @@ class _ReadingScreenState extends State<ReadingScreen> {
           // هنا بنعمل الـ الفصل الوهمي بالمواصفات اللي طلبها الـ TocModel بتاعك
           // بعتنا الـ id والاسم والـ depth والـ children عشان الإيرور يروح
           final tempChapter = TocModel(
-            id: widget.sections[index].id, 
-            name: widget.book.title, // هيعرض اسم الكتاب فوق في الـ AppBar
-            depth: 0, 
+            id: widget.sections[index].id,
+            name:
+                widget
+                    .sections[index]
+                    .name, // هيعرض اسم الكتاب فوق في الـ AppBar
+            depth: 0,
             children: [],
           );
 
@@ -71,52 +74,46 @@ class _ReadingScreenState extends State<ReadingScreen> {
   }
 
   Widget _buildBottomNav() {
-    return Container(
-      height: 70,
-      decoration: BoxDecoration(
-        color: Colors.white,
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black12, 
-            blurRadius: 4, 
-            offset: const Offset(0, -2)
-          )
-        ],
-      ),
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           // سهم الرجوع
           IconButton(
             icon: const Icon(Icons.arrow_back_ios, color: Color(0xFF1A0054)),
-            onPressed: currentIndex > 0
-                ? () => _pageController.previousPage(
-                    duration: const Duration(milliseconds: 300),
-                    curve: Curves.easeInOut)
-                : null,
+            onPressed:
+                currentIndex > 0
+                    ? () => _pageController.previousPage(
+                      duration: const Duration(milliseconds: 300),
+                      curve: Curves.easeInOut,
+                    )
+                    : null,
           ),
-          
+
           // العداد (رقم الصفحة الحالي / الإجمالي)
           Directionality(
             textDirection: TextDirection.ltr,
             child: Text(
               "${currentIndex + 1} / ${widget.sections.length}",
               style: const TextStyle(
-                fontWeight: FontWeight.bold, 
+                fontWeight: FontWeight.bold,
                 color: Color(0xFF1A0054),
                 fontSize: 18,
               ),
             ),
           ),
-          
+
           // سهم التالي
           IconButton(
             icon: const Icon(Icons.arrow_forward_ios, color: Color(0xFF1A0054)),
-            onPressed: currentIndex < widget.sections.length - 1
-                ? () => _pageController.nextPage(
-                    duration: const Duration(milliseconds: 300),
-                    curve: Curves.easeInOut)
-                : null,
+            onPressed:
+                currentIndex < widget.sections.length - 1
+                    ? () => _pageController.nextPage(
+                      duration: const Duration(milliseconds: 300),
+                      curve: Curves.easeInOut,
+                    )
+                    : null,
           ),
         ],
       ),
