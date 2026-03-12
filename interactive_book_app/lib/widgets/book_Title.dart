@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
 import '../models/book_model.dart';
-import '../screens/book_content_page.dart';
+
+import '../screens/reading_screen.dart';
 
 class BookTitle extends StatefulWidget {
   const BookTitle({super.key});
@@ -54,12 +55,29 @@ class SelectedbookState extends State<BookTitle> {
                   GestureDetector(
                     onTap: () {
                       // هنا بنروح لصفحة المحتوى وبنبعت الكتاب اللي اخترناه
-                      Navigator.push(
+                      /*Navigator.push(
                         context,
                         MaterialPageRoute(
                           builder: (context) => BookContentPage(book: book!, currentChapter: book.toc.first,),
                         ),
                       );
+                      */
+                      if (book != null) {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder:
+                                (context) => ReadingScreen(
+                                  book: book,
+                                  sections:
+                                      book.contents, // استخدمنا contents زي الموديل بتاعك
+                                  initialIndex: 0,
+                                  isArabic: true, // القيمة الابتدائية للغة
+                                ),
+                          ),
+                        );
+                      }
+                      
                     },
 
                     child: Container(
