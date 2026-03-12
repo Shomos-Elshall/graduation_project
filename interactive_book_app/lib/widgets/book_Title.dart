@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
 import '../models/book_model.dart';
-import '../screens/book_content_page.dart';
-import '../screens/readingscreen.dart';
+
+import '../screens/reading_screen.dart';
 
 class BookTitle extends StatefulWidget {
   const BookTitle({super.key});
