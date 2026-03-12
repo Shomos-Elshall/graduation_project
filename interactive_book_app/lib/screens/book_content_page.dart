@@ -48,60 +48,64 @@ class _BookContentPageState extends State<BookContentPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: const Color(0xFFF5F5F5),
-      appBar: AppBar(
-        backgroundColor: const Color(0xFF1A0054),
-        actions: [
-          _buildLangBtn(),
-          SizedBox(width: 24),
-          BookMarkButton(currentChapter: currentChapter),
-          SizedBox(width: 24),
-          PopUpMenuButton(book: widget.book),
-        ],
-        iconTheme: const IconThemeData(color: Colors.white, size: 30),
-      ),
-      drawer: BookDrawer(
-        book: widget.book,
-        onChapterSelected: (chapter) {
-          _loadContent(chapter);
-          Navigator.pop(context);
-        },
-      ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Padding(
-            padding: const EdgeInsets.only(top: 24.0, left: 16, bottom: 12),
-            child: Text(
-              currentChapter.name,
-
-              style: const TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-                color: Color(0xFF1A0054),
+    return Directionality(
+      // السطر ده هو اللي بيظبط اتجاه الصفحة كلها (القوائم، العناوين، الأزرار)
+      textDirection: isArabic ? TextDirection.rtl : TextDirection.ltr,
+      child: Scaffold(
+        backgroundColor: const Color(0xFFF5F5F5),
+        appBar: AppBar(
+          backgroundColor: const Color(0xFF1A0054),
+          actions: [
+            _buildLangBtn(),
+            SizedBox(width: 24),
+            BookMarkButton(currentChapter: currentChapter),
+            SizedBox(width: 24),
+            PopUpMenuButton(book: widget.book),
+          ],
+          iconTheme: const IconThemeData(color: Colors.white, size: 30),
+        ),
+        drawer: BookDrawer(
+          book: widget.book,
+          onChapterSelected: (chapter) {
+            _loadContent(chapter);
+            Navigator.pop(context);
+          },
+        ),
+        body: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(top: 24.0, left: 16, bottom: 12),
+              child: Text(
+                currentChapter.name,
+      
+                style: const TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                  color: Color(0xFF1A0054),
+                ),
               ),
             ),
-          ),
-          Divider(
-            color: Colors.grey[400],
-            thickness: 1,
-            endIndent: 20,
-            indent: 20,
-          ),
-          Expanded(
-            child: ListView.builder(
-              padding: const EdgeInsets.symmetric(horizontal: 16),
-              itemCount: displaySections.length,
-              itemBuilder:
-                  (context, index) => ContentSectionWidget(
-                    section: displaySections[index],
-                    isArabic: isArabic,
-                    onRefresh: () => setState(() {}),
-                  ),
+            Divider(
+              color: Colors.grey[400],
+              thickness: 1,
+              endIndent: 20,
+              indent: 20,
             ),
-          ),
-        ],
+            Expanded(
+              child: ListView.builder(
+                padding: const EdgeInsets.symmetric(horizontal: 16),
+                itemCount: displaySections.length,
+                itemBuilder:
+                    (context, index) => ContentSectionWidget(
+                      section: displaySections[index],
+                      isArabic: isArabic,
+                      onRefresh: () => setState(() {}),
+                    ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
