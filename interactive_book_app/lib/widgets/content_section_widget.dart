@@ -43,92 +43,79 @@ class _ContentSectionWidgetState extends State<ContentSectionWidget> {
       sectionId,
     );
 
-    return Container(
-      margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 5),
-      padding: const EdgeInsets.all(12),
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(12),
-        boxShadow: const [
-          BoxShadow(color: Colors.black12, blurRadius: 4, offset: Offset(0, 2)),
-        ],
-      ),
-      child: SelectionArea(
-        onSelectionChanged: (SelectedContent? content) {
-          _selectedText = content?.plainText ?? "";
-        },
-        contextMenuBuilder: (context, selectableRegionState) {
-          return AdaptiveTextSelectionToolbar.buttonItems(
-            anchors: selectableRegionState.contextMenuAnchors,
-            buttonItems: [
-              ...selectableRegionState.contextMenuButtonItems,
-              ContextMenuButtonItem(
-                label: 'Highlight',
-                onPressed: () {
-                  if (_selectedText.isNotEmpty) {
-                    selectableRegionState.hideToolbar();
-                    _showColorPicker(context, _selectedText);
-                  }
-                },
-              ),
-              ContextMenuButtonItem(
-                label: 'Add Note',
-                onPressed: () {
-                  if (_selectedText.isNotEmpty) {
-                    selectableRegionState.hideToolbar();
-                    NoteDialogs.showAddNoteDialog(
-                      context: context,
-                      sectionId: sectionId,
-                      selectedText: _selectedText,
-                      onRefresh: widget.onRefresh,
-                    );
-                  }
-                },
-              ),
-            ],
-          );
-        },
-        child: Html(
-          data: processedContent,
-          style: {
-            "body": Style(
-              direction:
-                  widget.isArabic ? TextDirection.rtl : TextDirection.ltr,
-              textAlign: widget.isArabic ? TextAlign.right : TextAlign.left,
-              fontSize: FontSize(18.0),
-              lineHeight: const LineHeight(1.6),
+    return SelectionArea(
+      onSelectionChanged: (SelectedContent? content) {
+        _selectedText = content?.plainText ?? "";
+      },
+      contextMenuBuilder: (context, selectableRegionState) {
+        return AdaptiveTextSelectionToolbar.buttonItems(
+          anchors: selectableRegionState.contextMenuAnchors,
+          buttonItems: [
+            ...selectableRegionState.contextMenuButtonItems,
+            ContextMenuButtonItem(
+              label: 'Highlight',
+              onPressed: () {
+                if (_selectedText.isNotEmpty) {
+                  selectableRegionState.hideToolbar();
+                  _showColorPicker(context, _selectedText);
+                }
+              },
             ),
-          },
-          onLinkTap: (url, _, __) {
-            if (url != null && url.startsWith("note://")) {
-              String originalText = Uri.decodeComponent(
-                url.replaceFirst("note://", ""),
-              );
-              var notes = NoteService.getNotes(sectionId);
-              var currentNote = notes.firstWhere(
-                (n) => n['originalText'] == originalText,
-                orElse: () => null,
-              );
-              if (currentNote != null) {
-                NoteDialogs.showSavedNoteDialog(
-                  context: context,
-                  originalText: originalText,
-                  savedNote: currentNote['noteContent'],
-                  sectionId: sectionId,
-                  onRefresh: widget.onRefresh,
-                );
-              }
-            }
-          },
-          extensions: [
-            TagExtension(
-              tagsToExtend: {"iframe"},
-              builder:
-                  (ctx) =>
-                      AppVideoPlayer(videoUrl: ctx.attributes['src'] ?? ""),
+            ContextMenuButtonItem(
+              label: 'Add Note',
+              onPressed: () {
+                if (_selectedText.isNotEmpty) {
+                  selectableRegionState.hideToolbar();
+                  NoteDialogs.showAddNoteDialog(
+                    context: context,
+                    sectionId: sectionId,
+                    selectedText: _selectedText,
+                    onRefresh: widget.onRefresh,
+                  );
+                }
+              },
             ),
           ],
-        ),
+        );
+      },
+      child: Html(
+        data: processedContent,
+        style: {
+          "body": Style(
+            direction: widget.isArabic ? TextDirection.rtl : TextDirection.ltr,
+            textAlign: widget.isArabic ? TextAlign.right : TextAlign.left,
+            fontSize: FontSize(18.0),
+            lineHeight: const LineHeight(1.6),
+          ),
+        },
+        onLinkTap: (url, _, __) {
+          if (url != null && url.startsWith("note://")) {
+            String originalText = Uri.decodeComponent(
+              url.replaceFirst("note://", ""),
+            );
+            var notes = NoteService.getNotes(sectionId);
+            var currentNote = notes.firstWhere(
+              (n) => n['originalText'] == originalText,
+              orElse: () => null,
+            );
+            if (currentNote != null) {
+              NoteDialogs.showSavedNoteDialog(
+                context: context,
+                originalText: originalText,
+                savedNote: currentNote['noteContent'],
+                sectionId: sectionId,
+                onRefresh: widget.onRefresh,
+              );
+            }
+          }
+        },
+        extensions: [
+          TagExtension(
+            tagsToExtend: {"iframe"},
+            builder:
+                (ctx) => AppVideoPlayer(videoUrl: ctx.attributes['src'] ?? ""),
+          ),
+        ],
       ),
     );
   }

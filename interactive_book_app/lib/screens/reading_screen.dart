@@ -52,7 +52,10 @@ class _ReadingScreenState extends State<ReadingScreen> {
           // بعتنا الـ id والاسم والـ depth والـ children عشان الإيرور يروح
           final tempChapter = TocModel(
             id: widget.sections[index].id,
-            name: widget.book.title, // هيعرض اسم الكتاب فوق في الـ AppBar
+            name:
+                widget
+                    .sections[index]
+                    .name, // هيعرض اسم الكتاب فوق في الـ AppBar
             depth: 0,
             children: [],
           );
@@ -71,18 +74,8 @@ class _ReadingScreenState extends State<ReadingScreen> {
   }
 
   Widget _buildBottomNav() {
-    return Container(
-      height: 70,
-      decoration: BoxDecoration(
-        color: Colors.white,
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black12,
-            blurRadius: 4,
-            offset: const Offset(0, -2),
-          ),
-        ],
-      ),
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
