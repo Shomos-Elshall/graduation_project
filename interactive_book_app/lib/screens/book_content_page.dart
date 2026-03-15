@@ -11,11 +11,13 @@ import 'package:interactive_book_app/widgets/content_section_widget.dart';
 class BookContentPage extends StatefulWidget {
   final BookModel book;
   final TocModel currentChapter;
+  final Function(TocModel)? onChapterSelectedInDrawer;
 
   const BookContentPage({
     super.key,
     required this.book,
     required this.currentChapter,
+    this.onChapterSelectedInDrawer,
   });
 
   @override
@@ -67,6 +69,10 @@ class _BookContentPageState extends State<BookContentPage> {
         onChapterSelected: (chapter) {
           _loadContent(chapter);
           Navigator.pop(context);
+          // 3. نادي الدالة اللي جاية من الأب (الـ ReadingScreen)
+          if (widget.onChapterSelectedInDrawer != null) {
+            widget.onChapterSelectedInDrawer!(chapter);
+          }
         },
       ),
       body: Column(
