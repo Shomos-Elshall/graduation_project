@@ -40,6 +40,7 @@ dependencies:
   video_player: any
   chewie: any
   webview_flutter: ^4.8.0
+ 
 
 
   
@@ -74,6 +75,7 @@ flutter:
   assets:
     - assets/images/
     - assets/data/data.json
+    - assets/data/data_copy.json
     
      
 

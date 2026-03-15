@@ -44,7 +44,7 @@ class InteractiveBookApp extends StatelessWidget {
   const InteractiveBookApp({super.key});
 
   Future<String> loadJsonData() async {
-    return await rootBundle.loadString('assets/data/data.json');
+    return await rootBundle.loadString('assets/data/data_copy.json');
   }
 
   Future<void> loadDataIntoHive() async {
