@@ -1,0 +1,232 @@
+{
+  "keywords": [
+    "Tetrahedral molecules",
+    "VSEPR notation",
+    "repulsive forces",
+    "plainer bond",
+    "Tetrahedral shape",
+    "terminal atoms",
+    "free electrons",
+    "valence shell electron"
+  ],
+  "input": "visual",
+  "status": "preprocessed",
+  "type": "mo",
+  "speakerGender": "male",
+  "_id": "60a2ceb601b1e64d520112ff",
+  "audioList": [
+    {
+      "langCode": "en",
+      "url": "https://scube-applications-media54cbabfc-u3d19945rbtv.s3.amazonaws.com/molecules_video_data/dac0-4a8a-8613-c730f4f47e8b_Molecular_Structure_intro_video.mp3",
+      "langName": "English",
+      "duration": 164
+    },
+    {
+      "langCode": "ar",
+      "url": "https://scube-applications-media54cbabfc-u3d19945rbtv.s3.amazonaws.com/molecules_video_data/f469-42d5-9d45-b2abaf392d0d_80f447bb-dac0-4a8a-8613-c730f4f47e8b_Molecular_Structure_intro_video_ar.mp3",
+      "langName": "Arabic",
+      "duration": 222.288
+    },
+    {
+      "langCode": "fr",
+      "url": "https://scube-applications-media54cbabfc-u3d19945rbtv.s3.amazonaws.com/molecules_video_data/f469-42d5-9d45-b2abaf392d0d_80f447bb-dac0-4a8a-8613-c730f4f47e8b_Molecular_Structure_intro_video_fr.mp3",
+      "langName": "French",
+      "duration": 178.104
+    },
+    {
+      "langCode": "es",
+      "url": "https://scube-applications-media54cbabfc-u3d19945rbtv.s3.amazonaws.com/molecules_video_data/f469-42d5-9d45-b2abaf392d0d_80f447bb-dac0-4a8a-8613-c730f4f47e8b_Molecular_Structure_intro_video_es.mp3",
+      "langName": "Spanish",
+      "duration": 195.432
+    },
+    {
+      "langCode": "de",
+      "url": "https://scube-applications-media54cbabfc-u3d19945rbtv.s3.amazonaws.com/molecules_video_data/f469-42d5-9d45-b2abaf392d0d_80f447bb-dac0-4a8a-8613-c730f4f47e8b_Molecular_Structure_intro_video_de.mp3",
+      "langName": "German",
+      "duration": 190.224
+    },
+    {
+      "langCode": "it",
+      "url": "https://scube-applications-media54cbabfc-u3d19945rbtv.s3.amazonaws.com/molecules_video_data/f469-42d5-9d45-b2abaf392d0d_80f447bb-dac0-4a8a-8613-c730f4f47e8b_Molecular_Structure_intro_video_it.mp3",
+      "langName": "Italian",
+      "duration": 194.112
+    },
+    {
+      "langCode": "tr",
+      "url": "https://scube-applications-media54cbabfc-u3d19945rbtv.s3.amazonaws.com/molecules_video_data/f469-42d5-9d45-b2abaf392d0d_80f447bb-dac0-4a8a-8613-c730f4f47e8b_Molecular_Structure_intro_video_tr.mp3",
+      "langName": "Turkish",
+      "duration": 202.488
+    }
+  ],
+  "vttList": [
+    {
+      "langCode": "en",
+      "langName": "English",
+      "url": "https://scube-applications-media54cbabfc-u3d19945rbtv.s3.amazonaws.com/molecules_video_data/f469-42d5-9d45-b2abaf392d0d_80f447bb-dac0-4a8a-8613-c730f4f47e8b_Molecular_Structure_intro_video_en.vtt"
+    },
+    {
+      "langCode": "eg",
+      "langName": "Egyptian Style",
+      "url": "https://scube-applications-media54cbabfc-u3d19945rbtv.s3.amazonaws.com/molecules_video_data/f469-42d5-9d45-b2abaf392d0d_80f447bb-dac0-4a8a-8613-c730f4f47e8b_Molecular_Structure_intro_video_eg.vtt"
+    },
+    {
+      "langCode": "ar",
+      "langName": "Arabic",
+      "url": "https://scube-applications-media54cbabfc-u3d19945rbtv.s3.amazonaws.com/molecules_video_data/f469-42d5-9d45-b2abaf392d0d_80f447bb-dac0-4a8a-8613-c730f4f47e8b_Molecular_Structure_intro_video_ar.vtt"
+    },
+    {
+      "langCode": "fr",
+      "langName": "French",
+      "url": "https://scube-applications-media54cbabfc-u3d19945rbtv.s3.amazonaws.com/molecules_video_data/f469-42d5-9d45-b2abaf392d0d_80f447bb-dac0-4a8a-8613-c730f4f47e8b_Molecular_Structure_intro_video_fr.vtt"
+    },
+    {
+      "langCode": "es",
+      "langName": "Spanish",
+      "url": "https://scube-applications-media54cbabfc-u3d19945rbtv.s3.amazonaws.com/molecules_video_data/f469-42d5-9d45-b2abaf392d0d_80f447bb-dac0-4a8a-8613-c730f4f47e8b_Molecular_Structure_intro_video_es.vtt"
+    },
+    {
+      "langCode": "de",
+      "langName": "German",
+      "url": "https://scube-applications-media54cbabfc-u3d19945rbtv.s3.amazonaws.com/molecules_video_data/f469-42d5-9d45-b2abaf392d0d_80f447bb-dac0-4a8a-8613-c730f4f47e8b_Molecular_Structure_intro_video_de.vtt"
+    },
+    {
+      "langCode": "it",
+      "langName": "Italian",
+      "url": "https://scube-applications-media54cbabfc-u3d19945rbtv.s3.amazonaws.com/molecules_video_data/f469-42d5-9d45-b2abaf392d0d_80f447bb-dac0-4a8a-8613-c730f4f47e8b_Molecular_Structure_intro_video_it.vtt"
+    },
+    {
+      "langCode": "hi",
+      "langName": "Hindi",
+      "url": "https://scube-applications-media54cbabfc-u3d19945rbtv.s3.amazonaws.com/molecules_video_data/f469-42d5-9d45-b2abaf392d0d_80f447bb-dac0-4a8a-8613-c730f4f47e8b_Molecular_Structure_intro_video_hi.vtt",
+      "signedurl": ""
+    },
+    {
+      "langCode": "tr",
+      "langName": "Turkish",
+      "url": "https://scube-applications-media54cbabfc-u3d19945rbtv.s3.amazonaws.com/molecules_video_data/f469-42d5-9d45-b2abaf392d0d_80f447bb-dac0-4a8a-8613-c730f4f47e8b_Molecular_Structure_intro_video_tr.vtt",
+      "signedurl": ""
+    }
+  ],
+  "availableLanguages": [
+    {
+      "data": {
+        "transcript": "<p>Okay, welcome to electron line and here we're going to talk about our next shape. It's called Tetrahedral molecules.\nSo Tetrahedral molecules have one central molecule, as you can see, and four molecules that are at the very ends of the four bonds that it makes.\nSo, this would be a good example of what we call CH4, which is, of course, the Methane molecule. One Carbon at the center and four Hydrogens, they all form a nice bond with 2 electrons in each bond.\nAnd notice that those electrons will like to be as far away from one another as possible.\nSo this is the shape that they're going to end up with.\nSomething that looks like this. It is called the Tetrahedral shape.\n\nNow you may ask yourself the question:\nwell, why doesn't this form a plainer bond like that? Wouldn't all the molecule or wouldn't the electrons in the bonds be as far away from each other as possible when they're like this.\nBecause you can see here that the bond angles in this case would be 90 degrees.\n\nSo the question is: why isn't it 90 degrees?\nIt was a plainer molecule, that's what it would be.\nHowever, when that happens, is the distance between those bond bonded electrons are that the bond electrons is only 90 degrees and angle of 90 degrees and if it takes on a tetrahedral shape like that, the bond angle is 109.5 degrees.\nSo that in this case, would be 109.5 degrees. So simply the force of repulsion forces it into that shape.\n\nBecause in that shape, that is the largest possible angle you can have between the 4 sets of bond electrons or electrons that are used in the bonds, I should say, they're not really bond electrons, of course their electrons use in the bonding between carbon and the four hydrogens.\nSo that's why it turns out that from electrical pulse of forces alone, it will go ahead and form itself into this kind of molecule like that.\n\nNow, VSEPR notation, remember that was the valence shell electron pair repulsion concept of how molecules are formed.\nWe have one central atom and we have 4 terminal atoms.\nSo that's what we end up with the methane molecules. In that respect, anytime you have a shape made from this kind of arrangement of molecules one in the center and for a on the on the ends of the bonds.\nYou'll end up with what we call it tetrahedral shape with the bond angles 109.5 degrees.\nAt that point, there is far away from each other as possible.\nAlso note that the molecules right here, the hydrogen, do not have free electrons.\nSo there's no repulsive forces there, so this is kind of as clean as a good example. If you can get for this kind of shape.</p>",
+        "summary25": "Okay, welcome to electron line and here we're going to talk about our next shape. So Tetrahedral molecules have one central molecule, as you can see, and four molecules that are at the very ends of the four bonds that it makes. So, this would be a good example of what we call C. H. 4, which is, of course, the Methane molecule. One Carbon at the center and four Hydrogens. So this is the shape that they're going to end up with. However, when that happens, is the distance between those bond bonded electrons are that the bond electrons is only 90 degrees and angle of 90 degrees and if it takes on a Tetrahedral shape like that, the bond angle is 109.5 degrees. because in that shape, that is the largest possible angle you can have between the 4 sets of bond electrons or electrons that are used in the bonds, I should say, they're not really bond electrons, of course their electrons use in the bonding between carbon and the four hydrogens. So there's no repulsive forces there, so this is kind of as clean as a good example.",
+        "summary50": "Okay, welcome to electron line and here we're going to talk about our next shape. It's called Tetrahedral molecules. So Tetrahedral molecules have one central molecule, as you can see, and four molecules that are at the very ends of the four bonds that it makes. So, this would be a good example of what we call C. H. 4, which is, of course, the Methane molecule. One Carbon at the center and four Hydrogens. They all form a nice bond with 2 electrons in each bond. And notice that those electrons will like to be as far away from one another as possible. So this is the shape that they're going to end up with. Because you can see here that the bond angles in this case would be 90 degrees. However, when that happens, is the distance between those bond bonded electrons are that the bond electrons is only 90 degrees and angle of 90 degrees and if it takes on a Tetrahedral shape like that, the bond angle is 109.5 degrees. So that in this case, would be 109.5 degrees. So simply the force of repulsion forces it into that shape. because in that shape, that is the largest possible angle you can have between the 4 sets of bond electrons or electrons that are used in the bonds, I should say, they're not really bond electrons, of course their electrons use in the bonding between carbon and the four hydrogens. So that's why it turns out that from electrical pulse of forces alone, it will go ahead and form itself into this kind of molecule like that. Now, VSEPR notation, remember that was the valence shell electron pair repulsion concept of how molecules are formed. In that respect, anytime you have a shape made from this kind of arrangement of molecules one in the center and for a on the on the ends of the bonds. So there's no repulsive forces there, so this is kind of as clean as a good example.",
+        "keywords": []
+      },
+      "frameUrls": [],
+      "frameList": [],
+      "languageCode": "en",
+      "isEdited": false
+    },
+    {
+      "data": {
+        "transcript": "حسنًا، مرحبًا بكم في خط الإلكترون وسنتحدث هنا عن الشكل التالي. إنها تسمى جزيئات رباعي السطوح.\nإذن، جزيئات رباعي السطوح لها جزيء مركزي واحد، كما ترون، وأربعة جزيئاتتقع في نهايات الروابط الأربعة التي تصنعها.\nلذلك، سيكون هذا مثالًا جيدًا لما نسميه C.H4، وهو بالطبع جزيء الميثان. واحد كربون في المركز وأربعة هيدروجين.\nكلهم يشكلون رابطة لطيفة مع إلكترونين في كل رابطة.\nولاحظ أن تلك الإلكترونات ترغب في أن تكون بعيدة عن بعضها البعض قدر الإمكان.\nإذن هذا هو الشكل الذي سنصل إليه.\nشيء يشبه هذا. يطلق عليه شكل رباعي السطوح.",
+        "summary25": "حسنًا ، مرحبًا بكم في خط الإلكترون وسنتحدث هنا عن الشكل التالي. إذن Tetrahedral molecules له جزيء مركزي واحد ، كما ترون ، وأربعة جزيئات تقع في نهايات الروابط الأربعة التي يصنعها. لذلك ، سيكون هذا مثالًا جيدًا لما نسميه C.H4 ، وهو ، بالطبع ، جزيء الميثان. واحد كربون في المركز وأربعة هيدروجين. إذن هذا هو الشكل الذي سينتهي بهم المطاف به.",
+        "summary50": "حسنًا ، مرحبًا بكم في خط الإلكترون وسنتحدث هنا عن الشكل التالي. إنه يسمى Tetrahedral molecules. إذن Tetrahedral molecules له جزيء مركزي واحد ، كما ترون ، وأربعة جزيئات تقع في نهايات الروابط الأربعة التي يصنعها.",
+        "keywords": []
+      },
+      "frameUrls": [],
+      "frameList": [],
+      "languageCode": "eg",
+      "isEdited": false
+    },
+    {
+      "data": {
+        "transcript": "حسنًا ، مرحبًا بكم في خط الإلكترون وسنتحدث هنا عن الشكل التالي. إنها تسمى جزيئات رباعي السطوح. إذن ، جزيئات رباعي السطوح لها جزيء مركزي واحد ، كما ترون ، وأربعة جزيئات تقع في نهايات الروابط الأربعة التي تصنعها.",
+        "summary25": "حسنًا ، مرحبًا بكم في خط الإلكترون وسنتحدث هنا عن الشكل التالي.",
+        "summary50": "حسنًا ، مرحبًا بكم في خط الإلكترون وسنتحدث هنا عن الشكل التالي. إنها تسمى جزيئات رباعي السطوح.",
+        "keywords": []
+      },
+      "frameUrls": [],
+      "frameList": [],
+      "languageCode": "ar",
+      "isEdited": false
+    },
+    {
+      "data": {
+        "transcript": "D'accord, bienvenue sur la ligne d'électrons et ici nous allons parler de notre prochaine forme. C'est ce qu'on appelle les molécules tétraédriques.",
+        "summary25": "D'accord, bienvenue sur la ligne d'électrons et ici nous allons parler de notre prochaine forme.",
+        "summary50": "D'accord, bienvenue sur la ligne d'électrons et ici nous allons parler de notre prochaine forme. C'est ce qu'on appelle les molécules tétraédriques.",
+        "keywords": []
+      },
+      "frameUrls": [],
+      "frameList": [],
+      "languageCode": "fr",
+      "isEdited": false
+    },
+    {
+      "data": {
+        "transcript": "Bien, bienvenido a la línea de electrones y aquí vamos a hablar sobre nuestra próxima forma. Se llaman moléculas tetraédricas.",
+        "summary25": "Bien, bienvenido a la línea de electrones y aquí vamos a hablar sobre nuestra próxima forma.",
+        "summary50": "Bien, bienvenido a la línea de electrones y aquí vamos a hablar sobre nuestra próxima forma. Se llaman moléculas tetraédricas.",
+        "keywords": []
+      },
+      "frameUrls": [],
+      "frameList": [],
+      "languageCode": "es",
+      "isEdited": false
+    },
+    {
+      "data": {
+        "transcript": "Okay, willkommen bei der Elektronenlinie und hier werden wir über unsere nächste Form sprechen. Es heißt tetraedrische Moleküle.",
+        "summary25": "Okay, willkommen bei der Elektronenlinie und hier werden wir über unsere nächste Form sprechen.",
+        "summary50": "Okay, willkommen bei der Elektronenlinie und hier werden wir über unsere nächste Form sprechen. Es heißt tetraedrische Moleküle.",
+        "keywords": []
+      },
+      "frameUrls": [],
+      "frameList": [],
+      "languageCode": "de",
+      "isEdited": false
+    },
+    {
+      "data": {
+        "transcript": "Ok, benvenuto sulla linea dell'elettrone e qui parleremo della nostra prossima forma. Si chiamano molecole tetraedriche.",
+        "summary25": "Ok, benvenuto sulla linea dell'elettrone e qui parleremo della nostra prossima forma.",
+        "summary50": "Ok, benvenuto sulla linea dell'elettrone e qui parleremo della nostra prossima forma. Si chiamano molecole tetraedriche.",
+        "keywords": []
+      },
+      "frameUrls": [],
+      "frameList": [],
+      "languageCode": "it",
+      "isEdited": false
+    },
+    {
+      "data": {
+        "transcript": "<p>ठीक है, इलेक्ट्रॉन लाइन में आपका स्वागत है और यहां हम अपने अगले आकार के बारे में बात करने जा रहे हैं। इसे टेट्राहेड्रल अणु कहते हैं।</p>",
+        "summary25": "ठीक है, इलेक्ट्रॉन लाइन में आपका स्वागत है और यहां हम अपने अगले आकार के बारे में बात करने जा रहे हैं।",
+        "summary50": "ठीक है, इलेक्ट्रॉन लाइन में आपका स्वागत है और यहां हम अपने अगले आकार के बारे में बात करने जा रहे हैं। इसे टेट्राहेड्रल अणु कहते हैं।",
+        "keywords": []
+      },
+      "frameUrls": [],
+      "frameList": [],
+      "languageCode": "hi",
+      "isEdited": false
+    },
+    {
+      "data": {
+        "transcript": "<p>Tamam, elektron çizgisine hoş geldiniz ve burada bir sonraki şeklimiz hakkında konuşacağız. Buna tetrahedral moleküller denir.</p>",
+        "summary25": "Tamam, elektron çizgisine hoş geldiniz ve burada bir sonraki şeklimiz hakkında konuşacağız.",
+        "summary50": "Tamam, elektron çizgisine hoş geldiniz ve burada bir sonraki şeklimiz hakkında konuşacağız. Buna tetrahedral moleküller denir.",
+        "keywords": []
+      },
+      "frameUrls": [],
+      "frameList": [],
+      "languageCode": "tr",
+      "isEdited": false
+    }
+  ],
+  "tenantId": "azharengineering2020",
+  "ownershipId": "azharengineering2020_ut1",
+  "title": "World of Chemistry - Molecular Architecture (mp4)",
+  "language": "en",
+  "url": "https://archive.org/download/world-of-chemistry/09%20Molecular%20Architecture.mp4",
+  "domainId": "ea593b9efe036879f9329e46051356af",
+  "contentType": "video/mp4",
+  "narration": [],
+  "owner": "public",
+  "domainName": "Scube Test Domain",
+  "subDomainId": "8922af923453305fb60e39f5c205ccdb",
+  "subDomainName": "Scube Test Sub Domain"
+}
