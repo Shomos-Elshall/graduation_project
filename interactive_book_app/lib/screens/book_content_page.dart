@@ -89,26 +89,26 @@ class _BookContentPageState extends State<BookContentPage> {
                 color: Color(0xFF1A0054),
               ),
             ),
-          ),
-          Divider(
-            color: Colors.grey[400],
-            thickness: 1,
-            endIndent: 20,
-            indent: 20,
-          ),
-          Expanded(
-            child: ListView.builder(
-              padding: const EdgeInsets.symmetric(horizontal: 16),
-              itemCount: displaySections.length,
-              itemBuilder:
-                  (context, index) => ContentSectionWidget(
-                    section: displaySections[index],
-                    isArabic: isArabic,
-                    onRefresh: () => setState(() {}),
-                  ),
+            Divider(
+              color: Colors.grey[400],
+              thickness: 1,
+              endIndent: 20,
+              indent: 20,
             ),
-          ),
-        ],
+            Expanded(
+              child: ListView.builder(
+                padding: const EdgeInsets.symmetric(horizontal: 16),
+                itemCount: displaySections.length,
+                itemBuilder:
+                    (context, index) => ContentSectionWidget(
+                      section: displaySections[index],
+                      isArabic: isArabic,
+                      onRefresh: () => setState(() {}),
+                    ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
