@@ -170,6 +170,7 @@ class _ObjectWebViewScreenState extends State<ObjectWebViewScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text(
           widget.title,
@@ -184,7 +185,7 @@ class _ObjectWebViewScreenState extends State<ObjectWebViewScreen> {
         backgroundColor: const Color(0xFF1A0054),
       ),
       body: Padding(
-        padding: const EdgeInsets.only(top: 16.0),
+        padding: const EdgeInsets.all(16.0),
         child: Stack(
           children: [
             WebViewWidget(controller: _controller),

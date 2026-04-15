@@ -1,0 +1,46 @@
+{
+"ioParameters": {
+"_Question_": ".........يمكن أن تصنع أسلاك الكهرباء من عنصر عدده الذرى",
+"Answers  2": [
+{
+"_OptionText_": "7",
+"_ChosenFeedback_": "",
+"_notChosenFeedback_": "",
+"_Tip_": ""
+},
+{
+"_OptionText_": "10",
+"_ChosenFeedback_": "",
+"_notChosenFeedback_": "",
+"_Tip_": ""
+},
+{
+"_OptionText_": "13",
+"_ChosenFeedback_": "",
+"_notChosenFeedback_": "",
+"_Tip_": ""
+},
+{
+"_OptionText_": "17",
+"_Correct_": true,
+"_ChosenFeedback_": "",
+"_notChosenFeedback_": "",
+"_Tip_": ""
+}
+]
+},
+"ioType": "Text MCQ",
+"baseType": "Text MCQ",
+"isAnswered": "r",
+"_id": "698f3803425efb7af5f10fec",
+"title": "العدد الذري",
+"url": "https://scube-applications-media54cbabfc-u3d19945rbtv.s3.eu-west-1.amazonaws.com/new-interactive-objects/objects/العدد-الذري-675c24110d13c2000311fee5.html",
+"ioCategory": "Q",
+"cognitive": "remember",
+"complexity": 1,
+"conceptName": "Interacitve Object",
+"instructionalrole": "test",
+"language": "en",
+"domainName": "Scube Test Domain",
+"subDomainName": "Scube Test Sub Domain"
+}
