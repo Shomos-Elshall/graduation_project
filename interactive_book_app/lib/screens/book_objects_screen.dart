@@ -9,10 +9,10 @@ class ObjectScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFF0F2F5),
+      backgroundColor: const Color(0xFFF0F2F5),
       appBar: AppBar(
         title: const Text(
-          'Learning  Objects',
+          'Learning Objects',
           style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
         ),
         iconTheme: const IconThemeData(color: Colors.white, size: 24),
@@ -26,7 +26,7 @@ class ObjectScreen extends StatelessWidget {
           return Container(
             margin: const EdgeInsets.only(bottom: 16),
             decoration: BoxDecoration(
-              color: Color(0xffF5F7FA),
+              color: const Color(0xffF5F7FA),
               borderRadius: BorderRadius.circular(16),
               border: Border.all(color: Colors.grey.shade300, width: 0.8),
             ),
@@ -69,22 +69,35 @@ class ObjectScreen extends StatelessWidget {
                           ),
                         ),
                         const SizedBox(height: 12),
-                        // Click to practice row
                         GestureDetector(
                           onTap: () {
+                            // 1. بناء الرابط الأساسي
+                            String finalUrl = item.url;
+                            if (!finalUrl.startsWith('http')) {
+                              finalUrl =
+                                  'https://scube-applications-media54cbabfc-u3d19945rbtv.s3.amazonaws.com/$finalUrl';
+                            }
+
+                            // 2. إذا كان الملف PDF، نمرره عبر مشغل جوجل لضمان فتحه
+                            if (finalUrl.toLowerCase().endsWith('.pdf')) {
+                              finalUrl =
+                                  'https://docs.google.com/viewer?embedded=true&url=$finalUrl';
+                            }
+
+                            // 3. الانتقال لشاشة الـ WebView
                             Navigator.push(
                               context,
                               MaterialPageRoute(
                                 builder:
                                     (context) => ObjectWebViewScreen(
                                       title: item.title,
-                                      url: item.url,
+                                      url: finalUrl,
                                     ),
                               ),
                             );
                           },
-                          child: Row(
-                            children: const [
+                          child: const Row(
+                            children: [
                               Icon(
                                 Icons.touch_app_outlined,
                                 color: Color(0xFF1A0054),
@@ -114,7 +127,7 @@ class ObjectScreen extends StatelessWidget {
   }
 }
 
-// ======= WebView Screen =======
+// ======= WebView Screen (تستخدم لعرض الروابط والـ PDF) =======
 class ObjectWebViewScreen extends StatefulWidget {
   final String title;
   final String url;
@@ -132,34 +145,32 @@ class ObjectWebViewScreen extends StatefulWidget {
 class _ObjectWebViewScreenState extends State<ObjectWebViewScreen> {
   late final WebViewController _controller;
   bool _isLoading = true;
-  // في ObjectWebViewScreen، غير initState بس:
 
   @override
   void initState() {
     super.initState();
 
-    // بناء الـ URL الكامل
-    String fullUrl = widget.url;
-    if (!fullUrl.startsWith('http')) {
-      fullUrl =
-          'https://scube-applications-media54cbabfc-u3d19945rbtv.s3.eu-west-1.amazonaws.com/${widget.url}';
-    }
-
     _controller =
         WebViewController()
-          ..setJavaScriptMode(JavaScriptMode.unrestricted)
+          ..setJavaScriptMode(
+            JavaScriptMode.unrestricted,
+          ) // ضروري جداً لمشغل جوجل
           ..setNavigationDelegate(
             NavigationDelegate(
               onPageStarted: (_) => setState(() => _isLoading = true),
               onPageFinished: (_) => setState(() => _isLoading = false),
+              onWebResourceError: (error) {
+                debugPrint("WebView Error: ${error.description}");
+              },
             ),
           )
-          ..loadRequest(Uri.parse(fullUrl));
+          ..loadRequest(Uri.parse(widget.url));
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text(
           widget.title,
@@ -173,14 +184,17 @@ class _ObjectWebViewScreenState extends State<ObjectWebViewScreen> {
         iconTheme: const IconThemeData(color: Colors.white),
         backgroundColor: const Color(0xFF1A0054),
       ),
-      body: Stack(
-        children: [
-          WebViewWidget(controller: _controller),
-          if (_isLoading)
-            const Center(
-              child: CircularProgressIndicator(color: Color(0xFF1A0054)),
-            ),
-        ],
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Stack(
+          children: [
+            WebViewWidget(controller: _controller),
+            if (_isLoading)
+              const Center(
+                child: CircularProgressIndicator(color: Color(0xFF1A0054)),
+              ),
+          ],
+        ),
       ),
     );
   }

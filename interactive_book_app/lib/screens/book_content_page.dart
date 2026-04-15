@@ -11,11 +11,13 @@ import 'package:interactive_book_app/widgets/content_section_widget.dart';
 class BookContentPage extends StatefulWidget {
   final BookModel book;
   final TocModel currentChapter;
+  final Function(TocModel)? onChapterSelectedInDrawer;
 
   const BookContentPage({
     super.key,
     required this.book,
     required this.currentChapter,
+    this.onChapterSelectedInDrawer,
   });
 
   @override
@@ -49,42 +51,42 @@ class _BookContentPageState extends State<BookContentPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Directionality(
-      // السطر ده هو اللي بيظبط اتجاه الصفحة كلها (القوائم، العناوين، الأزرار)
-      textDirection: isArabic ? TextDirection.rtl : TextDirection.ltr,
-      child: Scaffold(
-        backgroundColor: const Color(0xFFF5F5F5),
-        appBar: AppBar(
-          backgroundColor: const Color(0xFF1A0054),
-          actions: [
-            _buildLangBtn(),
-            SizedBox(width: 24),
-            BookMarkButton(currentChapter: currentChapter),
-            SizedBox(width: 24),
-            PopUpMenuButton(book: widget.book),
-          ],
-          iconTheme: const IconThemeData(color: Colors.white, size: 30),
-        ),
-        drawer: BookDrawer(
-          book: widget.book,
-          onChapterSelected: (chapter) {
-            _loadContent(chapter);
-            Navigator.pop(context);
-          },
-        ),
-        body: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Padding(
-              padding: const EdgeInsets.only(top: 24.0, left: 16, bottom: 12),
-              child: Text(
-                currentChapter.name,
-      
-                style: const TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
-                  color: Color(0xFF1A0054),
-                ),
+    return Scaffold(
+      backgroundColor: const Color(0xFFF5F5F5),
+      appBar: AppBar(
+        backgroundColor: const Color(0xFF1A0054),
+        actions: [
+          _buildLangBtn(),
+          SizedBox(width: 24),
+          BookMarkButton(currentChapter: currentChapter),
+          SizedBox(width: 24),
+          PopUpMenuButton(book: widget.book),
+        ],
+        iconTheme: const IconThemeData(color: Colors.white, size: 30),
+      ),
+      drawer: BookDrawer(
+        book: widget.book,
+        onChapterSelected: (chapter) {
+          _loadContent(chapter);
+          Navigator.pop(context);
+          // 3. نادي الدالة اللي جاية من الأب (الـ ReadingScreen)
+          if (widget.onChapterSelectedInDrawer != null) {
+            widget.onChapterSelectedInDrawer!(chapter);
+          }
+        },
+      ),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(top: 24.0, left: 16, bottom: 12),
+            child: Text(
+              currentChapter.name,
+
+              style: const TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+                color: Color(0xFF1A0054),
               ),
             ),
             Divider(

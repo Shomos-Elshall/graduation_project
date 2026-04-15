@@ -1,0 +1,136 @@
+{
+  "_id": "book2_photosynthesis",
+  "title": "Photosynthesis in Plants",
+  "url": "https://scube-applications-media54cbabfc-u3d19945rbtv.s3.amazonaws.com/pdf_sample_data/373e37ec-f17f-4be8-844c-780a616e6b95_Respiration_in_Man.pdf",
+  "language": "en",
+  "cognitive": "understand",
+  "complexity": 1,
+  "instructionalrole": "explanation",
+  "contentType": "application/pdf",
+  "domainName": "Biology",
+  "subDomainName": "Plants",
+  "conceptName": "Photosynthesis",
+  "pagesCount": 3,
+  "audioList": [
+    {
+      "langCode": "en",
+      "langName": "English",
+      "url": "https://scube-applications-media54cbabfc-u3d19945rbtv.s3.amazonaws.com/pdf_sample_data/373e37ec-f17f-4be8-844c-780a616e6b95_Respiration_in_Man_en.mp3",
+      "duration": 180.0
+    },
+    {
+      "langCode": "ar",
+      "langName": "Arabic",
+      "url": "https://scube-applications-media54cbabfc-u3d19945rbtv.s3.amazonaws.com/pdf_sample_data/373e37ec-f17f-4be8-844c-780a616e6b95_Respiration_in_Man_ar.mp3",
+      "duration": 185.0
+    }
+  ],
+  "vttList": [
+    {
+      "lang": "en",
+      "text": "English",
+      "format": "vtt",
+      "url": "https://scube-applications-media54cbabfc-u3d19945rbtv.s3.amazonaws.com/pdf_sample_data/373e37ec-f17f-4be8-844c-780a616e6b95_Respiration_in_Man_en.vtt"
+    },
+    {
+      "lang": "ar",
+      "text": "Arabic",
+      "format": "vtt",
+      "url": "https://scube-applications-media54cbabfc-u3d19945rbtv.s3.amazonaws.com/pdf_sample_data/373e37ec-f17f-4be8-844c-780a616e6b95_Respiration_in_Man_ar.vtt"
+    }
+  ],
+  "frameList": [
+    {
+      "page": 1,
+      "name": "photo_1.png",
+      "size": 400.0,
+      "startTime": 0,
+      "duration": 65.0,
+      "url": "https://scube-applications-media54cbabfc-u3d19945rbtv.s3.amazonaws.com/pdf_sample_data/636796c2cfa1425a643d7b6c_1_en.png",
+      "audioList": [
+        {
+          "langCode": "en",
+          "langName": "English",
+          "url": "https://scube-applications-media54cbabfc-u3d19945rbtv.s3.amazonaws.com/pdf_sample_data/636796c2cfa1425a643d7b6c_1_en_en.mp3",
+          "duration": 65.0
+        }
+      ]
+    },
+    {
+      "page": 2,
+      "name": "photo_2.png",
+      "size": 400.0,
+      "startTime": 70.0,
+      "duration": 60.0,
+      "url": "https://scube-applications-media54cbabfc-u3d19945rbtv.s3.amazonaws.com/pdf_sample_data/636796c2cfa1425a643d7b6c_2_en.png",
+      "audioList": [
+        {
+          "langCode": "en",
+          "langName": "English",
+          "url": "https://scube-applications-media54cbabfc-u3d19945rbtv.s3.amazonaws.com/pdf_sample_data/636796c2cfa1425a643d7b6c_2_en_en.mp3",
+          "duration": 60.0
+        }
+      ]
+    },
+    {
+      "page": 3,
+      "name": "photo_3.png",
+      "size": 400.0,
+      "startTime": 135.0,
+      "duration": 45.0,
+      "url": "https://scube-applications-media54cbabfc-u3d19945rbtv.s3.amazonaws.com/pdf_sample_data/636796c2cfa1425a643d7b6c_3_en.png",
+      "audioList": [
+        {
+          "langCode": "en",
+          "langName": "English",
+          "url": "https://scube-applications-media54cbabfc-u3d19945rbtv.s3.amazonaws.com/pdf_sample_data/636796c2cfa1425a643d7b6c_3_en_en.mp3",
+          "duration": 45.0
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    {
+      "id": "k0",
+      "word": "photosynthesis",
+      "definition": "The process by which green plants use sunlight, water, and carbon dioxide to produce oxygen and energy in the form of sugar.",
+      "youtubeLink": "",
+      "wikipediaLink": "",
+      "ekbLink": ""
+    },
+    {
+      "id": "k1",
+      "word": "chlorophyll",
+      "definition": "The green pigment found in the chloroplasts of plants that absorbs light energy used in photosynthesis.",
+      "youtubeLink": "",
+      "wikipediaLink": "",
+      "ekbLink": ""
+    },
+    {
+      "id": "k2",
+      "word": "chloroplast",
+      "definition": "",
+      "youtubeLink": "",
+      "wikipediaLink": "",
+      "ekbLink": ""
+    }
+  ],
+  "availableLanguages": [
+    {
+      "languageCode": "en",
+      "data": {
+        "transcript": "<p> Slide 1:<br>Photosynthesis in Plants. Photosynthesis is the process by which plants make their own food using sunlight. The process takes place mainly in the leaves of the plant. Leaves are green because they contain a pigment called chlorophyll. Chlorophyll absorbs light energy from the sun.</p><p> Slide 2:<br>The Raw Materials of Photosynthesis. Plants need three things for photosynthesis: carbon dioxide, water, and light. Carbon dioxide enters the leaf through tiny pores called stomata. Water is absorbed by the roots and transported up through the stem to the leaves. Light energy is absorbed by the chlorophyll in the chloroplasts.</p><p> Slide 3:<br>The Products of Photosynthesis. The products of photosynthesis are glucose and oxygen. Glucose is used by the plant for energy and growth. Oxygen is released into the atmosphere through the stomata. This oxygen is what we breathe. The overall equation for photosynthesis is: 6CO2 + 6H2O + light energy → C6H12O6 + 6O2.</p>",
+        "summary25": "Photosynthesis is the process by which plants use sunlight, water, and carbon dioxide to produce glucose and oxygen. This process takes place in the chloroplasts of plant cells, which contain the green pigment chlorophyll.",
+        "summary50": "Photosynthesis is the process by which green plants manufacture their own food using sunlight. The raw materials needed are carbon dioxide from the air, water from the soil, and light energy from the sun. These are converted in the chloroplasts into glucose for energy and growth, and oxygen which is released into the atmosphere. The green color of leaves is due to chlorophyll, the pigment that captures light energy to drive the process."
+      }
+    },
+    {
+      "languageCode": "ar",
+      "data": {
+        "transcript": "<p> شريحة 1:<br>التمثيل الضوئي في النباتات. التمثيل الضوئي هو العملية التي تصنع بها النباتات غذاءها باستخدام ضوء الشمس. تتم العملية بشكل رئيسي في أوراق النبات. الأوراق خضراء لأنها تحتوي على صبغة تسمى الكلوروفيل. يمتص الكلوروفيل طاقة الضوء من الشمس.</p><p> شريحة 2:<br>المواد الخام للتمثيل الضوئي. تحتاج النباتات إلى ثلاثة أشياء للتمثيل الضوئي: ثاني أكسيد الكربون والماء والضوء. يدخل ثاني أكسيد الكربون إلى الورقة من خلال مسام صغيرة تسمى الثغور. يمتص الماء بواسطة الجذور وينتقل عبر الساق إلى الأوراق.</p><p> شريحة 3:<br>نواتج التمثيل الضوئي. نواتج التمثيل الضوئي هي الجلوكوز والأكسجين. يستخدم النبات الجلوكوز للطاقة والنمو. يُطلق الأكسجين في الغلاف الجوي عبر الثغور. هذا الأكسجين هو ما نتنفسه.</p>",
+        "summary25": "التمثيل الضوئي هو العملية التي تستخدم فيها النباتات ضوء الشمس والماء وثاني أكسيد الكربون لإنتاج الجلوكوز والأكسجين.",
+        "summary50": "التمثيل الضوئي هو العملية التي تصنع بها النباتات الخضراء غذاءها باستخدام ضوء الشمس. المواد الخام اللازمة هي ثاني أكسيد الكربون من الهواء والماء من التربة وطاقة الضوء من الشمس. يتم تحويلها في البلاستيدات الخضراء إلى جلوكوز للطاقة والنمو وأكسجين يُطلق في الغلاف الجوي."
+      }
+    }
+  ]
+}

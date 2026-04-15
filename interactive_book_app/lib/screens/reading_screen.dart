@@ -64,6 +64,25 @@ class _ReadingScreenState extends State<ReadingScreen> {
           return BookContentPage(
             book: widget.book,
             currentChapter: tempChapter,
+            // استقبلي الضغطة من الـ Drawer هنا
+            onChapterSelectedInDrawer: (selectedChapter) {
+              int targetIndex = widget.sections.indexWhere(
+                (s) => s.id == selectedChapter.id,
+              );
+
+              if (targetIndex != -1) {
+                // 1. تحديث العداد فوراً
+                setState(() {
+                  currentIndex = targetIndex;
+                });
+
+                // 2. تحريك الـ PageView
+                _pageController.jumpToPage(targetIndex);
+              } else {
+                // ده عشانك إنتِ عشان تتأكدي لو الـ ID مش موجود في الـ sections
+                print("Id not found: ${selectedChapter.id}");
+              }
+            },
           );
         },
       ),
