@@ -607,6 +607,10 @@
             "audio": {
                 "en": "eBooks/azharengineering2020/ut1/61645f97fccd34a44373699b/audioFiles/Electron_transport_en.mp3",
                 "ar": "eBooks/azharengineering2020/ut1/61645f97fccd34a44373699b/audioFiles/Electron_transport_ar.mp3"
+            },
+            "moduleVideo": {
+                "source": "asset",
+                "path": "assets/files/SmartObjectSample.json"
             }
         },
         {

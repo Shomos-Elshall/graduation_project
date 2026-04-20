@@ -6,7 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="72df1e66-fb78-4a72-b259-16b218e2e3d8" name="Changes" comment="init">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interactive_book_app/assets/data/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/interactive_book_app/assets/data/data.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/interactive_book_app/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/interactive_book_app/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interactive_book_app/lib/models/content_model.dart" beforeDir="false" afterPath="$PROJECT_DIR$/interactive_book_app/lib/models/content_model.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interactive_book_app/lib/models/content_model.g.dart" beforeDir="false" afterPath="$PROJECT_DIR$/interactive_book_app/lib/models/content_model.g.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interactive_book_app/lib/modules/video/videosurvices/videoprovider.dart" beforeDir="false" afterPath="$PROJECT_DIR$/interactive_book_app/lib/modules/video/videosurvices/videoprovider.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interactive_book_app/lib/modules/video/videoviewmodel.dart" beforeDir="false" afterPath="$PROJECT_DIR$/interactive_book_app/lib/modules/video/videoviewmodel.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interactive_book_app/lib/widgets/content_section_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/interactive_book_app/lib/widgets/content_section_widget.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,8 +96,27 @@
       <option name="project" value="LOCAL" />
       <updated>1776712602540</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="init">
+      <option name="closed" value="true" />
+      <created>1776714369407</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1776714369407</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init" />

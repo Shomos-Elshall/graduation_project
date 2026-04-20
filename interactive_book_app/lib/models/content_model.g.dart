@@ -26,13 +26,14 @@ class ContentModelAdapter extends TypeAdapter<ContentModel> {
       audioEn: fields[6] as String?,
       audioAr: fields[7] as String?,
       keywords: (fields[8] as List).cast<GlossaryModel>(),
+      moduleVideo: fields[9] as ModuleVideoRef?,
     );
   }
 
   @override
   void write(BinaryWriter writer, ContentModel obj) {
     writer
-      ..writeByte(9)
+      ..writeByte(10)
       ..writeByte(0)
       ..write(obj.id)
       ..writeByte(1)
@@ -50,7 +51,9 @@ class ContentModelAdapter extends TypeAdapter<ContentModel> {
       ..writeByte(7)
       ..write(obj.audioAr)
       ..writeByte(8)
-      ..write(obj.keywords);
+      ..write(obj.keywords)
+      ..writeByte(9)
+      ..write(obj.moduleVideo);
   }
 
   @override

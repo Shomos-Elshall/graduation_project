@@ -14,6 +14,7 @@ import 'models/book_objects_model.dart';
 import 'models/content_model.dart';
 import 'models/glossary_model.dart';
 import 'models/keyword_model.dart';
+import 'models/module_video_ref.dart';
 import 'models/text_content.dart';
 import 'models/toc_model.dart';
 
@@ -29,6 +30,7 @@ void main() async {
   Hive.registerAdapter(BookObjectsAdapter());
   Hive.registerAdapter(KeywordModelAdapter());
   Hive.registerAdapter(TextContentAdapter());
+  Hive.registerAdapter(ModuleVideoRefAdapter());
 
   // open boxes
   await Hive.openBox<BookModel>(bookBox);
@@ -69,7 +71,7 @@ class InteractiveBookApp extends StatelessWidget {
   const InteractiveBookApp({super.key});
 
   Future<String> loadJsonData() async {
-    return await rootBundle.loadString('assets/data/data_copy.json');
+    return await rootBundle.loadString('assets/data/data.json');
   }
 
   Future<void> loadDataIntoHive() async {
@@ -77,9 +79,11 @@ class InteractiveBookApp extends StatelessWidget {
     var data = jsonDecode(jsonData);
     BookModel book = BookModel.fromJson(data);
 
-    // storing data in hive
+    // storing data in hive — clear first so the new schema (ModuleVideoRef)
+    // replaces any cached copy from an older build.
     final box = Hive.box<BookModel>(bookBox);
-    await box.put('book1', book);
+    await box.clear();
+    await box.put('book2', book);
   }
 
   @override

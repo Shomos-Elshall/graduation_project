@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_html/flutter_html.dart';
 import 'package:hive/hive.dart';
+import 'package:interactive_book_app/widgets/inline_module_video.dart';
 import 'package:interactive_book_app/widgets/video_player_widget.dart';
 import '../Services/applyBoldToText.dart';
 import '../models/book_model.dart';
@@ -46,6 +47,9 @@ class _ContentSectionWidgetState extends State<ContentSectionWidget> {
       processedContent,
       sectionId,
     );
+
+    final moduleVideo = widget.section.moduleVideo;
+    final hasModuleVideo = moduleVideo != null;
 
     return SelectionArea(
       onSelectionChanged: (SelectedContent? content) {
@@ -111,8 +115,12 @@ class _ContentSectionWidgetState extends State<ContentSectionWidget> {
           ],
         );
       },
-      child: Html(
-        data: processedContent,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          if (hasModuleVideo) InlineModuleVideo(ref: moduleVideo),
+          Html(
+            data: processedContent,
         style: {
           "body": Style(
             direction: widget.isArabic ? TextDirection.rtl : TextDirection.ltr,
@@ -152,9 +160,12 @@ class _ContentSectionWidgetState extends State<ContentSectionWidget> {
         extensions: [
           TagExtension(
             tagsToExtend: {"iframe"},
-            builder:
-                (ctx) => AppVideoPlayer(videoUrl: ctx.attributes['src'] ?? ""),
+            builder: (ctx) => hasModuleVideo
+                ? const SizedBox.shrink()
+                : AppVideoPlayer(videoUrl: ctx.attributes['src'] ?? ""),
           ),
+        ],
+      ),
         ],
       ),
     );
