@@ -91,7 +91,10 @@ class _ContentSectionWidgetState extends State<ContentSectionWidget> {
 
                   // 1. الحصول على النص الكامل الحالي للمحتوى
                   // (افترضنا أن النص مخزن في متغير اسمه contentText)
-                  String updatedText = applyBoldToText(contentText, _selectedText);
+                  String updatedText = applyBoldToText(
+                    contentText,
+                    _selectedText,
+                  );
 
                   // 2. تحديث قاعدة بيانات Hive لضمان الحفظ الدائم
                   var box = Hive.box<BookModel>('book'); // تأكدي من اسم الصندوق
@@ -107,8 +110,6 @@ class _ContentSectionWidgetState extends State<ContentSectionWidget> {
                   setState(() {
                     contentText = updatedText;
                   });
-
-                  print("✅ تم جعل النص عريضاً وحفظه في Hive");
                 }
               },
             ),
@@ -118,54 +119,57 @@ class _ContentSectionWidgetState extends State<ContentSectionWidget> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          if (hasModuleVideo) InlineModuleVideo(ref: moduleVideo),
           Html(
             data: processedContent,
-        style: {
-          "body": Style(
-            direction: widget.isArabic ? TextDirection.rtl : TextDirection.ltr,
-            textAlign: widget.isArabic ? TextAlign.right : TextAlign.left,
-            fontSize: FontSize(18.0),
-            lineHeight: const LineHeight(1.6),
+            style: {
+              "body": Style(
+                direction:
+                    widget.isArabic ? TextDirection.rtl : TextDirection.ltr,
+                textAlign: widget.isArabic ? TextAlign.right : TextAlign.left,
+                fontSize: FontSize(18.0),
+                lineHeight: const LineHeight(1.6),
+              ),
+              "b": Style(
+                fontWeight: FontWeight.bold,
+                color: Colors.black, // أو أي لون تحبيه للكلمات المهمة
+              ),
+              "strong": Style(fontWeight: FontWeight.bold),
+            },
+            onLinkTap: (url, _, __) {
+              if (url != null && url.startsWith("note://")) {
+                String originalText = Uri.decodeComponent(
+                  url.replaceFirst("note://", ""),
+                );
+                var notes = NoteService.getNotes(sectionId);
+                var currentNote = notes.firstWhere(
+                  (n) => n['originalText'] == originalText,
+                  orElse: () => null,
+                );
+                if (currentNote != null) {
+                  NoteDialogs.showSavedNoteDialog(
+                    context: context,
+                    originalText: originalText,
+                    savedNote: currentNote['noteContent'],
+                    sectionId: sectionId,
+                    onRefresh: widget.onRefresh,
+                  );
+                }
+              }
+            },
+            extensions: [
+              TagExtension(
+                tagsToExtend: {"iframe"},
+                builder:
+                    (ctx) =>
+                        hasModuleVideo
+                            ? const SizedBox.shrink()
+                            : AppVideoPlayer(
+                              videoUrl: ctx.attributes['src'] ?? "",
+                            ),
+              ),
+            ],
           ),
-          "b": Style(
-            fontWeight: FontWeight.bold,
-            color: Colors.black, // أو أي لون تحبيه للكلمات المهمة
-          ),
-          "strong": Style(
-            fontWeight: FontWeight.bold,
-          ),
-        },
-        onLinkTap: (url, _, __) {
-          if (url != null && url.startsWith("note://")) {
-            String originalText = Uri.decodeComponent(
-              url.replaceFirst("note://", ""),
-            );
-            var notes = NoteService.getNotes(sectionId);
-            var currentNote = notes.firstWhere(
-              (n) => n['originalText'] == originalText,
-              orElse: () => null,
-            );
-            if (currentNote != null) {
-              NoteDialogs.showSavedNoteDialog(
-                context: context,
-                originalText: originalText,
-                savedNote: currentNote['noteContent'],
-                sectionId: sectionId,
-                onRefresh: widget.onRefresh,
-              );
-            }
-          }
-        },
-        extensions: [
-          TagExtension(
-            tagsToExtend: {"iframe"},
-            builder: (ctx) => hasModuleVideo
-                ? const SizedBox.shrink()
-                : AppVideoPlayer(videoUrl: ctx.attributes['src'] ?? ""),
-          ),
-        ],
-      ),
+          if (hasModuleVideo) InlineModuleVideo(ref: moduleVideo),
         ],
       ),
     );
