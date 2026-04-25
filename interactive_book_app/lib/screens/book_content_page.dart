@@ -82,7 +82,6 @@ class _BookContentPageState extends State<BookContentPage> {
             padding: const EdgeInsets.only(top: 24.0, left: 16, bottom: 12),
             child: Text(
               currentChapter.name,
-
               style: const TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,

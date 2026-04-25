@@ -1,5 +1,6 @@
 import 'package:hive/hive.dart';
 import 'package:interactive_book_app/models/glossary_model.dart';
+import 'package:interactive_book_app/models/module_video_ref.dart';
 part 'content_model.g.dart';
 
 @HiveType(typeId: 2)
@@ -22,6 +23,8 @@ class ContentModel extends HiveObject {
   final String? audioAr;
   @HiveField(8)
   final List<GlossaryModel> keywords;
+  @HiveField(9)
+  final ModuleVideoRef? moduleVideo;
 
   ContentModel({
     required this.id,
@@ -33,6 +36,7 @@ class ContentModel extends HiveObject {
     required this.audioEn,
     required this.audioAr,
     required this.keywords,
+    this.moduleVideo,
   });
 
   factory ContentModel.fromJson(Map<String, dynamic> json) {
@@ -55,6 +59,9 @@ class ContentModel extends HiveObject {
               ?.map((e) => GlossaryModel.fromJson(e as Map<String, dynamic>))
               .toList() ??
           [],
+      moduleVideo: json['moduleVideo'] != null
+          ? ModuleVideoRef.fromJson(json['moduleVideo'] as Map<String, dynamic>)
+          : null,
     );
   }
 }

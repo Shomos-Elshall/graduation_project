@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:dartz/dartz.dart';
 import 'package:flutter/services.dart';
+import 'package:interactive_book_app/models/module_video_ref.dart';
 import 'package:interactive_book_app/modules/video/models/Videoresponse.dart';
 
 class videoviewModel {
@@ -43,6 +44,24 @@ class videoviewModel {
     }
 
     throw Exception("Video not found");
+  }
+
+  static Future<Videoresponse> loadFromRef(ModuleVideoRef ref) async {
+    if (ref.source == 'inline') {
+      final payload = ref.payload;
+      if (payload == null) {
+        throw Exception("ModuleVideoRef.inline without payload");
+      }
+      return Videoresponse.fromJson(payload);
+    }
+
+    final path = ref.path;
+    if (path == null) {
+      throw Exception("ModuleVideoRef.asset without path");
+    }
+    final String jsonString = await rootBundle.loadString(path);
+    final jsonData = json.decode(jsonString) as Map<String, dynamic>;
+    return Videoresponse.fromJson(jsonData);
   }
 }
 

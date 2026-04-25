@@ -1,6 +1,7 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter/material.dart';
 import 'package:interactive_book_app/core/resources/ap_constants.dart';
+import 'package:interactive_book_app/models/module_video_ref.dart';
 import 'package:interactive_book_app/modules/video/models/Data.dart';
 import 'package:interactive_book_app/modules/video/videoviewmodel.dart';
 
@@ -89,6 +90,17 @@ class VideoProvider extends ChangeNotifier {
     Videoresponse videoresponse = await videoviewModel.loadvediodetails(
       selectedTitle!,
     );
+    _applyResponse(videoresponse);
+  }
+
+  Future<void> fetchFromRef(ModuleVideoRef ref) async {
+    isLoading = true;
+    notifyListeners();
+    Videoresponse videoresponse = await videoviewModel.loadFromRef(ref);
+    _applyResponse(videoresponse);
+  }
+
+  void _applyResponse(Videoresponse videoresponse) {
     isLoading = false;
     notifyListeners();
     url =
@@ -99,7 +111,6 @@ class VideoProvider extends ChangeNotifier {
     audioList = videoresponse.audioList ?? [];
     vttList = videoresponse.vttList ?? [];
     availableLanguages = videoresponse.availableLanguages ?? [];
-    // data=Data();
     notifyListeners();
     languageCodes =
         availableLanguages?.map((e) => e.languageCode.toString()).toList() ??
