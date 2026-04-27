@@ -8,7 +8,6 @@ import 'package:media_kit_video/media_kit_video.dart';
 import 'package:path_provider/path_provider.dart';
 
 class VideoPlayerProvider extends ChangeNotifier {
-
   late Player player;
   late VideoController controller;
 
@@ -51,7 +50,8 @@ class VideoPlayerProvider extends ChangeNotifier {
             if (total != -1) {
               double progress = (received / total * 100);
               Fluttertoast.showToast(
-                  msg: "Download: ${progress.toStringAsFixed(0)}%");
+                msg: "Download: ${progress.toStringAsFixed(0)}%",
+              );
             }
           },
         );

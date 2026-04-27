@@ -32,8 +32,10 @@ class _VideoveiwState extends State<Videoveiw> {
   void initState() {
     super.initState();
     videoProvider = context.read<VideoProvider>();
-    fetchData();
-    print(videoProvider.url);
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (!mounted) return;
+      fetchData();
+    });
   }
 
   void fetchData() async {
