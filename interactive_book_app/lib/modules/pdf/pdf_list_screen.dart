@@ -6,7 +6,7 @@ import 'package:interactive_book_app/modules/pdf/pdfviewmodel.dart';
 import 'package:provider/provider.dart';
 
 class PdfListScreen extends StatefulWidget {
-  const PdfListScreen();
+  const PdfListScreen({super.key});
 
   @override
   State<PdfListScreen> createState() => _PdfListScreenState();

@@ -7,7 +7,7 @@ import '../models/Keyword.dart';
 class CustomDialog extends StatefulWidget {
   final List<Keyword> keywords;
 
-  const CustomDialog({ required this.keywords});
+  const CustomDialog({super.key,  required this.keywords});
 
   @override
   State<CustomDialog> createState() => _CustomDialogState();

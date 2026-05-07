@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:hive/hive.dart';
 import 'package:interactive_book_app/widgets/book_mark_button.dart';
 import 'package:interactive_book_app/widgets/pop_up_menu_button.dart';
 import '../models/book_model.dart';
@@ -58,7 +57,10 @@ class _BookContentPageState extends State<BookContentPage> {
         actions: [
           _buildLangBtn(),
           SizedBox(width: 24),
-          BookMarkButton(currentChapter: currentChapter),
+          BookMarkButton(
+            currentChapter: currentChapter,
+            bookId: widget.book.id,
+          ),
           SizedBox(width: 24),
           PopUpMenuButton(book: widget.book),
         ],

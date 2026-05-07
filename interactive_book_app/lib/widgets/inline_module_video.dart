@@ -26,21 +26,25 @@ class _InlineModuleVideoState extends State<InlineModuleVideo> {
   String _selected = "transcript";
   String? _selectedaudio;
   bool _playerReady = false;
+  bool _videoLoaded = false;
 
   @override
   void initState() {
     super.initState();
     _videoProvider = VideoProvider();
     _playerProvider = VideoPlayerProvider();
+    // حمل بيانات الفيديو فقط (بدون تحميل المشغل)
     WidgetsBinding.instance.addPostFrameCallback((_) {
       if (!mounted) return;
-      _fetch();
+      _loadVideoData();
     });
   }
 
-  Future<void> _fetch() async {
+  Future<void> _loadVideoData() async {
     await _videoProvider.fetchFromRef(widget.ref);
-    if (!mounted) return;
+  }
+
+  Future<void> _fetch() async {
     if (_videoProvider.url != null) {
       await _playerProvider.initialize(_videoProvider.url!);
       if (!mounted) return;
@@ -48,9 +52,17 @@ class _InlineModuleVideoState extends State<InlineModuleVideo> {
     }
   }
 
+  Future<void> _onPlayVideo() async {
+    setState(() => _videoLoaded = true);
+    await _fetch();
+  }
+
   @override
   void dispose() {
-    _playerProvider.player.dispose();
+    // تأكد من أن الـ player تم تهيئته قبل محاولة إغلاقه
+    if (_playerReady) {
+      _playerProvider.player.dispose();
+    }
     super.dispose();
   }
 
@@ -63,12 +75,18 @@ class _InlineModuleVideoState extends State<InlineModuleVideo> {
       ],
       child: Consumer<VideoProvider>(
         builder: (context, videoProvider, child) {
+          // إذا لم يتم الضغط على الفيديو بعد، عرض الصورة المصغرة
+          if (!_videoLoaded) {
+            return _buildThumbnail(context, videoProvider);
+          }
+          // إذا تم الضغط لكن الفيديو لم يحمل بعد
           if (videoProvider.isLoading || !_playerReady) {
             return const Padding(
               padding: EdgeInsets.all(24),
               child: Center(child: CircularProgressIndicator()),
             );
           }
+          // عرض الفيديو مع التفاصيل
           return Column(
             mainAxisSize: MainAxisSize.min,
             children: [
@@ -77,6 +95,41 @@ class _InlineModuleVideoState extends State<InlineModuleVideo> {
             ],
           );
         },
+      ),
+    );
+  }
+
+  Widget _buildThumbnail(BuildContext context, VideoProvider videoProvider) {
+    return GestureDetector(
+      onTap: _onPlayVideo,
+      child: Container(
+        color: Colors.black,
+        child: AspectRatio(
+          aspectRatio: 16 / 10,
+          child: Stack(
+            alignment: Alignment.center,
+            children: [
+              // صورة مصغرة (placeholder)
+              Container(
+                color: Colors.grey[800],
+                child: const Icon(
+                  Icons.play_circle_outline,
+                  size: 80,
+                  color: Colors.white,
+                ),
+              ),
+              // نص "اضغط للتشغيل"
+              // const Text(
+              //   'اضغط للتشغيل',
+              //   style: TextStyle(
+              //     color: Colors.white,
+              //     fontSize: 18,
+              //     fontWeight: FontWeight.bold,
+              //   ),
+              // ),
+            ],
+          ),
+        ),
       ),
     );
   }
@@ -93,9 +146,10 @@ class _InlineModuleVideoState extends State<InlineModuleVideo> {
               Row(
                 children: [
                   VideoControlButton(
-                    icon: playerProvider.isMuted
-                        ? Icons.volume_off
-                        : Icons.volume_up,
+                    icon:
+                        playerProvider.isMuted
+                            ? Icons.volume_off
+                            : Icons.volume_up,
                     onPressed: playerProvider.toggleMute,
                   ),
                   VideoControlButton(
@@ -110,29 +164,46 @@ class _InlineModuleVideoState extends State<InlineModuleVideo> {
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: GestureDetector(
-                      onTapDown: (details) =>
-                          _tapPosition = details.globalPosition,
-                      child: Icon(Icons.headphones, color: AppColors.lightColor),
-                      onTap: () => _showAudioMenu(context, videoProvider, playerProvider),
+                      onTapDown:
+                          (details) => _tapPosition = details.globalPosition,
+                      child: Icon(
+                        Icons.headphones,
+                        color: AppColors.lightColor,
+                      ),
+                      onTap:
+                          () => _showAudioMenu(
+                            context,
+                            videoProvider,
+                            playerProvider,
+                          ),
                     ),
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: GestureDetector(
-                      onTapDown: (details) =>
-                          _tapPosition = details.globalPosition,
+                      onTapDown:
+                          (details) => _tapPosition = details.globalPosition,
                       child: Icon(
                         Icons.subtitles,
                         color: AppColors.lightColor,
                         size: 25,
                       ),
-                      onTap: () =>
-                          _showSubtitleMenu(context, videoProvider, playerProvider),
+                      onTap:
+                          () => _showSubtitleMenu(
+                            context,
+                            videoProvider,
+                            playerProvider,
+                          ),
                     ),
                   ),
                   IconButton(
-                    icon: Icon(Icons.key, color: AppColors.lightColor, size: 25),
-                    onPressed: () => _showKeywordsDialog(context, videoProvider),
+                    icon: Icon(
+                      Icons.key,
+                      color: AppColors.lightColor,
+                      size: 25,
+                    ),
+                    onPressed:
+                        () => _showKeywordsDialog(context, videoProvider),
                   ),
                 ],
               ),
@@ -202,8 +273,7 @@ class _InlineModuleVideoState extends State<InlineModuleVideo> {
     VideoPlayerProvider playerProvider,
   ) async {
     if (_tapPosition == null) return;
-    final overlay =
-        Overlay.of(context).context.findRenderObject() as RenderBox;
+    final overlay = Overlay.of(context).context.findRenderObject() as RenderBox;
     final result = await showMenu<String>(
       color: AppColors.lightColor,
       context: context,
@@ -211,9 +281,10 @@ class _InlineModuleVideoState extends State<InlineModuleVideo> {
         Rect.fromPoints(_tapPosition!, _tapPosition!),
         Offset.zero & overlay.size,
       ),
-      items: videoProvider.audiolanguageCodes
-          .map((e) => PopupMenuItem<String>(value: e, child: Text(e)))
-          .toList(),
+      items:
+          videoProvider.audiolanguageCodes
+              .map((e) => PopupMenuItem<String>(value: e, child: Text(e)))
+              .toList(),
     );
     if (result != null) {
       setState(() => _selectedaudio = result);
@@ -235,8 +306,7 @@ class _InlineModuleVideoState extends State<InlineModuleVideo> {
     VideoPlayerProvider playerProvider,
   ) async {
     if (_tapPosition == null) return;
-    final overlay =
-        Overlay.of(context).context.findRenderObject() as RenderBox;
+    final overlay = Overlay.of(context).context.findRenderObject() as RenderBox;
     final result = await showMenu<String>(
       color: AppColors.lightColor,
       context: context,
@@ -244,9 +314,10 @@ class _InlineModuleVideoState extends State<InlineModuleVideo> {
         Rect.fromPoints(_tapPosition!, _tapPosition!),
         Offset.zero & overlay.size,
       ),
-      items: videoProvider.subtitlelangcode!
-          .map((e) => PopupMenuItem<String>(value: e, child: Text(e)))
-          .toList(),
+      items:
+          videoProvider.subtitlelangcode!
+              .map((e) => PopupMenuItem<String>(value: e, child: Text(e)))
+              .toList(),
     );
     if (result != null) {
       for (var vtt in videoProvider.vttList!) {
@@ -271,25 +342,26 @@ class _InlineModuleVideoState extends State<InlineModuleVideo> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.end,
               crossAxisAlignment: CrossAxisAlignment.end,
-              children: (videoProvider.keywords ?? [])
-                  .map(
-                    (e) => Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Column(
-                        children: [
-                          Text(
-                            e,
-                            style: TextStyle(
-                              color: AppColors.darkColor,
-                              fontSize: 20,
-                            ),
+              children:
+                  (videoProvider.keywords ?? [])
+                      .map(
+                        (e) => Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Column(
+                            children: [
+                              Text(
+                                e,
+                                style: TextStyle(
+                                  color: AppColors.darkColor,
+                                  fontSize: 20,
+                                ),
+                              ),
+                              const Divider(height: 3),
+                            ],
                           ),
-                          const Divider(height: 3),
-                        ],
-                      ),
-                    ),
-                  )
-                  .toList(),
+                        ),
+                      )
+                      .toList(),
             ),
           ),
         );

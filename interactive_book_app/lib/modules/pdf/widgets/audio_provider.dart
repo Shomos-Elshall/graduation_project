@@ -224,11 +224,11 @@ class AudioProvider extends ChangeNotifier {
     final chunks = <String>[];
     String current = '';
     for (var word in words) {
-      if ((current + ' ' + word).trim().length > chunkSize) {
+      if (('$current $word').trim().length > chunkSize) {
         if (current.isNotEmpty) chunks.add(current.trim());
         current = word;
       } else {
-        current = (current + ' ' + word).trim();
+        current = ('$current $word').trim();
       }
     }
     if (current.isNotEmpty) chunks.add(current.trim());
@@ -349,10 +349,11 @@ class AudioProvider extends ChangeNotifier {
       ],
     ).then((lang) {
       if (lang == null) return;
-      if (lang == 'off')
+      if (lang == 'off') {
         hideSubtitle();
-      else
+      } else {
         setSubtitle(lang);
+      }
     });
   }
 

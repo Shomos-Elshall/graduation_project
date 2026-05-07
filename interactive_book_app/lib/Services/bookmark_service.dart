@@ -4,18 +4,19 @@ import '../models/toc_model.dart'; // تأكدي من مسار الموديل ع
 class BookmarkService {
   static final _box = Hive.box<TocModel>('bookmarks_box');
 
-  // وظيفة الإضافة أو الحذف (Toggle)
-  static void toggleBookmark(TocModel chapter) {
-    // نستخدم ID الشابتر كمفتاح (Key) للتخزين
-    if (_box.containsKey(chapter.id.toString())) {
-      _box.delete(chapter.id.toString());
+  // Toggle bookmark using composite key: {bookId}_{chapterId}
+  static void toggleBookmark(String bookId, TocModel chapter) {
+    final key = '${bookId}_${chapter.id}';
+    if (_box.containsKey(key)) {
+      _box.delete(key);
     } else {
-      _box.put(chapter.id.toString(), chapter);
+      _box.put(key, chapter);
     }
   }
 
-  // التأكد إذا كان الشابتر محفوظ أم لا لتلوين الأيقونة
-  static bool isBookmarked(String id) {
-    return _box.containsKey(id);
+  // Check if chapter is bookmarked for specific book
+  static bool isBookmarked(String bookId, int chapterId) {
+    final key = '${bookId}_$chapterId';
+    return _box.containsKey(key);
   }
 }

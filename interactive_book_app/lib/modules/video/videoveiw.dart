@@ -11,7 +11,7 @@ import 'package:media_kit_video/media_kit_video.dart';
 import 'widgets/dropdown.dart';
 
 class Videoveiw extends StatefulWidget {
-  const Videoveiw();
+  const Videoveiw({super.key});
 
   @override
   State<Videoveiw> createState() => _VideoveiwState();
@@ -127,7 +127,7 @@ class _VideoveiwState extends State<Videoveiw> {
                                           Offset.zero & overlay.size,
                                         ),
                                         items:
-                                            videoProvider.audiolanguageCodes!
+                                            videoProvider.audiolanguageCodes
                                                 .map(
                                                   (e) => PopupMenuItem<String>(
                                                     value: e,
@@ -337,7 +337,7 @@ class _VideoveiwState extends State<Videoveiw> {
                                 onChanged: (value) {
                                   videoProvider.selected(value!);
                                   setState(() {
-                                    selected = value!;
+                                    selected = value;
                                   });
                                 },
                               ),

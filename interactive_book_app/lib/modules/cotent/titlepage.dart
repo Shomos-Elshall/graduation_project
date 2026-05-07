@@ -3,13 +3,12 @@ import 'package:interactive_book_app/modules/video/videosurvices/videoprovider.d
 
 import 'package:provider/provider.dart';
 
-import '../pdf/models/Pdfresponse.dart';
 import '../video/models/Videoresponse.dart';
 import '../video/videoveiw.dart';
 import 'content choice.dart';
 
 class TitlePage extends StatelessWidget {
-  const TitlePage();
+  const TitlePage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -73,9 +72,6 @@ class TitlePage extends StatelessWidget {
                         var result = await ContentChoice.openContentByTitle(
                           title,
                         );
-                        print(
-                          "Result type: ${result.runtimeType}",
-                        ); // ← شوفي بيطبع إيه
 
                         if (!context.mounted) return;
 

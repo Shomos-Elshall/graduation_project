@@ -8,7 +8,7 @@ class CustomDropdown extends StatelessWidget {
   final List<String>? items;
   final Function(String?) onChanged;
 
-  const CustomDropdown({
+  const CustomDropdown({super.key, 
     required this.hint,
     this.items,
     required this.onChanged,
