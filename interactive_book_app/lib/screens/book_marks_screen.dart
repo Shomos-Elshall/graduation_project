@@ -26,7 +26,13 @@ class BookmarksScreen extends StatelessWidget {
       body: ValueListenableBuilder(
         valueListenable: Hive.box<TocModel>('bookmarks_box').listenable(),
         builder: (context, Box<TocModel> box, _) {
-          final bookmarkedChapters = box.values.toList();
+          // Filter bookmarks to show only from current book
+          final Map<dynamic, TocModel> allEntries = box.toMap();
+          final bookmarkedChapters =
+              allEntries.entries
+                  .where((e) => (e.key as String).startsWith('${book.id}_'))
+                  .map((e) => e.value)
+                  .toList();
 
           if (bookmarkedChapters.isEmpty) {
             return Center(
@@ -84,7 +90,7 @@ class BookmarksScreen extends StatelessWidget {
                       );
                     },
                     child: Padding(
-                      padding: const EdgeInsets.all(12.0),
+                      padding: const EdgeInsets.all(6.0),
                       child: Row(
                         children: [
                           // أيقونة الكتاب داخل دائرة ملونة
@@ -146,7 +152,7 @@ class BookmarksScreen extends StatelessWidget {
                               size: 28,
                             ),
                             onPressed: () {
-                              box.delete(chapter.id.toString());
+                              box.delete('${book.id}_${chapter.id}');
                             },
                           ),
                         ],

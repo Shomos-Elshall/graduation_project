@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_html/flutter_html.dart';
+import 'package:hive/hive.dart';
+import 'package:interactive_book_app/widgets/inline_module_video.dart';
 import 'package:interactive_book_app/widgets/video_player_widget.dart';
+import '../Services/applyBoldToText.dart';
+import '../models/book_model.dart';
 import '../models/content_model.dart';
 import '../services/highlight_service.dart';
 import '../services/note_service.dart';
@@ -25,6 +29,7 @@ class ContentSectionWidget extends StatefulWidget {
 
 class _ContentSectionWidgetState extends State<ContentSectionWidget> {
   String _selectedText = "";
+  String contentText = " "; // المتغير الذي يخزن النص ويحدثه عند عمل Bold
 
   @override
   Widget build(BuildContext context) {
@@ -42,6 +47,9 @@ class _ContentSectionWidgetState extends State<ContentSectionWidget> {
       processedContent,
       sectionId,
     );
+
+    final moduleVideo = widget.section.moduleVideo;
+    final hasModuleVideo = moduleVideo != null;
 
     return SelectionArea(
       onSelectionChanged: (SelectedContent? content) {
@@ -75,46 +83,93 @@ class _ContentSectionWidgetState extends State<ContentSectionWidget> {
                 }
               },
             ),
+            ContextMenuButtonItem(
+              label: 'Bold',
+              onPressed: () async {
+                if (_selectedText.isNotEmpty) {
+                  selectableRegionState.hideToolbar();
+
+                  // 1. الحصول على النص الكامل الحالي للمحتوى
+                  // (افترضنا أن النص مخزن في متغير اسمه contentText)
+                  String updatedText = applyBoldToText(
+                    contentText,
+                    _selectedText,
+                  );
+
+                  // 2. تحديث قاعدة بيانات Hive لضمان الحفظ الدائم
+                  var box = Hive.box<BookModel>('book'); // تأكدي من اسم الصندوق
+                  var book = box.get('book'); // استرجاع الكتاب
+
+                  if (book != null) {
+                    // هنا نقوم بتحديث الحقل المناسب (مثل النص العربي) وحفظه
+                    // ملاحظة: يجب تعديل هذا الجزء ليطابق مكان النص في الـ Model الخاص بكِ
+                    await box.put('book', book);
+                  }
+
+                  // 3. تحديث واجهة المستخدم (setState) لرؤية التغيير فوراً
+                  setState(() {
+                    contentText = updatedText;
+                  });
+                }
+              },
+            ),
           ],
         );
       },
-      child: Html(
-        data: processedContent,
-        style: {
-          "body": Style(
-            direction: widget.isArabic ? TextDirection.rtl : TextDirection.ltr,
-            textAlign: widget.isArabic ? TextAlign.right : TextAlign.left,
-            fontSize: FontSize(18.0),
-            lineHeight: const LineHeight(1.6),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Html(
+            data: processedContent,
+            style: {
+              "body": Style(
+                direction:
+                    widget.isArabic ? TextDirection.rtl : TextDirection.ltr,
+                textAlign: widget.isArabic ? TextAlign.right : TextAlign.left,
+                fontSize: FontSize(18.0),
+                lineHeight: const LineHeight(1.6),
+              ),
+              "b": Style(
+                fontWeight: FontWeight.bold,
+                color: Colors.black, // أو أي لون تحبيه للكلمات المهمة
+              ),
+              "strong": Style(fontWeight: FontWeight.bold),
+            },
+            onLinkTap: (url, _, __) {
+              if (url != null && url.startsWith("note://")) {
+                String originalText = Uri.decodeComponent(
+                  url.replaceFirst("note://", ""),
+                );
+                var notes = NoteService.getNotes(sectionId);
+                var currentNote = notes.firstWhere(
+                  (n) => n['originalText'] == originalText,
+                  orElse: () => null,
+                );
+                if (currentNote != null) {
+                  NoteDialogs.showSavedNoteDialog(
+                    context: context,
+                    originalText: originalText,
+                    savedNote: currentNote['noteContent'],
+                    sectionId: sectionId,
+                    onRefresh: widget.onRefresh,
+                  );
+                }
+              }
+            },
+            extensions: [
+              TagExtension(
+                tagsToExtend: {"iframe"},
+                builder:
+                    (ctx) =>
+                        hasModuleVideo
+                            ? const SizedBox.shrink()
+                            : AppVideoPlayer(
+                              videoUrl: ctx.attributes['src'] ?? "",
+                            ),
+              ),
+            ],
           ),
-        },
-        onLinkTap: (url, _, __) {
-          if (url != null && url.startsWith("note://")) {
-            String originalText = Uri.decodeComponent(
-              url.replaceFirst("note://", ""),
-            );
-            var notes = NoteService.getNotes(sectionId);
-            var currentNote = notes.firstWhere(
-              (n) => n['originalText'] == originalText,
-              orElse: () => null,
-            );
-            if (currentNote != null) {
-              NoteDialogs.showSavedNoteDialog(
-                context: context,
-                originalText: originalText,
-                savedNote: currentNote['noteContent'],
-                sectionId: sectionId,
-                onRefresh: widget.onRefresh,
-              );
-            }
-          }
-        },
-        extensions: [
-          TagExtension(
-            tagsToExtend: {"iframe"},
-            builder:
-                (ctx) => AppVideoPlayer(videoUrl: ctx.attributes['src'] ?? ""),
-          ),
+          if (hasModuleVideo) InlineModuleVideo(ref: moduleVideo),
         ],
       ),
     );

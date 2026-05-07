@@ -1,0 +1,136 @@
+{
+  "_id": "book3_digestion",
+  "title": "Digestion in Humans",
+  "url": "https://scube-applications-media54cbabfc-u3d19945rbtv.s3.amazonaws.com/pdf_sample_data/373e37ec-f17f-4be8-844c-780a616e6b95_Respiration_in_Man.pdf",
+  "language": "en",
+  "cognitive": "understand",
+  "complexity": 1,
+  "instructionalrole": "explanation",
+  "contentType": "application/pdf",
+  "domainName": "Biology",
+  "subDomainName": "Human Body",
+  "conceptName": "Digestion",
+  "pagesCount": 3,
+  "audioList": [
+    {
+      "langCode": "en",
+      "langName": "English",
+      "url": "https://scube-applications-media54cbabfc-u3d19945rbtv.s3.amazonaws.com/pdf_sample_data/373e37ec-f17f-4be8-844c-780a616e6b95_Respiration_in_Man_en.mp3",
+      "duration": 195.0
+    },
+    {
+      "langCode": "ar",
+      "langName": "Arabic",
+      "url": "https://scube-applications-media54cbabfc-u3d19945rbtv.s3.amazonaws.com/pdf_sample_data/373e37ec-f17f-4be8-844c-780a616e6b95_Respiration_in_Man_ar.mp3",
+      "duration": 200.0
+    }
+  ],
+  "vttList": [
+    {
+      "lang": "en",
+      "text": "English",
+      "format": "vtt",
+      "url": "https://scube-applications-media54cbabfc-u3d19945rbtv.s3.amazonaws.com/pdf_sample_data/373e37ec-f17f-4be8-844c-780a616e6b95_Respiration_in_Man_en.vtt"
+    },
+    {
+      "lang": "ar",
+      "text": "Arabic",
+      "format": "vtt",
+      "url": "https://scube-applications-media54cbabfc-u3d19945rbtv.s3.amazonaws.com/pdf_sample_data/373e37ec-f17f-4be8-844c-780a616e6b95_Respiration_in_Man_ar.vtt"
+    }
+  ],
+  "frameList": [
+    {
+      "page": 1,
+      "name": "digest_1.png",
+      "size": 400.0,
+      "startTime": 0,
+      "duration": 70.0,
+      "url": "https://scube-applications-media54cbabfc-u3d19945rbtv.s3.amazonaws.com/pdf_sample_data/636796c2cfa1425a643d7b6c_1_en.png",
+      "audioList": [
+        {
+          "langCode": "en",
+          "langName": "English",
+          "url": "https://scube-applications-media54cbabfc-u3d19945rbtv.s3.amazonaws.com/pdf_sample_data/636796c2cfa1425a643d7b6c_1_en_en.mp3",
+          "duration": 70.0
+        }
+      ]
+    },
+    {
+      "page": 2,
+      "name": "digest_2.png",
+      "size": 400.0,
+      "startTime": 75.0,
+      "duration": 65.0,
+      "url": "https://scube-applications-media54cbabfc-u3d19945rbtv.s3.amazonaws.com/pdf_sample_data/636796c2cfa1425a643d7b6c_2_en.png",
+      "audioList": [
+        {
+          "langCode": "en",
+          "langName": "English",
+          "url": "https://scube-applications-media54cbabfc-u3d19945rbtv.s3.amazonaws.com/pdf_sample_data/636796c2cfa1425a643d7b6c_2_en_en.mp3",
+          "duration": 65.0
+        }
+      ]
+    },
+    {
+      "page": 3,
+      "name": "digest_3.png",
+      "size": 400.0,
+      "startTime": 145.0,
+      "duration": 50.0,
+      "url": "https://scube-applications-media54cbabfc-u3d19945rbtv.s3.amazonaws.com/pdf_sample_data/636796c2cfa1425a643d7b6c_3_en.png",
+      "audioList": [
+        {
+          "langCode": "en",
+          "langName": "English",
+          "url": "https://scube-applications-media54cbabfc-u3d19945rbtv.s3.amazonaws.com/pdf_sample_data/636796c2cfa1425a643d7b6c_3_en_en.mp3",
+          "duration": 50.0
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    {
+      "id": "k0",
+      "word": "digestion",
+      "definition": "The process of breaking down food into smaller molecules that can be absorbed into the bloodstream.",
+      "youtubeLink": "",
+      "wikipediaLink": "",
+      "ekbLink": ""
+    },
+    {
+      "id": "k1",
+      "word": "enzyme",
+      "definition": "A biological molecule that speeds up chemical reactions in the body, including the breakdown of food during digestion.",
+      "youtubeLink": "",
+      "wikipediaLink": "",
+      "ekbLink": ""
+    },
+    {
+      "id": "k2",
+      "word": "stomach",
+      "definition": "",
+      "youtubeLink": "",
+      "wikipediaLink": "",
+      "ekbLink": ""
+    }
+  ],
+  "availableLanguages": [
+    {
+      "languageCode": "en",
+      "data": {
+        "transcript": "<p> Slide 1:<br>Digestion in Humans. Digestion is the process of breaking down food into smaller molecules. The digestive system consists of the mouth, esophagus, stomach, small intestine, and large intestine. Digestion begins in the mouth where food is chewed and mixed with saliva. Saliva contains enzymes that begin breaking down carbohydrates.</p><p> Slide 2:<br>The Stomach and Small Intestine. After swallowing, food travels down the esophagus to the stomach. The stomach produces acid and enzymes that break down proteins. Food then moves to the small intestine where most digestion and absorption takes place. The small intestine produces enzymes and receives digestive juices from the liver and pancreas.</p><p> Slide 3:<br>Absorption and the Large Intestine. Nutrients from digested food are absorbed through the walls of the small intestine into the bloodstream. Water and remaining nutrients are absorbed in the large intestine. The remaining waste material is formed into feces and stored in the rectum until it is eliminated from the body.</p>",
+        "summary25": "Digestion is the process of breaking down food into smaller molecules for absorption. It begins in the mouth and continues through the stomach and intestines, with enzymes playing a key role in breaking down different food components.",
+        "summary50": "Digestion in humans is a complex process involving multiple organs. Food is first broken down mechanically by chewing in the mouth, then chemically by enzymes and acids in the stomach. The small intestine is where most chemical digestion and nutrient absorption occurs, aided by digestive juices from the liver and pancreas. The large intestine absorbs water and the remaining waste is eliminated from the body."
+      }
+    },
+    {
+      "languageCode": "ar",
+      "data": {
+        "transcript": "<p> شريحة 1:<br>الهضم عند الإنسان. الهضم هو عملية تكسير الطعام إلى جزيئات أصغر. يتكون الجهاز الهضمي من الفم والمريء والمعدة والأمعاء الدقيقة والأمعاء الغليظة. يبدأ الهضم في الفم حيث يتم مضغ الطعام وخلطه باللعاب. يحتوي اللعاب على إنزيمات تبدأ في تكسير الكربوهيدرات.</p><p> شريحة 2:<br>المعدة والأمعاء الدقيقة. بعد البلع، ينتقل الطعام عبر المريء إلى المعدة. تنتج المعدة حمضاً وإنزيمات تكسر البروتينات. ثم ينتقل الطعام إلى الأمعاء الدقيقة حيث تتم معظم عمليات الهضم والامتصاص.</p><p> شريحة 3:<br>الامتصاص والأمعاء الغليظة. تُمتص العناصر الغذائية من الطعام المهضوم عبر جدران الأمعاء الدقيقة إلى مجرى الدم. يتم امتصاص الماء والعناصر الغذائية المتبقية في الأمعاء الغليظة. تتشكل المادة النفايات المتبقية على شكل براز.</p>",
+        "summary25": "الهضم هو عملية تكسير الطعام إلى جزيئات أصغر للامتصاص. يبدأ في الفم ويستمر عبر المعدة والأمعاء.",
+        "summary50": "الهضم عند الإنسان عملية معقدة تشمل أعضاء متعددة. يتم تكسير الطعام أولاً ميكانيكياً بالمضغ في الفم، ثم كيميائياً بالإنزيمات والأحماض في المعدة. الأمعاء الدقيقة هي المكان الذي يتم فيه معظم الهضم الكيميائي وامتصاص العناصر الغذائية."
+      }
+    }
+  ]
+}

@@ -30,7 +30,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
+  flutter_math_fork: ^0.7.2+1
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
@@ -40,7 +40,23 @@ dependencies:
   video_player: any
   chewie: any
   webview_flutter: ^4.8.0
+  animated_toggle_switch:
+  provider:
  
+  media_kit: ^1.1.10
+  media_kit_video: ^1.2.4
+  media_kit_libs_video: ^1.0.7
+  path_provider: ^2.0.15
+  fluttertoast: ^8.2.1
+  shared_preferences:
+  subtitle_wrapper_package: ^2.2.1
+  flutter_pdfview: ^1.3.2
+  flutter_screenutil: ^5.9.3
+  
+  http: ^1.2.0
+  dartz: ^0.10.1
+  just_audio: ^0.9.36
+  dio: ^5.9.2
 
 
   
@@ -76,6 +92,8 @@ flutter:
     - assets/images/
     - assets/data/data.json
     - assets/data/data_copy.json
+    - assets/data/book3.json
+    - assets/files/
     
      
 

@@ -2,12 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:interactive_book_app/models/book_model.dart';
 import 'package:interactive_book_app/screens/book_marks_screen.dart';
 import 'package:interactive_book_app/screens/book_objects_screen.dart';
+
 import 'package:interactive_book_app/screens/glossary_screen.dart';
+import 'package:interactive_book_app/modules/cotent/titlepage.dart';
 
 class PopUpMenuButton extends StatelessWidget {
   const PopUpMenuButton({super.key, required this.book});
 
- final BookModel book;
+  final BookModel book;
 
   @override
   Widget build(BuildContext context) {
@@ -21,27 +23,34 @@ class PopUpMenuButton extends StatelessWidget {
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder:
-                  (context) =>
-                      GlossaryScreen(glossaryList: book.glossary),
+              builder: (context) => GlossaryScreen(glossaryList: book.glossary),
             ),
           );
         } else if (value == "Bookmarks") {
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => BookmarksScreen(book:book),
+              builder: (context) => BookmarksScreen(book: book),
             ),
           );
         } else if (value == "Objects") {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder:
-                  (context) =>
-                      ObjectScreen(objectList: book.bookObjects),
-            ),
-          );
+          // التحقق من اسم الكتاب
+          if (book.title == "Biology - second year -secondary") {
+            // إذا كان كتاب Biology، اعرض TitlePage
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const TitlePage()),
+            );
+          } else {
+            // بخلاف ذلك، اعرض ObjectScreen
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder:
+                    (context) => ObjectScreen(objectList: book.bookObjects),
+              ),
+            );
+          }
         }
       },
 
