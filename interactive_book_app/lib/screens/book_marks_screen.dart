@@ -26,7 +26,13 @@ class BookmarksScreen extends StatelessWidget {
       body: ValueListenableBuilder(
         valueListenable: Hive.box<TocModel>('bookmarks_box').listenable(),
         builder: (context, Box<TocModel> box, _) {
-          final bookmarkedChapters = box.values.toList();
+          // Filter bookmarks to show only from current book
+          final Map<dynamic, TocModel> allEntries = box.toMap();
+          final bookmarkedChapters =
+              allEntries.entries
+                  .where((e) => (e.key as String).startsWith('${book.id}_'))
+                  .map((e) => e.value)
+                  .toList();
 
           if (bookmarkedChapters.isEmpty) {
             return Center(
@@ -83,75 +89,73 @@ class BookmarksScreen extends StatelessWidget {
                         ),
                       );
                     },
-                    child: Expanded(
-                      child: Padding(
-                        padding: const EdgeInsets.all(6.0),
-                        child: Row(
-                          children: [
-                            // أيقونة الكتاب داخل دائرة ملونة
-                            Container(
-                              width: 50,
-                              height: 50,
-                              decoration: BoxDecoration(
-                                color: const Color(0xFF1A0054).withOpacity(0.1),
-                                shape: BoxShape.circle,
-                              ),
-                              child: const Icon(
-                                Icons.menu_book_rounded,
-                                color: Color(0xFF1A0054),
-                                size: 26,
-                              ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(6.0),
+                      child: Row(
+                        children: [
+                          // أيقونة الكتاب داخل دائرة ملونة
+                          Container(
+                            width: 50,
+                            height: 50,
+                            decoration: BoxDecoration(
+                              color: const Color(0xFF1A0054).withOpacity(0.1),
+                              shape: BoxShape.circle,
                             ),
-                            const SizedBox(width: 16),
-                            // اسم الشابتر والوصف
-                            Expanded(
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    chapter.name,
-                                    style: const TextStyle(
-                                      fontSize: 19,
-                                      fontWeight: FontWeight.bold,
-                                      color: Color(0xFF1A0054),
+                            child: const Icon(
+                              Icons.menu_book_rounded,
+                              color: Color(0xFF1A0054),
+                              size: 26,
+                            ),
+                          ),
+                          const SizedBox(width: 16),
+                          // اسم الشابتر والوصف
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  chapter.name,
+                                  style: const TextStyle(
+                                    fontSize: 19,
+                                    fontWeight: FontWeight.bold,
+                                    color: Color(0xFF1A0054),
+                                  ),
+                                  maxLines: 1,
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                                const SizedBox(height: 4),
+                                Row(
+                                  children: [
+                                    Icon(
+                                      Icons.touch_app_outlined,
+                                      size: 14,
+                                      color: Colors.grey[600],
                                     ),
-                                    maxLines: 1,
-                                    overflow: TextOverflow.ellipsis,
-                                  ),
-                                  const SizedBox(height: 4),
-                                  Row(
-                                    children: [
-                                      Icon(
-                                        Icons.touch_app_outlined,
-                                        size: 14,
+                                    const SizedBox(width: 4),
+                                    Text(
+                                      "Click to continue reading",
+                                      style: TextStyle(
                                         color: Colors.grey[600],
+                                        fontSize: 15,
                                       ),
-                                      const SizedBox(width: 4),
-                                      Text(
-                                        "Click to continue reading",
-                                        style: TextStyle(
-                                          color: Colors.grey[600],
-                                          fontSize: 15,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ],
-                              ),
+                                    ),
+                                  ],
+                                ),
+                              ],
                             ),
-                            // زر الحذف
-                            IconButton(
-                              icon: const Icon(
-                                Icons.bookmark_remove,
-                                color: Color(0xff1C0054),
-                                size: 28,
-                              ),
-                              onPressed: () {
-                                box.delete(chapter.id.toString());
-                              },
+                          ),
+                          // زر الحذف
+                          IconButton(
+                            icon: const Icon(
+                              Icons.bookmark_remove,
+                              color: Color(0xff1C0054),
+                              size: 28,
                             ),
-                          ],
-                        ),
+                            onPressed: () {
+                              box.delete('${book.id}_${chapter.id}');
+                            },
+                          ),
+                        ],
                       ),
                     ),
                   ),

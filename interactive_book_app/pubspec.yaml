@@ -92,6 +92,7 @@ flutter:
     - assets/images/
     - assets/data/data.json
     - assets/data/data_copy.json
+    - assets/data/book3.json
     - assets/files/
     
      

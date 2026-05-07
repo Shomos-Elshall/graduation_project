@@ -21,7 +21,7 @@ class PdfVideoArea extends StatelessWidget {
   final VoidCallback onKeywordsPress;
   final Function(int) onThumbnailTap;
 
-  const PdfVideoArea({
+  const PdfVideoArea({super.key, 
 
     required this.provider,
     required this.isMuted,
