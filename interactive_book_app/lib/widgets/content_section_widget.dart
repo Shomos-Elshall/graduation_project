@@ -16,6 +16,8 @@ class ContentSectionWidget extends StatefulWidget {
   final bool isArabic;
   final VoidCallback onRefresh;
 
+
+
   const ContentSectionWidget({
     super.key,
     required this.section,
@@ -167,9 +169,18 @@ class _ContentSectionWidgetState extends State<ContentSectionWidget> {
                               videoUrl: ctx.attributes['src'] ?? "",
                             ),
               ),
+              TagExtension(
+                tagsToExtend: {"module-video"},
+                builder: (ctx) {
+                  return hasModuleVideo
+                      ? InlineModuleVideo(
+                    ref: moduleVideo,
+                  )
+                      : const SizedBox.shrink();
+                },
+              ),
             ],
           ),
-          if (hasModuleVideo) InlineModuleVideo(ref: moduleVideo),
         ],
       ),
     );
