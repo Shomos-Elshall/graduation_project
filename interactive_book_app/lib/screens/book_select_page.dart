@@ -1,24 +1,59 @@
 import 'package:flutter/material.dart';
-import 'package:interactive_book_app/widgets/custom_text_field.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 
+import '../models/book_model.dart';
 import '../widgets/book_title.dart';
-
-// import 'package:interactive_book_app/pages/book_content_page.dart'; // صفحة المحتوى (افترضي اسمها كده)
+import '../widgets/custom_text_field.dart';
 
 class Selectedbook extends StatefulWidget {
   const Selectedbook({super.key});
 
   @override
-  State<Selectedbook> createState() => SelectedbookState();
+  State<Selectedbook> createState() => _SelectedbookState();
 }
 
-class SelectedbookState extends State<Selectedbook> {
-  String hint = "Search for a book";
+class _SelectedbookState extends State<Selectedbook> {
+  late Box<BookModel> bookBox;
+
+  List<BookModel> allBooks = [];
+  List<BookModel> filteredBooks = [];
+
+  @override
+  void initState() {
+    super.initState();
+
+    bookBox = Hive.box<BookModel>('book');
+
+    allBooks = bookBox.values.toList();
+    filteredBooks = allBooks;
+
+    bookBox.listenable().addListener(_refreshBooks);
+  }
+
+  void _refreshBooks() {
+    setState(() {
+      allBooks = bookBox.values.toList();
+      filteredBooks = allBooks;
+    });
+  }
+
+  @override
+  void dispose() {
+    bookBox.listenable().removeListener(_refreshBooks);
+    super.dispose();
+  }
 
   void searchBooks(String query) {
-    // منطق البحث (ممكن نفلتر الـ list هنا لو حابة)
     setState(() {
-      hint = query.isEmpty ? "Search book " : "Searching...";
+      if (query.trim().isEmpty) {
+        filteredBooks = allBooks;
+      } else {
+        filteredBooks = allBooks.where((book) {
+          return book.title.toLowerCase().contains(
+            query.toLowerCase(),
+          );
+        }).toList();
+      }
     });
   }
 
@@ -41,11 +76,16 @@ class SelectedbookState extends State<Selectedbook> {
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
-            CustomTextfield(hintText: hint, onChanged: searchBooks),
+            CustomTextfield(
+              hintText: "Search for a book",
+              onChanged: searchBooks,
+            ),
+
             const SizedBox(height: 20),
 
-            // الجزء الخاص بعرض الكتب من Hive
-            BookTitle(),
+            BookTitle(
+              books: filteredBooks,
+            ),
           ],
         ),
       ),
