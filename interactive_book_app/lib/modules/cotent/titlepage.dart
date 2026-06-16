@@ -13,7 +13,13 @@ class TitlePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(backgroundColor: Colors.blue),
+      appBar: AppBar(backgroundColor: Color(0xFF1D0E53),
+        title: const Text(
+          'Learning Objects',
+          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+        ),
+        iconTheme: const IconThemeData(color: Colors.white, size: 24),
+      ),
       body: FutureBuilder<List<String>>(
         future: ContentChoice.getAllTitles(),
         builder: (context, snapshot) {
