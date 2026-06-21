@@ -142,20 +142,20 @@
     "year": "1970-01-01T00:00:02.021Z",
     "deleted": false,
     "isPublished": true,
-    "_id": "61645f97fccd34a44373699b",
+    "_id": "636796c2cfa1425a643d7b6c",
     "createdAt": "2021-10-11T16:00:23.213Z",
     "updatedAt": "2023-06-18T18:15:10.641Z",
-    "title": "Biology - second year -secondary",
+    "title": "Physics - second year -secondary",
     "language": "en",
     "domainId": "d7c8da80d67227affcb50494c1a9cfa7",
-    "coverPageURL": "eBooks/azharengineering2020/ut1/61645f97fccd34a44373699b/bio-2.jpg",
+    "coverPageURL": "eBooks/azharengineering2020/ut1/636796c2cfa1425a643d7b6c/bio-2.jpg",
     "tenantId": "azharengineering2020",
     "ownershipId": "azharengineering2020_ut1",
-    "contentsURL": "eBooks/azharengineering2020/ut1/61645f97fccd34a44373699b/Biology-Copy_contents.txt",
-    "glossaryURL": "eBooks/azharengineering2020/ut1/61645f97fccd34a44373699b/Biology-Copy_glossary.txt",
+    "contentsURL": "eBooks/azharengineering2020/ut1/636796c2cfa1425a643d7b6c/Biology-Copy_contents.txt",
+    "glossaryURL": "eBooks/azharengineering2020/ut1/636796c2cfa1425a643d7b6c/Biology-Copy_glossary.txt",
     "contents": [
         {
-            "id": 70335069006,
+            "id": 80335069006,
             "name": "Respiration in living organisms",
             "description": "First Node(Root)",
             "expanded": true,
@@ -252,8 +252,8 @@
             "depth": 1,
             "parentId": 70335069006,
             "text": {
-                "en": "<p><strong>The importance of respiration to living organisms:</strong></p><p><br></p><p>In cellular respiration the cell breaks down food molecules in order to release the <span style=\"background-color: rgb(255, 194, 102);\">energy</span> which is used by the cell to perform its vital functions and activities.</p><p><br></p><module-video></module-video>\n<p><br></p>",
-                "ar": "<h1 class=\"ql-direction-rtl ql-align-right\">لماذا التنفس</h1><p class=\"ql-direction-rtl ql-align-right\"><strong>أهمية التنفس للكائنات الحية:</strong></p><p class=\"ql-direction-rtl ql-align-right\"><br></p><p class=\"ql-direction-rtl ql-align-right\">في التنفس<a href=\"objective_0:0\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"background-color: rgb(255, 255, 0);\"><u> الخلوي ، تكسر الخلية جزيئات الطعام من أجل إطلاق الطاقة التي تستخدمها الخلية لأداء وظائفها وأنشطتها الحيوية.</u></a></p><p class=\"ql-direction-rtl ql-align-right\"><br></p><p class=\"ql-direction-rtl ql-align-right\"><br></p><module-video></module-video>\n<p class=\"ql-direction-rtl ql-align-right\"><br></p>"
+                "en": "<p><strong>The importance of respiration to living organisms:</strong></p><p><br></p><p>In cellular respiration the cell breaks down food molecules in order to release the <span style=\"background-color: rgb(255, 194, 102);\">energy</span> which is used by the cell to perform its vital functions and activities.</p><p><br></p><iframe class=\"ql-video\" allowfullscreen=\"true\" src=\"https://scube-applications-media54cbabfc-u3d19945rbtv.s3.eu-west-1.amazonaws.com/h5p/energy_613e4cc16682baedcc2e735a.html?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=ASIA4ZSSFNBKPUE5P3AK%2F20210912%2Feu-west-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20210912T185656Z&amp;X-Amz-Expires=10000&amp;X-Amz-Security-Token=FwoGZXIvYXdzENT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDA9g22JWO4Ko8fXIuCK2AZBPjf8d0hBS9w4EmX7Dtldw4%2FckY%2FRLEBWvNvIFtlYuuWawuqH89w%2BeQZ4waO2f%2F6CE%2B5vOfuwD8kf8Jmvtx41vPe7rIG8l35EhhWMGxD52uiGe7j%2FpHvZKto9oTuSvN%2BwGjbBE2nulZ6UBwzzqE8AxBhI%2FIS4rQlsNj3FxOhIsPxO09d%2FlcWQBcmrRgYGvzWYRYqwM6MUNlkMtgY3QBUvkqIgpaYqDBlHdc5pxXbzF5%2BpeZ80RKPia%2BYkGMi0Qkb86tziCLY3DLyWYRdr%2BpSEzH6%2BVzjpK7CqCXAF5%2Fr5SZIYuaKT0CiuND%2Fo%3D&amp;X-Amz-Signature=8d151d0e9e49d752364556fef44005db239d379458abe208b87799e586a410fb&amp;X-Amz-SignedHeaders=host\" frameborder=\"0\"></iframe><p><br></p>",
+                "ar": "<h1 class=\"ql-direction-rtl ql-align-right\">لماذا التنفس</h1><p class=\"ql-direction-rtl ql-align-right\"><strong>أهمية التنفس للكائنات الحية:</strong></p><p class=\"ql-direction-rtl ql-align-right\"><br></p><p class=\"ql-direction-rtl ql-align-right\">في التنفس<a href=\"objective_0:0\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"background-color: rgb(255, 255, 0);\"><u> الخلوي ، تكسر الخلية جزيئات الطعام من أجل إطلاق الطاقة التي تستخدمها الخلية لأداء وظائفها وأنشطتها الحيوية.</u></a></p><p class=\"ql-direction-rtl ql-align-right\"><br></p><p class=\"ql-direction-rtl ql-align-right\"><br></p><iframe class=\"ql-video\" frameborder=\"0\" allowfullscreen=\"true\" src=\"https://scube-applications-media54cbabfc-u3d19945rbtv.s3.eu-west-1.amazonaws.com/h5p/energy_613e4cc16682baedcc2e735a_ar.html?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=ASIA4ZSSFNBKKVZOER4Y%2F20220301%2Feu-west-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20220301T165918Z&amp;X-Amz-Expires=10000&amp;X-Amz-Security-Token=FwoGZXIvYXdzEML%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDP%2BugGLC1H9MEzmkcSK2AeHZDly1FWuBtN%2BB2OI4uxLeIb1HEzuqlTrQ%2FtNGvY2qT8NBNtK%2FL5K5xolGT2%2BzoVj8aPI33xu6%2BoyYR%2FqlJGuG7DTbnwCx69MlM5UMA54UrM9N%2BsgwrzZneX9dhzujgdU5rN1yUqVE25mxK11ZV1RWThgePcAFKpaytWK5MYnfUG0MF0V8WcthZGwiEFrIBAjfAypXzZ5qySEppPaMlsn0RkBG10uFisy8k7cN3qux2Y0rUCieKOah%2BZAGMi1IngfHRnNPW4%2B2Qr6TZuvfUtCxtR%2F07aSEmWyuXilcV0AH84ioJQJLTuPGV3M%3D&amp;X-Amz-Signature=3e2c6a06361b054ca371044f9bb2a9ad89c5e032a89fbe3cda22d463f497d0c3&amp;X-Amz-SignedHeaders=host\"></iframe><p class=\"ql-direction-rtl ql-align-right\"><br></p>"
             },
             "keywords": [
                 {
@@ -269,10 +269,6 @@
             "audio": {
                 "en": "eBooks/azharengineering2020/ut1/61645f97fccd34a44373699b/audioFiles/why_respiration_en.mp3",
                 "ar": "eBooks/azharengineering2020/ut1/61645f97fccd34a44373699b/audioFiles/why_respiration_ar.mp3"
-            },
-            "moduleVideo": {
-                "source": "asset",
-                "path": "assets/files/SmartObjectSample.json"
             }
         },
         {
@@ -498,7 +494,7 @@
             "depth": 3,
             "expanded": true,
             "text": {
-                "en": "<p class=\"ql-align-justify\"><strong style=\"font-size: 24px;\">A) Glycolysis</strong></p><p class=\"ql-align-justify\">Glycolysis takes place in both aerobic and anaerobic respiration produce energy in which <span style=\"background-color: rgb(204, 232, 204);\">one molecule of glucose breakdown forming two molecules of pyruvic acid (3-carbons)</span> passing through a group of reactions through which glucose is converted into glucose (6-phosphate) then fructose (6-phosphate) then fructose 1-6 diphosphate which forms two molecules of PGAL phosphoglyceraldehyde</p><p class=\"ql-align-justify\">to be oxidized in two pyruvic and reduce two molecules of NAD<sup>+</sup> into NADH and two molecules of ATP are produced in the cytosole of the cell.</p><p class=\"ql-align-justify\"><br></p><p class=\"ql-align-justify\"><br></p><module-video></module-video></iframe><p class=\"ql-align-justify\"><br></p><p class=\"ql-align-justify\"><span style=\"font-size: 20px;\">All of these reactions are occurred in the absence or lack of oxygen therefore, these reactions are called anaerobic respiration.</span></p><p class=\"ql-align-justify\"><br></p><p class=\"ql-align-justify\"><br></p><p class=\"ql-align-justify\"><span style=\"font-size: 20px;\">The energy resulted is not enough to perform all vital activities of living organism, therefore, in the presence of oxygen, pyruvic acid passes into the mitochondria to produce more energy. This takes place in two stage, Krebs cycle and electron transport.</span></p><p class=\"ql-align-justify\"><br></p>",
+                "en": "<p class=\"ql-align-justify\"><strong style=\"font-size: 24px;\">A) Glycolysis</strong></p><p class=\"ql-align-justify\">Glycolysis takes place in both aerobic and anaerobic respiration produce energy in which <span style=\"background-color: rgb(204, 232, 204);\">one molecule of glucose breakdown forming two molecules of pyruvic acid (3-carbons)</span> passing through a group of reactions through which glucose is converted into glucose (6-phosphate) then fructose (6-phosphate) then fructose 1-6 diphosphate which forms two molecules of PGAL phosphoglyceraldehyde</p><p class=\"ql-align-justify\">to be oxidized in two pyruvic and reduce two molecules of NAD<sup>+</sup> into NADH and two molecules of ATP are produced in the cytosole of the cell.</p><p class=\"ql-align-justify\"><br></p><p class=\"ql-align-justify\"><br></p><iframe class=\"ql-video\" frameborder=\"0\" allowfullscreen=\"true\" src=\"https://scube-applications-media54cbabfc-u3d19945rbtv.s3.eu-west-1.amazonaws.com/h5p/Glyco_613627cf65e96e2d250691df.html?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=ASIA4ZSSFNBKEJN7L62Q%2F20210912%2Feu-west-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20210912T204521Z&amp;X-Amz-Expires=10000&amp;X-Amz-Security-Token=FwoGZXIvYXdzENb%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDISEFFTFg1oc3xq4mSK2AcVSUWAOPrMqjiCiASGxnagcn9sZkktA2uwlw%2BJRGQtF3KXuyERsOngzd8i9W1Ztv%2Bw%2BgBVfmUgCWq%2B38t89wjkum9WcAW%2BaTOFWwM%2BAGRelrgQrzGQpktf6xbnifgMbORI7HnFwdxor%2BKNbm1ywDJ8U0%2Fif2d%2BYLXX8bNF7iMpW%2FBakxJyuLjlSygnoUaj92dHoMPpignvshSM1SLmPO1jVL2KIxfE42cKqt06YoQrqqv%2BB7%2Bg9KOHN%2BYkGMi3y6miyzRCcZm4WFM8Qci9aEcI6FGDSXFGqNlKQ%2F5Iovx%2FkHzW9Uyjcqyk5P1Q%3D&amp;X-Amz-Signature=a0db69632fa9c00e26f3d3b5e1b07eac4a3101a40566ebef95ec1e73c246ec35&amp;X-Amz-SignedHeaders=host\"></iframe><p class=\"ql-align-justify\"><br></p><p class=\"ql-align-justify\"><span style=\"font-size: 20px;\">All of these reactions are occurred in the absence or lack of oxygen therefore, these reactions are called anaerobic respiration.</span></p><p class=\"ql-align-justify\"><br></p><p class=\"ql-align-justify\"><br></p><p class=\"ql-align-justify\"><span style=\"font-size: 20px;\">The energy resulted is not enough to perform all vital activities of living organism, therefore, in the presence of oxygen, pyruvic acid passes into the mitochondria to produce more energy. This takes place in two stage, Krebs cycle and electron transport.</span></p><p class=\"ql-align-justify\"><br></p>",
                 "ar": "<h1 class=\"ql-direction-rtl ql-align-right\">تحلل السكر</h1><p class=\"ql-direction-rtl ql-align-right\"><strong style=\"font-size: 24px;\">أ) </strong><a href=\"objective_1:0\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"font-size: 24px; background-color: rgb(255, 255, 0);\"><strong><u>تحلل السكر</u></strong></a></p><p class=\"ql-direction-rtl ql-align-right\"><a href=\"objective_1:0\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"background-color: rgb(255, 255, 0);\"><u>يحدث تحلل الجلوكوز في كل من التنفس الهوائي واللاهوائي لإنتاج الطاقة التي ينتج فيها جزيء واحد من تحلل الجلوكوز مكونًا جزيئين من حمض البيروفيك (3 كربون) يمر عبر مجموعة من التفاعلات التي يتم من خلالها تحويل الجلوكوز إلى جلوكوز (6 فوسفات) ثم الفركتوز ( 6-فوسفات) ثم الفركتوز 1-6 ثنائي الفوسفات الذي يشكل جزيئين من PGAL phosphoglyceraldehyde</u></a></p><p class=\"ql-direction-rtl ql-align-right\"><a href=\"objective_1:0\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"background-color: rgb(255, 255, 0);\"><u>يتأكسد في اثنين من البيروفيك ويختزل جزيئين من NAD </u><sup><u>+</u></sup><u> إلى NADH ويتم إنتاج جزيئين من ATP في العصارة الخلوية للخلية.</u></a></p><p class=\"ql-direction-rtl ql-align-right\"><br></p><p class=\"ql-direction-rtl ql-align-right\"><br></p><p class=\"ql-direction-rtl ql-align-right\"><br></p><iframe class=\"ql-video\" frameborder=\"0\" allowfullscreen=\"true\" src=\"https://scube-applications-media54cbabfc-u3d19945rbtv.s3.eu-west-1.amazonaws.com/h5p/Glyco_613627cf65e96e2d250691df_ar.html?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=ASIA4ZSSFNBKPORTKOE4%2F20220301%2Feu-west-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20220301T170428Z&amp;X-Amz-Expires=10000&amp;X-Amz-Security-Token=FwoGZXIvYXdzEMP%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDJPZYrHcY6V%2BnhwI4iK2AdfH0IyKZMLY%2F4qWLaq1dR5bvGyQQPuM9R%2FfnUwkYiPVv44cIZ5W6vXTXbB40GiyaZEK7M3W%2FC9uOdTcSRbTqd%2FWjoQtF8CXkQKhSICwi5IKMCUM1FY6v0N%2FYgHiB%2FGrqCbqnL0om%2FRgDxihY%2FvlUBQA0trF2OBd2jJomIZGAy2hYffff4caWvkqQ7D8ikeRtwvsvH0lJ%2Bq4VeNi%2Fn04wIqQF5QxmyyEcDCHhZV8cvY6S88TqItsKJyk%2BZAGMi1%2B46xtlbs737uB4v8a8bbkx50V7sE9Zij5MJoehtsQpqH38jWv2SrLoug73xQ%3D&amp;X-Amz-Signature=a86170fa089deff334024593f2ce954ac861266ef17bd768a1f4e55734732107&amp;X-Amz-SignedHeaders=host\"></iframe><p class=\"ql-direction-rtl ql-align-right\"><br></p><p class=\"ql-direction-rtl ql-align-right\"><a href=\"objective_1:0\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"font-size: 20px; background-color: rgb(255, 255, 0);\"><u>كل هذه التفاعلات تحدث في غياب أو نقص الأكسجين لذلك تسمى هذه</u></a><span style=\"font-size: 20px;\"> التفاعلات التنفس اللاهوائي.</span></p><p class=\"ql-direction-rtl ql-align-right\"><br></p><p class=\"ql-direction-rtl ql-align-right\"><br></p><p class=\"ql-direction-rtl ql-align-right\"><span style=\"font-size: 20px;\">الطاقة الناتجة ليست كافية لأداء جميع الأنشطة الحيوية للكائن الحي ، لذلك في وجود الأكسجين ، يمر حمض البيروفيك إلى الميتوكوندريا لإنتاج المزيد من الطاقة. يحدث هذا على مرحلتين ، دورة كريبس ونقل الإلكترون.</span></p><p class=\"ql-direction-rtl ql-align-right\"><br></p>"
             },
             "parentId": 120057072545,
@@ -560,10 +556,6 @@
             "audio": {
                 "en": "eBooks/azharengineering2020/ut1/61645f97fccd34a44373699b/audioFiles/Glycolysis_en.mp3",
                 "ar": "eBooks/azharengineering2020/ut1/61645f97fccd34a44373699b/audioFiles/Glycolysis_ar.mp3"
-            },
-            "moduleVideo": {
-                "source": "asset",
-                "path": "assets/files/SmartObjectSample.json"
             }
         },
         {
@@ -595,9 +587,10 @@
             "id": 93415780377,
             "depth": 3,
             "parentId": 120057072545,
+            
             "text": {
-                "en": "<p class=\"ql-align-justify\"><strong>C) Electron transport chain</strong></p><p class=\"ql-align-justify\">1.&nbsp;&nbsp;&nbsp;&nbsp;At the terminal stage of aerobic respiration and by the end of Krebs cycle, hydrogen and high-energy electrons carried out by NAD<sup>+</sup> and FAD are transported over certain sequence of co-enzymes called cytochromes (electron carriers) present inside the inner membrane of mitochondria. They carry electron at different energy levels. These high energy electrons are passed from one molecule of cytochromes to another, and during the that energy is released to form ATP from ADP plus a phosphate group. This process is called oxidative phosphorylation</p><p class=\"ql-align-justify\">2.&nbsp;&nbsp;&nbsp;Oxygen is considered the last receptor in the electron transport chain where the two electrons combine with two H<sup>+</sup> and one oxygen atom to form water. In the electron transport chain, each NADH molecule produces 3 molecules of ATP while each FADH<sub>2</sub> molecule produces two molecules of ATP)</p><p class=\"ql-align-justify\">&nbsp;3.&nbsp;&nbsp;&nbsp;Accordingly in aerobic respiration each molecule of glucose produces 38 ATP two of them are produced in the cytoplasm of the cell during glycolysis and 36 molecules are produced inside the mitochondria</p><module-video></module-video>",
-                "ar": "<h1 class=\"ql-direction-rtl ql-align-right\">نقل الإلكترون</h1><p class=\"ql-direction-rtl ql-align-right\"><strong>ج) سلسلة نقل الإلكترون</strong></p><p class=\"ql-direction-rtl ql-align-right\">1. في المرحلة النهائية من التنفس الهوائي وبحلول نهاية دورة كريبس ، يتم نقل الهيدروجين والإلكترونات عالية الطاقة المنفذة بواسطة NAD <sup>+</sup> و FAD عبر تسلسل معين من الإنزيمات المشتركة تسمى cytochromes (ناقلات الإلكترون) الموجودة داخل الغشاء الداخلي الميتوكوندريا. يحملون الإلكترون عند مستويات طاقة مختلفة. يتم تمرير هذه الإلكترونات عالية الطاقة من جزيء واحد من السيتوكرومات إلى آخر ، وخلال تلك الطاقة يتم إطلاقها لتكوين ATP من ADP بالإضافة إلى مجموعة الفوسفات. هذه العملية تسمى الفسفرة المؤكسدة</p><p class=\"ql-direction-rtl ql-align-right\">2. يعتبر الأكسجين هو المستقبل الأخير في سلسلة نقل الإلكترون حيث يتحد الإلكترونان مع ذرتين من H <sup>+</sup> وذرة أكسجين واحدة لتكوين الماء. في سلسلة نقل الإلكترون ، ينتج كل جزيء NADH 3 جزيئات من ATP بينما ينتج كل جزيء FADH <sub>2</sub> جزيئين من ATP)</p><p class=\"ql-direction-rtl ql-align-right\">3. وفقًا للتنفس الهوائي ، ينتج كل جزيء من الجلوكوز 38 جزيء ATP يتم إنتاج اثنين منهم في سيتوبلازم الخلية أثناء تحلل الجلوكوز ويتم إنتاج 36 جزيء داخل الميتوكوندريا</p><module-video></module-video>"
+                "en": "<p class=\"ql-align-justify\"><strong>C) Electron transport chain</strong></p><p class=\"ql-align-justify\">1.&nbsp;&nbsp;&nbsp;&nbsp;At the terminal stage of aerobic respiration and by the end of Krebs cycle, hydrogen and high-energy electrons carried out by NAD<sup>+</sup> and FAD are transported over certain sequence of co-enzymes called cytochromes (electron carriers) present inside the inner membrane of mitochondria. They carry electron at different energy levels. These high energy electrons are passed from one molecule of cytochromes to another, and during the that energy is released to form ATP from ADP plus a phosphate group. This process is called oxidative phosphorylation</p><p class=\"ql-align-justify\">2.&nbsp;&nbsp;&nbsp;Oxygen is considered the last receptor in the electron transport chain where the two electrons combine with two H<sup>+</sup> and one oxygen atom to form water. In the electron transport chain, each NADH molecule produces 3 molecules of ATP while each FADH<sub>2</sub> molecule produces two molecules of ATP)</p><p class=\"ql-align-justify\">&nbsp;3.&nbsp;&nbsp;&nbsp;Accordingly in aerobic respiration each molecule of glucose produces 38 ATP two of them are produced in the cytoplasm of the cell during glycolysis and 36 molecules are produced inside the mitochondria</p><p class=\"ql-align-justify\"><br></p><p class=\"ql-align-justify\">EKB video:</p><p class=\"ql-align-justify\"><br></p><p class=\"ql-align-justify\"><br></p><p class=\"ql-align-center\"><a href=\"https://player.eduedges.com?MoId=619c19b8cacb4f019387c020\" rel=\"noopener noreferrer\" target=\"_blank\"><img src=\"https://scube-applications-media54cbabfc-u3d19945rbtv.s3.eu-west-1.amazonaws.com/screenshots/619c19b8cacb4f019387c020_screenshot.png\"></a></p>",
+                "ar": "<h1 class=\"ql-direction-rtl ql-align-right\">نقل الإلكترون</h1><p class=\"ql-direction-rtl ql-align-right\"><strong>ج) سلسلة نقل الإلكترون</strong></p><p class=\"ql-direction-rtl ql-align-right\">1. في المرحلة النهائية من التنفس الهوائي وبحلول نهاية دورة كريبس ، يتم نقل الهيدروجين والإلكترونات عالية الطاقة المنفذة بواسطة NAD <sup>+</sup> و FAD عبر تسلسل معين من الإنزيمات المشتركة تسمى cytochromes (ناقلات الإلكترون) الموجودة داخل الغشاء الداخلي الميتوكوندريا. يحملون الإلكترون عند مستويات طاقة مختلفة. يتم تمرير هذه الإلكترونات عالية الطاقة من جزيء واحد من السيتوكرومات إلى آخر ، وخلال تلك الطاقة يتم إطلاقها لتكوين ATP من ADP بالإضافة إلى مجموعة الفوسفات. هذه العملية تسمى الفسفرة المؤكسدة</p><p class=\"ql-direction-rtl ql-align-right\">2. يعتبر الأكسجين هو المستقبل الأخير في سلسلة نقل الإلكترون حيث يتحد الإلكترونان مع ذرتين من H <sup>+</sup> وذرة أكسجين واحدة لتكوين الماء. في سلسلة نقل الإلكترون ، ينتج كل جزيء NADH 3 جزيئات من ATP بينما ينتج كل جزيء FADH <sub>2</sub> جزيئين من ATP)</p><p class=\"ql-direction-rtl ql-align-right\">3. وفقًا للتنفس الهوائي ، ينتج كل جزيء من الجلوكوز 38 جزيء ATP يتم إنتاج اثنين منهم في سيتوبلازم الخلية أثناء تحلل الجلوكوز ويتم إنتاج 36 جزيء داخل الميتوكوندريا</p><p class=\"ql-direction-rtl ql-align-right\"><br></p><p class=\"ql-direction-rtl ql-align-right\">فيديو EKB:</p><p class=\"ql-direction-rtl ql-align-right\"><br></p><p class=\"ql-direction-rtl ql-align-right\"><br></p><p class=\"ql-direction-rtl ql-align-right ql-indent-5\"><a href=\"https://player.eduedges.com?MoId=619c19b8cacb4f019387c020\" rel=\"noopener noreferrer\" target=\"_blank\"><img src=\"https://scube-applications-media54cbabfc-u3d19945rbtv.s3.eu-west-1.amazonaws.com/screenshots/619c19b8cacb4f019387c020_screenshot.png\"></a></p>"
             },
             "keywords": [
                 {
@@ -615,12 +608,8 @@
             "audio": {
                 "en": "eBooks/azharengineering2020/ut1/61645f97fccd34a44373699b/audioFiles/Electron_transport_en.mp3",
                 "ar": "eBooks/azharengineering2020/ut1/61645f97fccd34a44373699b/audioFiles/Electron_transport_ar.mp3"
-            },
-            "moduleVideo": {
-                "source": "asset",
-                "path": "assets/files/SmartObjectSample.json",
-                "displayOrder": 999
             }
+           
         },
         {
             "name": "anaeropic respiration",
@@ -629,8 +618,8 @@
             "expanded": true,
             "parentId": 109824618867,
             "text": {
-                "en": "<p><strong style=\"color: rgb(231, 0, 138);\">Chapter 3</strong></p><p>&nbsp;</p><p><strong style=\"color: rgb(231, 0, 138);\">Anaerobic Respiration:</strong></p><p class=\"ql-align-justify\"><span style=\"font-size: 16px; color: rgb(32, 33, 34);\">is&nbsp;respiration&nbsp;using&nbsp;</span><span style=\"font-size: 16px; background-color: rgb(255, 255, 255);\">electron acceptors</span><span style=\"font-size: 16px; color: rgb(32, 33, 34);\">&nbsp;other</span><span style=\"font-size: 16px;\"> than&nbsp;</span><span style=\"font-size: 16px; background-color: rgb(255, 255, 255);\">molecular oxygen</span><span style=\"font-size: 16px;\">&nbsp;(O</span><sub style=\"font-size: 16px;\">2</sub><span style=\"font-size: 16px;\">). Although oxygen is not the final electron acceptor, the process still uses a respiratory electron transport chain</span><span style=\"font-size: 16px; color: rgb(32, 33, 34);\">.</span><span style=\"font-size: 14px; color: rgb(32, 33, 34);\"> </span>When oxygen is missing or in low quantity. living organisms as bacteria and fungi respire by another kind of respiration called anaerobic respiration. Also plant and animal cells may respire anaerobically when oxygen is not available, and this is known as fermentation. this kind of respiration does not need oxygen but it takes place in the presence of special enzymes.</p><p class=\"ql-align-justify\"><br></p><p>Anaerobic respiration starts the same way as aerobic respiration by the decomposition of a glucose molecule into two molecules of pyruvic acid with two molecules of NADH and a small quantity of energy as 2 ATP released.</p><p><br></p><p><span style=\"font-size: 24px;\">Activity:</span></p><module-video></module-video>\n<p><br></p><p><br></p><p>Pyruvic acid is converted according to the type of cell in which it was formed, in case of animal cells, especially the muscle fibres, when the muscles exert vigorous efforts or exercises, they consume most of the oxygen in their cells and tend to convert pyruvic acid into lactic acid after its reduction by combining with hydrogen on NADH</p><p><br></p><p><br></p><p class=\"ql-align-justify\"><strong style=\"color: rgb(54, 52, 53);\">C</strong><sub style=\"color: rgb(54, 52, 53);\"><strong>6</strong></sub><strong style=\"color: rgb(54, 52, 53);\">H</strong><sub style=\"color: rgb(54, 52, 53);\"><strong>12</strong></sub><strong style=\"color: rgb(54, 52, 53);\">&nbsp;O</strong><sub style=\"color: rgb(54, 52, 53);\"><strong>6</strong></sub><strong style=\"color: rgb(54, 52, 53);\">+ 6O</strong><sub style=\"color: rgb(54, 52, 53);\"><strong>2</strong></sub>&nbsp;<img src=\"//:0\">&nbsp;&nbsp;<strong style=\"color: rgb(54, 52, 53);\">2C</strong><sub style=\"color: rgb(54, 52, 53);\"><strong>3</strong></sub><strong style=\"color: rgb(54, 52, 53);\">H</strong><sub style=\"color: rgb(54, 52, 53);\"><strong>6&nbsp;</strong></sub><strong style=\"color: rgb(54, 52, 53);\">O</strong><sub style=\"color: rgb(54, 52, 53);\"><strong>3</strong></sub><strong style=\"color: rgb(54, 52, 53);\">&nbsp;&nbsp;+ 2ATP</strong></p><p class=\"ql-align-justify\">This is known as muscular fatigue, (if oxygen is available, lactic acid is converted into pyruvic acid again and then into acetyl co-A). In the case of bacteria pyruvic acid is convened into lactic acid. In the case of yeast or in some plant cells pyruvic acid is reduced into ethyl alcohol and carbon dioxide. This process is called alcoholic fermentation and is used in the industry of some products.</p><p class=\"ql-align-justify\">&nbsp;</p><p class=\"ql-align-justify\">&nbsp;</p><p class=\"ql-align-justify\"><strong style=\"color: rgb(54, 52, 53);\">C</strong><sub style=\"color: rgb(54, 52, 53);\"><strong>6</strong></sub><strong style=\"color: rgb(54, 52, 53);\">H</strong><sub style=\"color: rgb(54, 52, 53);\"><strong>12</strong></sub><strong style=\"color: rgb(54, 52, 53);\">&nbsp;O</strong><sub style=\"color: rgb(54, 52, 53);\"><strong>6</strong></sub><strong style=\"color: rgb(54, 52, 53);\">+ 6O</strong><sub style=\"color: rgb(54, 52, 53);\"><strong>2</strong></sub>&nbsp;<img src=\"//:0\">&nbsp;&nbsp;<strong style=\"color: rgb(54, 52, 53);\">2C</strong><sub style=\"color: rgb(54, 52, 53);\"><strong>2</strong></sub><strong style=\"color: rgb(54, 52, 53);\">H</strong><sub style=\"color: rgb(54, 52, 53);\"><strong>5</strong></sub><strong style=\"color: rgb(54, 52, 53);\">&nbsp;OH+2CO</strong><sub style=\"color: rgb(54, 52, 53);\"><strong>2</strong></sub><strong style=\"color: rgb(54, 52, 53);\">+ 2ATP</strong></p><p><br></p><p class=\"ql-align-justify\"><br></p>",
-                "ar": "<h1 class=\"ql-direction-rtl ql-align-right\">التنفس اللاهوائي</h1><p class=\"ql-direction-rtl ql-align-right\"><strong style=\"color: rgb(231, 0, 138);\">الفصل 3</strong></p><p class=\"ql-direction-rtl ql-align-right\"><strong style=\"color: rgb(231, 0, 138);\">التنفس اللاهوائي:</strong></p><p class=\"ql-direction-rtl ql-align-right\"><span style=\"color: rgb(32, 33, 34); font-size: 16px;\">هو التنفس باستخدام</span> <span style=\"background-color: rgb(255, 255, 255); font-size: 16px;\">مستقبلات الإلكترون</span> <span style=\"color: rgb(32, 33, 34); font-size: 16px;\">بخلاف</span> <span style=\"font-size: 16px;\">الأكسجين</span> <span style=\"background-color: rgb(255, 255, 255); font-size: 16px;\">الجزيئي</span> <span style=\"font-size: 16px;\">(O</span> <sub style=\"font-size: 16px;\">2</sub> <span style=\"font-size: 16px;\">). على الرغم من أن الأكسجين ليس متقبل الإلكترون النهائي ، إلا أن العملية لا تزال تستخدم سلسلة نقل إلكترون في الجها</span><a href=\"ref_0\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"font-size: 16px;\">[1]</a><span style=\"font-size: 16px;\">ز التنفسي</span> <span style=\"color: rgb(32, 33, 34); font-size: 16px;\">.</span><span style=\"color: rgb(32, 33, 34); font-size: 14px;\"> </span>عندما يكون الأكسجين مفقودًا أو بكميات قليلة. تتنفس الكائنات الحية مثل البكتيريا والفطريات بنوع آخر من التنفس يسمى التنفس اللاهوائي. كما يمكن للخلايا النباتية والحيوانية أن تتنفس بشكل لاهوائي عند عدم توفر الأكسجين ، وهذا ما يعرف بالتخمير. هذا النوع من التنفس لا يحتاج إلى أكسجين ولكنه يحدث بوجود إنزيمات خاصة.</p><p class=\"ql-direction-rtl ql-align-right\"><br></p><p class=\"ql-direction-rtl ql-align-right\">يبدأ التنفس اللاهوائي بنفس طريقة التنفس الهوائي عن طريق تحلل جزيء الجلوكوز إلى جزيئين من حمض البيروفيك مع جزيئين من NADH وكمية صغيرة من الطاقة عند إطلاق 2 ATP.</p><p class=\"ql-direction-rtl ql-align-right\"><br></p><p class=\"ql-direction-rtl ql-align-right\"><span style=\"font-size: 24px;\">نشاط:</span></p><module-video></module-video><p class=\"ql-direction-rtl ql-align-right\"><br></p><p class=\"ql-direction-rtl ql-align-right\"><br></p><p class=\"ql-direction-rtl ql-align-right\">يتم تحويل حمض البيروفيك وفقًا لنوع الخلية التي تشكلت فيها ، في حالة الخلايا الحيوانية ، وخاصة ألياف العضلات ، فعندما تبذل العضلات جهودًا أو تمارين قوية ، فإنها تستهلك معظم الأكسجين الموجود في خلاياها وتميل إلى تحويل البيروفيك. إلى حمض اللاكتيك بعد اختزاله عن طريق الدمج مع الهيدروجين في NADH</p><p class=\"ql-direction-rtl ql-align-right\"><br></p><p class=\"ql-direction-rtl ql-align-right\"><br></p><p class=\"ql-direction-rtl ql-align-right\"><strong style=\"color: rgb(54, 52, 53);\">ج</strong> <sub style=\"color: rgb(54, 52, 53);\"><strong>6</strong></sub> <strong style=\"color: rgb(54, 52, 53);\">س</strong> <sub style=\"color: rgb(54, 52, 53);\"><strong>12</strong></sub> <strong style=\"color: rgb(54, 52, 53);\">س</strong> <sub style=\"color: rgb(54, 52, 53);\"><strong>6</strong></sub> <strong style=\"color: rgb(54, 52, 53);\">+</strong> 6 س <sub style=\"color: rgb(54, 52, 53);\"><strong>2</strong></sub><img src=\"//:0\"> <strong style=\"color: rgb(54, 52, 53);\">2C</strong> <sub style=\"color: rgb(54, 52, 53);\"><strong>3</strong></sub> <strong style=\"color: rgb(54, 52, 53);\">H</strong> <sub style=\"color: rgb(54, 52, 53);\"><strong>6</strong></sub> <strong style=\"color: rgb(54, 52, 53);\">O</strong> <sub style=\"color: rgb(54, 52, 53);\"><strong>3</strong></sub> <strong style=\"color: rgb(54, 52, 53);\">+ 2ATP</strong></p><p class=\"ql-direction-rtl ql-align-right\">يُعرف هذا بالإرهاق العضلي (في حالة توفر الأكسجين ، يتم تحويل حمض اللاكتيك إلى حمض البيروفيك مرة أخرى ثم إلى أسيتيل co-A). في حالة البكتيريا ، يتم تحويل حمض البيروفيك إلى حمض اللاكتيك. في حالة الخميرة أو في بعض الخلايا النباتية يتم تقليل حمض البيروفيك إلى كحول إيثيلي وثاني أكسيد الكربون. تسمى هذه العملية بالتخمير الكحولي وتستخدم في صناعة بعض المنتجات.</p><p class=\"ql-direction-rtl ql-align-right\"><strong style=\"color: rgb(54, 52, 53);\">ج</strong> <sub style=\"color: rgb(54, 52, 53);\"><strong>6</strong></sub> <strong style=\"color: rgb(54, 52, 53);\">س</strong> <sub style=\"color: rgb(54, 52, 53);\"><strong>12</strong></sub> <strong style=\"color: rgb(54, 52, 53);\">س</strong> <sub style=\"color: rgb(54, 52, 53);\"><strong>6</strong></sub> <strong style=\"color: rgb(54, 52, 53);\">+</strong> 6 س <sub style=\"color: rgb(54, 52, 53);\"><strong>2</strong></sub><img src=\"//:0\"> <strong style=\"color: rgb(54, 52, 53);\">2C</strong> <sub style=\"color: rgb(54, 52, 53);\"><strong>2</strong></sub> <strong style=\"color: rgb(54, 52, 53);\">H</strong> <sub style=\"color: rgb(54, 52, 53);\"><strong>5</strong></sub> <strong style=\"color: rgb(54, 52, 53);\">OH +</strong> 2CO <sub style=\"color: rgb(54, 52, 53);\"><strong>2</strong></sub> <strong style=\"color: rgb(54, 52, 53);\">+ 2ATP</strong></p><p class=\"ql-direction-rtl ql-align-right\"><br></p><p class=\"ql-direction-rtl ql-align-right\"><br></p><p>.</p>"
+                "en": "<p><strong style=\"color: rgb(231, 0, 138);\">Chapter 3</strong></p><p>&nbsp;</p><p><strong style=\"color: rgb(231, 0, 138);\">Anaerobic Respiration:</strong></p><p class=\"ql-align-justify\"><span style=\"font-size: 16px; color: rgb(32, 33, 34);\">is&nbsp;respiration&nbsp;using&nbsp;</span><span style=\"font-size: 16px; background-color: rgb(255, 255, 255);\">electron acceptors</span><span style=\"font-size: 16px; color: rgb(32, 33, 34);\">&nbsp;other</span><span style=\"font-size: 16px;\"> than&nbsp;</span><span style=\"font-size: 16px; background-color: rgb(255, 255, 255);\">molecular oxygen</span><span style=\"font-size: 16px;\">&nbsp;(O</span><sub style=\"font-size: 16px;\">2</sub><span style=\"font-size: 16px;\">). Although oxygen is not the final electron acceptor, the process still uses a respiratory electron transport chain</span><span style=\"font-size: 16px; color: rgb(32, 33, 34);\">.</span><span style=\"font-size: 14px; color: rgb(32, 33, 34);\"> </span>When oxygen is missing or in low quantity. living organisms as bacteria and fungi respire by another kind of respiration called anaerobic respiration. Also plant and animal cells may respire anaerobically when oxygen is not available, and this is known as fermentation. this kind of respiration does not need oxygen but it takes place in the presence of special enzymes.</p><p class=\"ql-align-justify\"><br></p><p>Anaerobic respiration starts the same way as aerobic respiration by the decomposition of a glucose molecule into two molecules of pyruvic acid with two molecules of NADH and a small quantity of energy as 2 ATP released.</p><p><br></p><p><span style=\"font-size: 24px;\">Activity:</span></p><iframe class=\"ql-video\" frameborder=\"0\" allowfullscreen=\"true\" src=\"https://scube-applications-media54cbabfc-u3d19945rbtv.s3.eu-west-1.amazonaws.com/h5p/Aerobic_and_Anaerobic_613ce39c6682ba42ce2e7356.html?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=ASIA4ZSSFNBKNDUHF7VN%2F20220126%2Feu-west-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20220126T162617Z&amp;X-Amz-Expires=10000&amp;X-Amz-Security-Token=FwoGZXIvYXdzEJL%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDF1cD7Qiw9QNvjW8WCK2ATivsv8EZLD6gm3OzmzcpEFvaWghEG%2B5H%2FoaQjmuXqxHKtNamd%2Fu4uqwLxX%2B5humm6QZw3YTB8LhGf6G8gEU6fFlsKt6VQwhFxqc6P%2Bo%2FfESom6Bn%2ByCFSWBF%2Fm9huzVGF%2FV7Bb%2FIVYeD7NyMj4XhGSMDUY1a1PpvPMh8vs%2Ba957sJhos83v8VqeAV473jHKj5l2YBQzuDZ05u4ppu4520NyRZZbCTSors5%2FT411JYVGRVMpYI7tKKnsxY8GMi1Gp%2BK5ahYjUZiMctW8uxvmgtZfXbWmNjNiMxC9VxSkR9%2B3CHcG%2BotRQYf4gOc%3D&amp;X-Amz-Signature=822f0431a67976215466cf0d7fe3ed966b0d0cea217e92bd06495369cf284f25&amp;X-Amz-SignedHeaders=host\"></iframe><p><br></p><p><br></p><p>Pyruvic acid is converted according to the type of cell in which it was formed, in case of animal cells, especially the muscle fibres, when the muscles exert vigorous efforts or exercises, they consume most of the oxygen in their cells and tend to convert pyruvic acid into lactic acid after its reduction by combining with hydrogen on NADH</p><p><br></p><p><br></p><p class=\"ql-align-justify\"><strong style=\"color: rgb(54, 52, 53);\">C</strong><sub style=\"color: rgb(54, 52, 53);\"><strong>6</strong></sub><strong style=\"color: rgb(54, 52, 53);\">H</strong><sub style=\"color: rgb(54, 52, 53);\"><strong>12</strong></sub><strong style=\"color: rgb(54, 52, 53);\">&nbsp;O</strong><sub style=\"color: rgb(54, 52, 53);\"><strong>6</strong></sub><strong style=\"color: rgb(54, 52, 53);\">+ 6O</strong><sub style=\"color: rgb(54, 52, 53);\"><strong>2</strong></sub>&nbsp;<img src=\"//:0\">&nbsp;&nbsp;<strong style=\"color: rgb(54, 52, 53);\">2C</strong><sub style=\"color: rgb(54, 52, 53);\"><strong>3</strong></sub><strong style=\"color: rgb(54, 52, 53);\">H</strong><sub style=\"color: rgb(54, 52, 53);\"><strong>6&nbsp;</strong></sub><strong style=\"color: rgb(54, 52, 53);\">O</strong><sub style=\"color: rgb(54, 52, 53);\"><strong>3</strong></sub><strong style=\"color: rgb(54, 52, 53);\">&nbsp;&nbsp;+ 2ATP</strong></p><p class=\"ql-align-justify\">This is known as muscular fatigue, (if oxygen is available, lactic acid is converted into pyruvic acid again and then into acetyl co-A). In the case of bacteria pyruvic acid is convened into lactic acid. In the case of yeast or in some plant cells pyruvic acid is reduced into ethyl alcohol and carbon dioxide. This process is called alcoholic fermentation and is used in the industry of some products.</p><p class=\"ql-align-justify\">&nbsp;</p><p class=\"ql-align-justify\">&nbsp;</p><p class=\"ql-align-justify\"><strong style=\"color: rgb(54, 52, 53);\">C</strong><sub style=\"color: rgb(54, 52, 53);\"><strong>6</strong></sub><strong style=\"color: rgb(54, 52, 53);\">H</strong><sub style=\"color: rgb(54, 52, 53);\"><strong>12</strong></sub><strong style=\"color: rgb(54, 52, 53);\">&nbsp;O</strong><sub style=\"color: rgb(54, 52, 53);\"><strong>6</strong></sub><strong style=\"color: rgb(54, 52, 53);\">+ 6O</strong><sub style=\"color: rgb(54, 52, 53);\"><strong>2</strong></sub>&nbsp;<img src=\"//:0\">&nbsp;&nbsp;<strong style=\"color: rgb(54, 52, 53);\">2C</strong><sub style=\"color: rgb(54, 52, 53);\"><strong>2</strong></sub><strong style=\"color: rgb(54, 52, 53);\">H</strong><sub style=\"color: rgb(54, 52, 53);\"><strong>5</strong></sub><strong style=\"color: rgb(54, 52, 53);\">&nbsp;OH+2CO</strong><sub style=\"color: rgb(54, 52, 53);\"><strong>2</strong></sub><strong style=\"color: rgb(54, 52, 53);\">+ 2ATP</strong></p><p><br></p><p class=\"ql-align-justify\"><br></p>",
+                "ar": "<h1 class=\"ql-direction-rtl ql-align-right\">التنفس اللاهوائي</h1><p class=\"ql-direction-rtl ql-align-right\"><strong style=\"color: rgb(231, 0, 138);\">الفصل 3</strong></p><p class=\"ql-direction-rtl ql-align-right\"><strong style=\"color: rgb(231, 0, 138);\">التنفس اللاهوائي:</strong></p><p class=\"ql-direction-rtl ql-align-right\"><span style=\"color: rgb(32, 33, 34); font-size: 16px;\">هو التنفس باستخدام</span> <span style=\"background-color: rgb(255, 255, 255); font-size: 16px;\">مستقبلات الإلكترون</span> <span style=\"color: rgb(32, 33, 34); font-size: 16px;\">بخلاف</span> <span style=\"font-size: 16px;\">الأكسجين</span> <span style=\"background-color: rgb(255, 255, 255); font-size: 16px;\">الجزيئي</span> <span style=\"font-size: 16px;\">(O</span> <sub style=\"font-size: 16px;\">2</sub> <span style=\"font-size: 16px;\">). على الرغم من أن الأكسجين ليس متقبل الإلكترون النهائي ، إلا أن العملية لا تزال تستخدم سلسلة نقل إلكترون في الجها</span><a href=\"ref_0\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"font-size: 16px;\">[1]</a><span style=\"font-size: 16px;\">ز التنفسي</span> <span style=\"color: rgb(32, 33, 34); font-size: 16px;\">.</span><span style=\"color: rgb(32, 33, 34); font-size: 14px;\"> </span>عندما يكون الأكسجين مفقودًا أو بكميات قليلة. تتنفس الكائنات الحية مثل البكتيريا والفطريات بنوع آخر من التنفس يسمى التنفس اللاهوائي. كما يمكن للخلايا النباتية والحيوانية أن تتنفس بشكل لاهوائي عند عدم توفر الأكسجين ، وهذا ما يعرف بالتخمير. هذا النوع من التنفس لا يحتاج إلى أكسجين ولكنه يحدث بوجود إنزيمات خاصة.</p><p class=\"ql-direction-rtl ql-align-right\"><br></p><p class=\"ql-direction-rtl ql-align-right\">يبدأ التنفس اللاهوائي بنفس طريقة التنفس الهوائي عن طريق تحلل جزيء الجلوكوز إلى جزيئين من حمض البيروفيك مع جزيئين من NADH وكمية صغيرة من الطاقة عند إطلاق 2 ATP.</p><p class=\"ql-direction-rtl ql-align-right\"><br></p><p class=\"ql-direction-rtl ql-align-right\"><span style=\"font-size: 24px;\">نشاط:</span></p><iframe class=\"ql-video\" frameborder=\"0\" allowfullscreen=\"true\" src=\"https://scube-applications-media54cbabfc-u3d19945rbtv.s3.eu-west-1.amazonaws.com/h5p/Aerobic_and_Anaerobic_613ce39c6682ba42ce2e7356_ar.html?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=ASIA4ZSSFNBKJY3MOWOC%2F20220301%2Feu-west-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20220301T170845Z&amp;X-Amz-Expires=10000&amp;X-Amz-Security-Token=FwoGZXIvYXdzEMP%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDEgFY6q1iM87mOisliK2AdrAa2pGme2p2d%2Fb37fEhApAjPaUU%2F%2BvaqMvg1m0uX0ETAGotWzSsz4kR6UhsZAmCcDHTpP3xGr00EwtDaYaKrUQcIhUlG3G2MqVwsXyNvT6U5WvFI5Gsvm2Gj%2Byj5aJ0KJ0NTt9QqNsQoWjz%2Fan%2F%2Bovrg%2B5dagW9PIth8KRIXtQJ%2F7FQIiqxU%2BsbkA%2Bcq8qc4EBjRjjBUW9ptZsPxkdb0iSiBaJoTfB%2FPGJc4wuknbbBiS2WeUmKJ2m%2BZAGMi3HhUZRKCw69HSWTbbuzxvYzCahI64yhkHUSgrilPHa0KOOgShma6qBR9eY7Zk%3D&amp;X-Amz-Signature=fbb4eb3298dcd88325a44b2e8447bfb9d7ad062d3b697d333618abe6d82ee938&amp;X-Amz-SignedHeaders=host\"></iframe><p class=\"ql-direction-rtl ql-align-right\"><br></p><p class=\"ql-direction-rtl ql-align-right\"><br></p><p class=\"ql-direction-rtl ql-align-right\">يتم تحويل حمض البيروفيك وفقًا لنوع الخلية التي تشكلت فيها ، في حالة الخلايا الحيوانية ، وخاصة ألياف العضلات ، فعندما تبذل العضلات جهودًا أو تمارين قوية ، فإنها تستهلك معظم الأكسجين الموجود في خلاياها وتميل إلى تحويل البيروفيك. إلى حمض اللاكتيك بعد اختزاله عن طريق الدمج مع الهيدروجين في NADH</p><p class=\"ql-direction-rtl ql-align-right\"><br></p><p class=\"ql-direction-rtl ql-align-right\"><br></p><p class=\"ql-direction-rtl ql-align-right\"><strong style=\"color: rgb(54, 52, 53);\">ج</strong> <sub style=\"color: rgb(54, 52, 53);\"><strong>6</strong></sub> <strong style=\"color: rgb(54, 52, 53);\">س</strong> <sub style=\"color: rgb(54, 52, 53);\"><strong>12</strong></sub> <strong style=\"color: rgb(54, 52, 53);\">س</strong> <sub style=\"color: rgb(54, 52, 53);\"><strong>6</strong></sub> <strong style=\"color: rgb(54, 52, 53);\">+</strong> 6 س <sub style=\"color: rgb(54, 52, 53);\"><strong>2</strong></sub><img src=\"//:0\"> <strong style=\"color: rgb(54, 52, 53);\">2C</strong> <sub style=\"color: rgb(54, 52, 53);\"><strong>3</strong></sub> <strong style=\"color: rgb(54, 52, 53);\">H</strong> <sub style=\"color: rgb(54, 52, 53);\"><strong>6</strong></sub> <strong style=\"color: rgb(54, 52, 53);\">O</strong> <sub style=\"color: rgb(54, 52, 53);\"><strong>3</strong></sub> <strong style=\"color: rgb(54, 52, 53);\">+ 2ATP</strong></p><p class=\"ql-direction-rtl ql-align-right\">يُعرف هذا بالإرهاق العضلي (في حالة توفر الأكسجين ، يتم تحويل حمض اللاكتيك إلى حمض البيروفيك مرة أخرى ثم إلى أسيتيل co-A). في حالة البكتيريا ، يتم تحويل حمض البيروفيك إلى حمض اللاكتيك. في حالة الخميرة أو في بعض الخلايا النباتية يتم تقليل حمض البيروفيك إلى كحول إيثيلي وثاني أكسيد الكربون. تسمى هذه العملية بالتخمير الكحولي وتستخدم في صناعة بعض المنتجات.</p><p class=\"ql-direction-rtl ql-align-right\"><strong style=\"color: rgb(54, 52, 53);\">ج</strong> <sub style=\"color: rgb(54, 52, 53);\"><strong>6</strong></sub> <strong style=\"color: rgb(54, 52, 53);\">س</strong> <sub style=\"color: rgb(54, 52, 53);\"><strong>12</strong></sub> <strong style=\"color: rgb(54, 52, 53);\">س</strong> <sub style=\"color: rgb(54, 52, 53);\"><strong>6</strong></sub> <strong style=\"color: rgb(54, 52, 53);\">+</strong> 6 س <sub style=\"color: rgb(54, 52, 53);\"><strong>2</strong></sub><img src=\"//:0\"> <strong style=\"color: rgb(54, 52, 53);\">2C</strong> <sub style=\"color: rgb(54, 52, 53);\"><strong>2</strong></sub> <strong style=\"color: rgb(54, 52, 53);\">H</strong> <sub style=\"color: rgb(54, 52, 53);\"><strong>5</strong></sub> <strong style=\"color: rgb(54, 52, 53);\">OH +</strong> 2CO <sub style=\"color: rgb(54, 52, 53);\"><strong>2</strong></sub> <strong style=\"color: rgb(54, 52, 53);\">+ 2ATP</strong></p><p class=\"ql-direction-rtl ql-align-right\"><br></p><p class=\"ql-direction-rtl ql-align-right\"><br></p><p>.</p>"
             },
             "keywords": [
                 {
@@ -649,7 +638,6 @@
                 "en": "eBooks/azharengineering2020/ut1/61645f97fccd34a44373699b/audioFiles/anaeropic_respiration_en.mp3",
                 "ar": "eBooks/azharengineering2020/ut1/61645f97fccd34a44373699b/audioFiles/anaeropic_respiration_ar.mp3"
             }
-
         },
         {
             "name": "Respiration in human",
@@ -669,27 +657,27 @@
     ],"definition": "anaerobic respiration",
            "glossary": [
         {
-            "word": "adenine",
+            "word": "adenine1",
             "definition": "A chemical compound that is used to make one of the building blocks of DNA and RNA",
             "abbreviation": "",
             "objId": "",
             "objTitle": ""
         },
         {
-            "word": "adenosine diphosphate adp",
+            "word": "adenosine diphosphate adp1",
             "definition": " A nucleotide made up of adenine, ribose, and two phosphate units;",
             "abbreviation": "ADP",
             "objId": ""
         },
         {
-            "word": "adenosine triphosphate",
+            "word": "adenosine triphosphate1",
             "definition": "is an organic compound and hydrotrope that provides energy to drive many processes in living cells",
             "abbreviation": "ATP",
             "objId": "6138d775aa91823829859400",
             "objTitle": "ATP slide"
         },
         {
-            "word": "aerobic respiration",
+            "word": "aerobic respiration1",
             "definition": "Aerobic respiration needs oxygen. It is the release of a relatively large amount of energy in cells by the breakdown of food substances in the presence of oxygen: glucose + oxygen → carbon dioxide + water.",
             "abbreviation": "",
             "objId": "",
@@ -698,7 +686,7 @@
             ]
         },
         {
-            "word": "anaerobic respiration",
+            "word": "anaerobic respiration1",
             "definition": "",
             "abbreviation": "",
             "objId": "",
@@ -707,7 +695,7 @@
             ]
         },
         {
-            "word": "anda 5-carbon pentose sugar",
+            "word": "anda 5-carbon pentose sugar1",
             "definition": "",
             "abbreviation": "",
             "objId": ""
@@ -977,238 +965,188 @@
         }
     ],
     "bookObjects": [
-        {
-"keywords": [
-"Tetrahedral molecules",
-"VSEPR notation",
-"repulsive forces",
-"plainer bond",
-"Tetrahedral shape",
-"terminal atoms",
-"free electrons",
-"valence shell electron"
-
-],
-"input": "visual",
-"status": "preprocessed",
-"type": "mo",
-"speakerGender": "male",
-"_id": "60a2ceb601b1e64d520112ff",
-"audioList": [
-  {
-    "langCode": "en",
-    "url": "https://scube-applications-media54cbabfc-u3d19945rbtv.s3.amazonaws.com/molecules_video_data/dac0-4a8a-8613-c730f4f47e8b_Molecular_Structure_intro_video.mp3",
-    "langName": "English",
-    "duration": 164
-  },
-  {
-    "langCode": "ar",
-    "url": "https://scube-applications-media54cbabfc-u3d19945rbtv.s3.amazonaws.com/molecules_video_data/f469-42d5-9d45-b2abaf392d0d_80f447bb-dac0-4a8a-8613-c730f4f47e8b_Molecular_Structure_intro_video_ar.mp3",
-    "langName": "Arabic",
-    "duration": 222.288
-  },
-  {
-    "langCode": "fr",
-    "url": "https://scube-applications-media54cbabfc-u3d19945rbtv.s3.amazonaws.com/molecules_video_data/f469-42d5-9d45-b2abaf392d0d_80f447bb-dac0-4a8a-8613-c730f4f47e8b_Molecular_Structure_intro_video_fr.mp3",
-    "langName": "French",
-    "duration": 178.104
-  },
-  {
-    "langCode": "es",
-    "url": "https://scube-applications-media54cbabfc-u3d19945rbtv.s3.amazonaws.com/molecules_video_data/f469-42d5-9d45-b2abaf392d0d_80f447bb-dac0-4a8a-8613-c730f4f47e8b_Molecular_Structure_intro_video_es.mp3",
-    "langName": "Spanish",
-    "duration": 195.432
-  },
-  {
-    "langCode": "de",
-    "url": "https://scube-applications-media54cbabfc-u3d19945rbtv.s3.amazonaws.com/molecules_video_data/f469-42d5-9d45-b2abaf392d0d_80f447bb-dac0-4a8a-8613-c730f4f47e8b_Molecular_Structure_intro_video_de.mp3",
-    "langName": "German",
-    "duration": 190.224
-  },
-  {
-    "langCode": "it",
-    "url": "https://scube-applications-media54cbabfc-u3d19945rbtv.s3.amazonaws.com/molecules_video_data/f469-42d5-9d45-b2abaf392d0d_80f447bb-dac0-4a8a-8613-c730f4f47e8b_Molecular_Structure_intro_video_it.mp3",
-    "langName": "Italian",
-    "duration": 194.112
-  },
-  {
-    "langCode": "tr",
-    "url": "https://scube-applications-media54cbabfc-u3d19945rbtv.s3.amazonaws.com/molecules_video_data/f469-42d5-9d45-b2abaf392d0d_80f447bb-dac0-4a8a-8613-c730f4f47e8b_Molecular_Structure_intro_video_tr.mp3",
-    "langName": "Turkish",
-    "duration": 202.488
-  }
-],
-"vttList": [
-  {
-    "langCode": "en",
-    "langName": "English",
-    "url": "https://scube-applications-media54cbabfc-u3d19945rbtv.s3.amazonaws.com/molecules_video_data/f469-42d5-9d45-b2abaf392d0d_80f447bb-dac0-4a8a-8613-c730f4f47e8b_Molecular_Structure_intro_video_en.vtt"
-  },
-  {
-    "langCode": "eg",
-    "langName": "Egyptian Style",
-    "url": "https://scube-applications-media54cbabfc-u3d19945rbtv.s3.amazonaws.com/molecules_video_data/f469-42d5-9d45-b2abaf392d0d_80f447bb-dac0-4a8a-8613-c730f4f47e8b_Molecular_Structure_intro_video_eg.vtt"
-  },
-  {
-    "langCode": "ar",
-    "langName": "Arabic",
-    "url": "https://scube-applications-media54cbabfc-u3d19945rbtv.s3.amazonaws.com/molecules_video_data/f469-42d5-9d45-b2abaf392d0d_80f447bb-dac0-4a8a-8613-c730f4f47e8b_Molecular_Structure_intro_video_ar.vtt"
-  },
-  {
-    "langCode": "fr",
-    "langName": "French",
-    "url": "https://scube-applications-media54cbabfc-u3d19945rbtv.s3.amazonaws.com/molecules_video_data/f469-42d5-9d45-b2abaf392d0d_80f447bb-dac0-4a8a-8613-c730f4f47e8b_Molecular_Structure_intro_video_fr.vtt"
-  },
-  {
-    "langCode": "es",
-    "langName": "Spanish",
-    "url": "https://scube-applications-media54cbabfc-u3d19945rbtv.s3.amazonaws.com/molecules_video_data/f469-42d5-9d45-b2abaf392d0d_80f447bb-dac0-4a8a-8613-c730f4f47e8b_Molecular_Structure_intro_video_es.vtt"
-  },
-  {
-    "langCode": "de",
-    "langName": "German",
-    "url": "https://scube-applications-media54cbabfc-u3d19945rbtv.s3.amazonaws.com/molecules_video_data/f469-42d5-9d45-b2abaf392d0d_80f447bb-dac0-4a8a-8613-c730f4f47e8b_Molecular_Structure_intro_video_de.vtt"
-  },
-  {
-    "langCode": "it",
-    "langName": "Italian",
-    "url": "https://scube-applications-media54cbabfc-u3d19945rbtv.s3.amazonaws.com/molecules_video_data/f469-42d5-9d45-b2abaf392d0d_80f447bb-dac0-4a8a-8613-c730f4f47e8b_Molecular_Structure_intro_video_it.vtt"
-  },
-  {
-    "langCode": "hi",
-    "langName": "Hindi",
-    "url": "https://scube-applications-media54cbabfc-u3d19945rbtv.s3.amazonaws.com/molecules_video_data/f469-42d5-9d45-b2abaf392d0d_80f447bb-dac0-4a8a-8613-c730f4f47e8b_Molecular_Structure_intro_video_hi.vtt",
-    "signedurl": ""
-  },
-  {
-    "langCode": "tr",
-    "langName": "Turkish",
-    "url": "https://scube-applications-media54cbabfc-u3d19945rbtv.s3.amazonaws.com/molecules_video_data/f469-42d5-9d45-b2abaf392d0d_80f447bb-dac0-4a8a-8613-c730f4f47e8b_Molecular_Structure_intro_video_tr.vtt",
-    "signedurl": ""
-  }
-],
-"availableLanguages": [
-  {
-    "data": {
-      "transcript": "<p>Okay, welcome to electron line and here we're going to talk about our next shape. It’s called Tetrahedral molecules.\nSo Tetrahedral molecules have one central molecule, as you can see, and four molecules that are at the very ends of the four bonds that it makes.\nSo, this would be a good example of what we call CH4, which is, of course, the Methane molecule. One Carbon at the center and four Hydrogens, they all form a nice bond with 2 electrons in each bond.\nAnd notice that those electrons will like to be as far away from one another as possible.\nSo this is the shape that they're going to end up with.\nSomething that looks like this. It is called the Tetrahedral shape.\n\nNow you may ask yourself the question:\nwell, why doesn't this form a plainer bond like that? Wouldn't all the molecule or wouldn’t the electrons in the bonds be as far away from each other as possible when they're like this.\nBecause you can see here that the bond angles in this case would be 90 degrees.\n\nSo the question is: why isn't it 90 degrees?\nIt was a plainer molecule, that's what it would be.\nHowever, when that happens, is the distance between those bond bonded electrons are that the bond electrons is only 90 degrees and angle of 90 degrees and if it takes on a tetrahedral shape like that, the bond angle is 109.5 degrees.\nSo that in this case, would be 109.5 degrees. So simply the force of repulsion forces it into that shape.\n\nBecause in that shape, that is the largest possible angle you can have between the 4 sets of bond electrons or electrons that are used in the bonds, I should say, they're not really bond electrons, of course their electrons use in the bonding between carbon and the four hydrogens.\nSo that's why it turns out that from electrical pulse of forces alone, it will go ahead and form itself into this kind of molecule like that.\n\nNow, VSEPR notation, remember that was the valence shell electron pair repulsion concept of how molecules are formed.\nWe have one central atom and we have 4 terminal atoms.\nSo that's what we end up with the methane molecules. In that respect, anytime you have a shape made from this kind of arrangement of molecules one in the center and for a on the on the ends of the bonds.\nYou'll end up with what we call it tetrahedral shape with the bond angles 109.5 degrees.\nAt that point, there is far away from each other as possible.\nAlso note that the molecules right here, the hydrogen, do not have free electrons.\nSo there's no repulsive forces there, so this is kind of as clean as a good example. If you can get for this kind of shape.</p>",
-      "summary25": "Okay, welcome to electron line and here we're going to talk about our next shape. So Tetrahedral molecules have one central molecule, as you can see, and four molecules that are at the very ends of the four bonds that it makes. So, this would be a good example of what we call C. H. 4, which is, of course, the Methane molecule. One Carbon at the center and four Hydrogens. So this is the shape that they're going to end up with. However, when that happens, is the distance between those bond bonded electrons are that the bond electrons is only 90 degrees and angle of 90 degrees and if it takes on a Tetrahedral shape like that, the bond angle is 109.5 degrees. because in that shape, that is the largest possible angle you can have between the 4 sets of bond electrons or electrons that are used in the bonds, I should say, they're not really bond electrons, of course their electrons use in the bonding between carbon and the four hydrogens. So there's no repulsive forces there, so this is kind of as clean as a good example.",
-      "summary50": "Okay, welcome to electron line and here we're going to talk about our next shape. It’s called Tetrahedral molecules. So Tetrahedral molecules have one central molecule, as you can see, and four molecules that are at the very ends of the four bonds that it makes. So, this would be a good example of what we call C. H. 4, which is, of course, the Methane molecule. One Carbon at the center and four Hydrogens. They all form a nice bond with 2 electrons in each bond. And notice that those electrons will like to be as far away from one another as possible. So this is the shape that they're going to end up with. Because you can see here that the bond angles in this case would be 90 degrees. However, when that happens, is the distance between those bond bonded electrons are that the bond electrons is only 90 degrees and angle of 90 degrees and if it takes on a Tetrahedral shape like that, the bond angle is 109.5 degrees. So that in this case, would be 109.5 degrees. So simply the force of repulsion forces it into that shape. because in that shape, that is the largest possible angle you can have between the 4 sets of bond electrons or electrons that are used in the bonds, I should say, they're not really bond electrons, of course their electrons use in the bonding between carbon and the four hydrogens. So that's why it turns out that from electrical pulse of forces alone, it will go ahead and form itself into this kind of molecule like that. Now, VSEPR notation, remember that was the valence shell electron pair repulsion concept of how molecules are formed. In that respect, anytime you have a shape made from this kind of arrangement of molecules one in the center and for a on the on the ends of the bonds. So there's no repulsive forces there, so this is kind of as clean as a good example.",
-      "keywords": []
-    },
-    "frameUrls": [],
-    "frameList": [],
-    "languageCode": "en",
-    "isEdited": false
-  },
-  {
-    "data": {
-      "transcript": "حسنًا، مرحبًا بكم في خط الإلكترون وسنتحدث هنا عن الشكل التالي. إنها تسمى جزيئات رباعي السطوح.\nإذن، جزيئات رباعي السطوح لها جزيء مركزي واحد، كما ترون، وأربعة جزيئاتتقع في نهايات الروابط الأربعة التي تصنعها.\nلذلك، سيكون هذا مثالًا جيدًا لما نسميه C.H4، وهو بالطبع جزيء الميثان. واحد كربون في المركز وأربعة هيدروجين.\nكلهم يشكلون رابطة لطيفة مع إلكترونين في كل رابطة.\nولاحظ أن تلك الإلكترونات ترغب في أن تكون بعيدة عن بعضها البعض قدر الإمكان.\nإذن هذا هو الشكل الذي سنصل إليه.\nشيء يشبه هذا. يطلق عليه شكل رباعي السطوح.\n\nالآن يمكنك أن تطرح على نفسك السؤال التالي:\nحسنًا ، لماذا لا يشكل هذا رابطة أكثر وضوحًا من هذا القبيل؟\n ألن يكون كل الجزيء أو ألن تكون الإلكترونات الموجودة في الروابط بعيدة عن بعضها بقدر الإمكان عندما تكون هكذا.\nلأنه يمكنك أن ترى هنا أن زوايا الرابطة في هذه الحالة ستكون 90 درجة.\nإذن السؤال هو: لماذا ليست 90 درجة؟\nلقد كان جزيءًا أبسط ، هذا ما سيكون عليه.\nومع ذلك، عندما يحدث ذلك ، فإن المسافة بين تلك الإلكترونات الرابطة هي أن إلكترونات الرابطة هي 90 درجة وزاوية 90 درجة فقط ، وإذا اتخذت شكل رباعي السطوح من هذا القبيل ، فإن زاوية الرابطة هي 109.5 درجة.\nإذن في هذه الحالة، سيكون 109.5 درجة.\nلذا فإن قوة التنافر تدفعه إلى هذا الشكل.\nلأنه في هذا الشكل ، هذه هي أكبر زاوية ممكنة بين المجموعات الأربع من إلكترونات السندات أو الإلكترونات المستخدمة في الروابط ، يجب أن أقول ، إنها ليست إلكترونات مرتبطة حقًا ، بالطبع تستخدم إلكتروناتها في الترابط بين الكربون وأربعة هيدروجين.\nلهذا السبب اتضح أنه من خلال النبضة الكهربائية للقوى وحدها ، ستمضي قدمًا وتشكل نفسها في هذا النوع من الجزيئات من هذا القبيل.\n\nالآن ، تدوين VSEPR ، تذكر أن هذا كان مفهوم تنافر زوج الإلكترون لغلاف التكافؤ لكيفية تشكل الجزيئات.\nلدينا ذرة مركزية واحدة ولدينا 4 ذرات طرفية.\nهذا ما ينتهي بنا المطاف مع جزيئات الميثان. في هذا الصدد ، في أي وقت يكون لديك شكل مصنوع من هذا النوع من ترتيب الجزيئات ، واحد في المركز وللحصول على في نهايات الروابط.\nستنتهي بما نسميه شكل رباعي السطوح بزوايا الرابطة 109.5 درجة.\nفي هذه المرحلة ، هناك بعيدون عن بعضهم البعض قدر الإمكان.\nلاحظ أيضًا أن الجزيئات الموجودة هنا ، الهيدروجين، لا تحتوي على إلكترونات حرة.\nلذلك لا توجد قوى طاردة هناك ، لذلك هذا نوع من النظافة كمثال جيد. إذا كنت تستطيع الحصول على هذا النوع من الشكل.",
-      "summary25": "حسنًا ، مرحبًا بكم في خط الإلكترون وسنتحدث هنا عن الشكل التالي. إذن Tetrahedral molecules له جزيء مركزي واحد ، كما ترون ، وأربعة جزيئات تقع في نهايات الروابط الأربعة التي يصنعها. لذلك ، سيكون هذا مثالًا جيدًا لما نسميه C.H4 ، وهو ، بالطبع ، جزيء الميثان. واحد كربون في المركز وأربعة هيدروجين. إذن هذا هو الشكل الذي سينتهي بهم المطاف به. ومع ذلك ، عندما يحدث ذلك ، تكون المسافة بين تلك الإلكترونات الرابطة هي أن إلكترونات الرابطة هي 90 درجة وزاوية 90 درجة فقط ، وإذا كانت على شكل Tetrahedral shape ، فإن زاوية الرابطة هي 109.5 درجة. لأنه في هذا الشكل ، هذه هي أكبر زاوية ممكنة يمكنك الحصول عليها بين المجموعات الأربع من إلكترونات الرابطة أو الإلكترونات المستخدمة في الروابط ، يجب أن أقول ، إنها ليست إلكترونات مرتبطة حقًا ، بالطبع تستخدم إلكتروناتها في الترابط بين الكربون وأربعة هيدروجين. لذلك لا يوجد repulsive forces هناك ، لذلك هذا نوع من النظافة كمثال جيد.",
-      "summary50": "حسنًا ، مرحبًا بكم في خط الإلكترون وسنتحدث هنا عن الشكل التالي. إنه يسمى Tetrahedral molecules. إذن Tetrahedral molecules له جزيء مركزي واحد ، كما ترون ، وأربعة جزيئات تقع في نهايات الروابط الأربعة التي يصنعها. لذلك ، سيكون هذا مثالًا جيدًا لما نسميه C.H4 ، وهو ، بالطبع ، جزيء الميثان. واحد كربون في المركز وأربعة هيدروجين. كلهم يشكلون رابطة لطيفة مع إلكترونين في كل رابطة. ولاحظ أن تلك الإلكترونات ترغب في أن تكون بعيدة عن بعضها البعض قدر الإمكان. إذن هذا هو الشكل الذي سينتهي بهم المطاف به. لأنه يمكنك أن ترى هنا أن زوايا الرابطة في هذه الحالة ستكون 90 درجة. ومع ذلك ، عندما يحدث ذلك ، فإن المسافة بين تلك الإلكترونات الرابطة هي أن إلكترونات الرابطة هي 90 درجة وزاوية 90 درجة فقط ، وإذا كانت Tetrahedral shape هكذا ، فإن زاوية الرابطة هي 109.5 درجة. إذن في هذه الحالة ، سيكون 109.5 درجة. لذا فإن قوة التنافر تدفعه إلى هذا الشكل. لأنه في هذا الشكل ، هذه هي أكبر زاوية ممكنة يمكنك الحصول عليها بين المجموعات الأربع من إلكترونات الرابطة أو الإلكترونات المستخدمة في الروابط ، يجب أن أقول ، إنها ليست إلكترونات مرتبطة حقًا ، بالطبع تستخدم إلكتروناتها في الترابط بين الكربون وأربعة هيدروجين. لهذا السبب اتضح أنه من خلال النبضة الكهربائية للقوى وحدها ، ستمضي قدمًا وتشكل نفسها في هذا النوع من الجزيئات من هذا القبيل. الآن ، في VSEPR ، تذكر أن هذا كان مفهوم تنافر زوج الإلكترون لغلاف التكافؤ لكيفية تشكل الجزيئات. في هذا الصدد ، في أي وقت يكون لديك شكل مصنوع من هذا النوع من ترتيب الجزيئات ، واحد في المركز وللحصول على في نهايات الروابط. لذلك لا يوجد repulsive forces هناك ، لذلك هذا نوع من النظافة كمثال جيد.",
-      "keywords": []
-    },
-    "frameUrls": [],
-    "frameList": [],
-    "languageCode": "eg",
-    "isEdited": false
-  },
-  {
-    "data": {
-      "transcript": "حسنًا ، مرحبًا بكم في خط الإلكترون وسنتحدث هنا عن الشكل التالي. إنها تسمى جزيئات رباعي السطوح. إذن ، جزيئات رباعي السطوح لها جزيء مركزي واحد ، كما ترون ، وأربعة جزيئات تقع في نهايات الروابط الأربعة التي تصنعها. لذلك ، سيكون هذا مثالًا جيدًا لما نسميه C.H4 ، وهو ، بالطبع ، جزيء الميثان. واحد كربون في المركز وأربعة هيدروجين. كلهم يشكلون رابطة لطيفة مع إلكترونين في كل رابطة. ولاحظ أن تلك الإلكترونات ترغب في أن تكون بعيدة عن بعضها البعض قدر الإمكان. إذن هذا هو الشكل الذي سينتهي بهم المطاف به. شيء يشبه هذا. يطلق عليه شكل رباعي السطوح. الآن يمكنك أن تطرح على نفسك السؤال التالي: حسنًا ، لماذا لا يشكل هذا رابطة أكثر وضوحًا من هذا القبيل؟ لن يكون كل الجزيء أو لا تكون الإلكترونات الموجودة في الروابط بعيدة عن بعضها بقدر الإمكان عندما تكون هكذا. لأنه يمكنك أن ترى هنا أن زوايا الرابطة في هذه الحالة ستكون 90 درجة. إذن السؤال هو: لماذا ليست 90 درجة؟ لقد كان جزيءًا أبسط ، هذا ما سيكون عليه. ومع ذلك ، عندما يحدث ذلك ، فإن المسافة بين تلك الإلكترونات الرابطة هي أن إلكترونات الرابطة هي 90 درجة وزاوية 90 درجة فقط ، وإذا اتخذت شكل رباعي السطوح من هذا القبيل ، فإن زاوية الرابطة هي 109.5 درجة. إذن في هذه الحالة ، سيكون 109.5 درجة. لذا فإن قوة التنافر تدفعه إلى هذا الشكل. لأنه في هذا الشكل ، هذه هي أكبر زاوية ممكنة بين المجموعات الأربع من إلكترونات السندات أو الإلكترونات المستخدمة في الروابط ، يجب أن أقول ، إنها ليست إلكترونات مرتبطة حقًا ، بالطبع تستخدم إلكتروناتها في الترابط بين الكربون وأربعة هيدروجين. لهذا السبب اتضح أنه من خلال النبضة الكهربائية للقوى وحدها ، ستمضي قدمًا وتشكل نفسها في هذا النوع من الجزيئات من هذا القبيل. الآن ، تدوين VSEPR ، تذكر أن هذا كان مفهوم تنافر زوج الإلكترون لغلاف التكافؤ لكيفية تشكل الجزيئات. لدينا ذرة مركزية واحدة ولدينا 4 ذرات طرفية. هذا ما ينتهي بنا المطاف مع جزيئات الميثان. في هذا الصدد ، في أي وقت يكون لديك شكل مصنوع من هذا النوع من ترتيب الجزيئات ، واحد في المركز وللحصول على في نهايات الروابط. ستنتهي بما نسميه شكل رباعي السطوح بزوايا الرابطة 109.5 درجة. في هذه المرحلة ، هناك بعيدون عن بعضهم البعض قدر الإمكان. لاحظ أيضًا أن الجزيئات الموجودة هنا ، الهيدروجين ، لا تحتوي على إلكترونات حرة. لذلك لا توجد قوى طاردة هناك ، لذلك هذا نوع من النظافة كمثال جيد. إذا كنت تستطيع الحصول على هذا النوع من الشكل.",
-      "summary25": "حسنًا ، مرحبًا بكم في خط الإلكترون وسنتحدث هنا عن الشكل التالي. إذن ، جزيئات رباعي السطوح لها جزيء مركزي واحد ، كما ترون ، وأربعة جزيئات تقع في نهايات الروابط الأربعة التي تصنعها. لذلك ، سيكون هذا مثالًا جيدًا لما نسميه C.H4 ، وهو ، بالطبع ، جزيء الميثان. واحد كربون في المركز وأربعة هيدروجين. إذن هذا هو الشكل الذي سينتهي بهم المطاف به. ومع ذلك ، عندما يحدث ذلك ، فإن المسافة بين تلك الإلكترونات الرابطة هي أن إلكترونات الرابطة هي 90 درجة وزاوية 90 درجة فقط ، وإذا اتخذت شكل رباعي السطوح من هذا القبيل ، فإن زاوية الرابطة هي 109.5 درجة. لأنه في هذا الشكل ، هذه هي أكبر زاوية ممكنة بين المجموعات الأربع من إلكترونات السندات أو الإلكترونات المستخدمة في الروابط ، يجب أن أقول ، إنها ليست إلكترونات مرتبطة حقًا ، بالطبع تستخدم إلكتروناتها في الترابط بين الكربون وأربعة هيدروجين. لذلك لا توجد قوى طاردة هناك ، لذلك هذا نوع من النظافة كمثال جيد.",
-      "summary50": "حسنًا ، مرحبًا بكم في خط الإلكترون وسنتحدث هنا عن الشكل التالي. إنها تسمى جزيئات رباعي السطوح. إذن ، جزيئات رباعي السطوح لها جزيء مركزي واحد ، كما ترون ، وأربعة جزيئات تقع في نهايات الروابط الأربعة التي تصنعها. لذلك ، سيكون هذا مثالًا جيدًا لما نسميه C.H4 ، وهو ، بالطبع ، جزيء الميثان. واحد كربون في المركز وأربعة هيدروجين. كلهم يشكلون رابطة لطيفة مع إلكترونين في كل رابطة. ولاحظ أن تلك الإلكترونات ترغب في أن تكون بعيدة عن بعضها البعض قدر الإمكان. إذن هذا هو الشكل الذي سينتهي بهم المطاف به. لأنه يمكنك أن ترى هنا أن زوايا الرابطة في هذه الحالة ستكون 90 درجة. ومع ذلك ، عندما يحدث ذلك ، فإن المسافة بين تلك الإلكترونات الرابطة هي أن إلكترونات الرابطة هي 90 درجة وزاوية 90 درجة فقط ، وإذا اتخذت شكل رباعي السطوح من هذا القبيل ، فإن زاوية الرابطة هي 109.5 درجة. إذن في هذه الحالة ، سيكون 109.5 درجة. لذا فإن قوة التنافر تدفعه إلى هذا الشكل. لأنه في هذا الشكل ، هذه هي أكبر زاوية ممكنة بين المجموعات الأربع من إلكترونات السندات أو الإلكترونات المستخدمة في الروابط ، يجب أن أقول ، إنها ليست إلكترونات مرتبطة حقًا ، بالطبع تستخدم إلكتروناتها في الترابط بين الكربون وأربعة هيدروجين. لهذا السبب اتضح أنه من خلال النبضة الكهربائية للقوى وحدها ، ستمضي قدمًا وتشكل نفسها في هذا النوع من الجزيئات من هذا القبيل. الآن ، تدوين VSEPR ، تذكر أن هذا كان مفهوم تنافر زوج الإلكترون لغلاف التكافؤ لكيفية تشكل الجزيئات. في هذا الصدد ، في أي وقت يكون لديك شكل مصنوع من هذا النوع من ترتيب الجزيئات ، واحد في المركز وللحصول على في نهايات الروابط. لذلك لا توجد قوى طاردة هناك ، لذلك هذا نوع من النظافة كمثال جيد.",
-      "keywords": []
-    },
-    "frameUrls": [],
-    "frameList": [],
-    "languageCode": "ar",
-    "isEdited": false
-  },
-  {
-    "data": {
-      "transcript": "D'accord, bienvenue sur la ligne d'électrons et ici nous allons parler de notre prochaine forme. C'est ce qu'on appelle les molécules tétraédriques. Ainsi, les molécules tétraédriques ont une molécule centrale, comme vous pouvez le voir, et quatre molécules qui sont aux extrémités des quatre liaisons qu'elles forment. Donc, ce serait un bon exemple de ce que nous appelons C. H. 4, qui est, bien sûr, la molécule de méthane. Un carbone au centre et quatre hydrogènes. Ils forment tous une belle liaison avec 2 électrons dans chaque liaison. Et notez que ces électrons aimeront être aussi éloignés que possible les uns des autres. C'est donc la forme avec laquelle ils vont se retrouver. Quelque chose qui ressemble à ça. C'est ce qu'on appelle la forme tétraédrique. Maintenant, vous pouvez vous poser la question: eh bien, pourquoi cela ne forme-t-il pas un lien plus simple comme ça? Est-ce que toutes les molécules ou les électrons dans les liaisons ne seraient pas aussi éloignés que possible les uns des autres quand ils sont comme ça? Parce que vous pouvez voir ici que les angles de liaison dans ce cas seraient de 90 degrés. La question est donc: pourquoi n'est-ce pas 90 degrés? C'était une molécule plus simple, c'est ce que ce serait. Cependant, lorsque cela se produit, la distance entre ces électrons liés par des liaisons est que les électrons de liaison ne sont que de 90 degrés et un angle de 90 degrés et si cela prend une forme tétraédrique comme celle-là, l'angle de liaison est de 109,5 degrés. Donc, dans ce cas, serait de 109,5 degrés. Donc, simplement la force de répulsion le force à prendre cette forme. parce que dans cette forme, c'est le plus grand angle possible que vous puissiez avoir entre les 4 ensembles d'électrons de liaison ou d'électrons qui sont utilisés dans les liaisons, je devrais dire, ce ne sont pas vraiment des électrons de liaison, bien sûr que leurs électrons utilisent dans la liaison entre le carbone et les quatre hydrogènes. C'est pourquoi il s'avère qu'à partir de la seule impulsion électrique des forces, il ira de l'avant et se transformera en ce genre de molécule comme ça. Maintenant, la notation VSEPR, rappelez-vous que c'était le concept de répulsion de paires d'électrons de coquille de valence de la façon dont les molécules sont formées. Nous avons un atome central et nous avons 4 atomes terminaux. C'est donc ce que nous finissons avec les molécules de méthane. À cet égard, chaque fois que vous avez une forme faite à partir de ce genre d'arrangement de molécules une au centre et pour une sur les extrémités des liaisons. Vous vous retrouverez avec ce que nous appelons la forme tétraédrique avec des angles de liaison de 109,5 degrés. À ce stade, il y a le plus loin possible les uns des autres. Notez également que les molécules ici même, l'hydrogène, n'ont pas d'électrons libres. Il n'y a donc pas de forces répulsives là-bas, donc c'est un peu aussi clair qu'un bon exemple. Si vous pouvez obtenir ce type de forme.",
-      "summary25": "D'accord, bienvenue sur la ligne d'électrons et ici nous allons parler de notre prochaine forme. Ainsi, les molécules tétraédriques ont une molécule centrale, comme vous pouvez le voir, et quatre molécules qui sont aux extrémités des quatre liaisons qu'elles forment. Donc, ce serait un bon exemple de ce que nous appelons C. H. 4, qui est, bien sûr, la molécule de méthane. Un carbone au centre et quatre hydrogènes. C'est donc la forme avec laquelle ils vont se retrouver. Cependant, lorsque cela se produit, la distance entre ces électrons liés par des liaisons est que les électrons de liaison ne sont que de 90 degrés et un angle de 90 degrés et si cela prend une forme tétraédrique comme celle-là, l'angle de liaison est de 109,5 degrés. parce que dans cette forme, c'est le plus grand angle possible que vous puissiez avoir entre les 4 ensembles d'électrons de liaison ou d'électrons qui sont utilisés dans les liaisons, je devrais dire, ce ne sont pas vraiment des électrons de liaison, bien sûr que leurs électrons utilisent dans la liaison entre le carbone et les quatre hydrogènes. Il n'y a donc pas de forces répulsives là-bas, donc c'est un peu aussi clair qu'un bon exemple.",
-      "summary50": "D'accord, bienvenue sur la ligne d'électrons et ici nous allons parler de notre prochaine forme. C'est ce qu'on appelle les molécules tétraédriques. Ainsi, les molécules tétraédriques ont une molécule centrale, comme vous pouvez le voir, et quatre molécules qui sont aux extrémités des quatre liaisons qu'elles forment. Donc, ce serait un bon exemple de ce que nous appelons C. H. 4, qui est, bien sûr, la molécule de méthane. Un carbone au centre et quatre hydrogènes. Ils forment tous une belle liaison avec 2 électrons dans chaque liaison. Et notez que ces électrons aimeront être aussi éloignés que possible les uns des autres. C'est donc la forme avec laquelle ils vont se retrouver. Parce que vous pouvez voir ici que les angles de liaison dans ce cas seraient de 90 degrés. Cependant, lorsque cela se produit, la distance entre ces électrons liés par des liaisons est que les électrons de liaison ne sont que de 90 degrés et un angle de 90 degrés et si cela prend une forme tétraédrique comme celle-là, l'angle de liaison est de 109,5 degrés. Donc, dans ce cas, serait de 109,5 degrés. Donc, simplement la force de répulsion le force à prendre cette forme. parce que dans cette forme, c'est le plus grand angle possible que vous puissiez avoir entre les 4 ensembles d'électrons de liaison ou d'électrons qui sont utilisés dans les liaisons, je devrais dire, ce ne sont pas vraiment des électrons de liaison, bien sûr que leurs électrons utilisent dans la liaison entre le carbone et les quatre hydrogènes. C'est pourquoi il s'avère qu'à partir de la seule impulsion électrique des forces, il ira de l'avant et se transformera en ce genre de molécule comme ça. Maintenant, la notation VSEPR, rappelez-vous que c'était le concept de répulsion de paires d'électrons de coquille de valence de la façon dont les molécules sont formées. À cet égard, chaque fois que vous avez une forme faite à partir de ce genre d'arrangement de molécules une au centre et pour une sur les extrémités des liaisons. Il n'y a donc pas de forces répulsives là-bas, donc c'est un peu aussi clair qu'un bon exemple.",
-      "keywords": []
-    },
-    "frameUrls": [],
-    "frameList": [],
-    "languageCode": "fr",
-    "isEdited": false
-  },
-  {
-    "data": {
-      "transcript": "Bien, bienvenido a la línea de electrones y aquí vamos a hablar sobre nuestra próxima forma. Se llaman moléculas tetraédricas. Entonces, las moléculas tetraédricas tienen una molécula central, como puede ver, y cuatro moléculas que están en los extremos de los cuatro enlaces que forma. Entonces, este sería un buen ejemplo de lo que llamamos C. H. 4, que es, por supuesto, la molécula de metano. Un carbono en el centro y cuatro hidrógenos. Todos forman un enlace agradable con 2 electrones en cada enlace. Y observe que a esos electrones les gustará estar lo más lejos posible unos de otros. Así que esta es la forma con la que van a terminar. Algo que se parece a esto. Se llama forma tetraédrica. Ahora puede hacerse la pregunta: bueno, ¿por qué esto no forma un vínculo más claro como ese? ¿No estarían todas las moléculas o los electrones en los enlaces lo más lejos posible entre sí cuando están así? Porque puede ver aquí que los ángulos de enlace en este caso serían de 90 grados. Entonces la pregunta es: ¿por qué no es de 90 grados? Era una molécula más simple, eso es lo que sería. Sin embargo, cuando eso sucede, la distancia entre esos electrones enlazados es que los electrones del enlace son solo 90 grados y un ángulo de 90 grados y si adquiere una forma tetraédrica como esa, el ángulo de enlace es 109,5 grados. Entonces, en este caso, serían 109,5 grados. Así que simplemente la fuerza de la repulsión lo obliga a adoptar esa forma. porque en esa forma, ese es el ángulo más grande posible que puede tener entre los 4 conjuntos de electrones de enlace o electrones que se utilizan en los enlaces, debería decir, no son realmente electrones de enlace, por supuesto que sus electrones se utilizan en el enlace entre el carbono y los cuatro hidrógenos. Entonces, es por eso que resulta que solo a partir del pulso eléctrico de fuerzas, seguirá adelante y se formará en este tipo de molécula como esa. Ahora, notación VSEPR, recuerde que ese era el concepto de repulsión de pares de electrones de la capa de valencia de cómo se forman las moléculas. Tenemos un átomo central y tenemos 4 átomos terminales. Entonces eso es lo que terminamos con las moléculas de metano. En ese sentido, siempre que tenga una forma hecha de este tipo de disposición de moléculas, una en el centro y otra en los extremos de los enlaces. Terminarás con lo que llamamos forma tetraédrica con ángulos de enlace de 109,5 grados. En ese punto, hay una distancia entre sí lo más posible. También tenga en cuenta que las moléculas de aquí, el hidrógeno, no tienen electrones libres. Entonces no hay fuerzas repulsivas allí, por lo que esto es tan limpio como un buen ejemplo. Si puedes conseguir este tipo de forma.",
-      "summary25": "Bien, bienvenido a la línea de electrones y aquí vamos a hablar sobre nuestra próxima forma. Entonces, las moléculas tetraédricas tienen una molécula central, como puede ver, y cuatro moléculas que están en los extremos de los cuatro enlaces que forma. Entonces, este sería un buen ejemplo de lo que llamamos C. H. 4, que es, por supuesto, la molécula de metano. Un carbono en el centro y cuatro hidrógenos. Así que esta es la forma con la que van a terminar. Sin embargo, cuando eso sucede, la distancia entre esos electrones enlazados es que los electrones del enlace son solo 90 grados y un ángulo de 90 grados y si adquiere una forma tetraédrica como esa, el ángulo de enlace es 109,5 grados. porque en esa forma, ese es el ángulo más grande posible que puede tener entre los 4 conjuntos de electrones de enlace o electrones que se utilizan en los enlaces, debería decir, no son realmente electrones de enlace, por supuesto que sus electrones se utilizan en el enlace entre el carbono y los cuatro hidrógenos. Entonces no hay fuerzas repulsivas allí, por lo que esto es tan limpio como un buen ejemplo.",
-      "summary50": "Bien, bienvenido a la línea de electrones y aquí vamos a hablar sobre nuestra próxima forma. Se llaman moléculas tetraédricas. Entonces, las moléculas tetraédricas tienen una molécula central, como puede ver, y cuatro moléculas que están en los extremos de los cuatro enlaces que forma. Entonces, este sería un buen ejemplo de lo que llamamos C. H. 4, que es, por supuesto, la molécula de metano. Un carbono en el centro y cuatro hidrógenos. Todos forman un enlace agradable con 2 electrones en cada enlace. Y observe que a esos electrones les gustará estar lo más lejos posible unos de otros. Así que esta es la forma con la que van a terminar. Porque puede ver aquí que los ángulos de enlace en este caso serían de 90 grados. Sin embargo, cuando eso sucede, la distancia entre esos electrones enlazados es que los electrones del enlace son solo 90 grados y un ángulo de 90 grados y si adquiere una forma tetraédrica como esa, el ángulo de enlace es 109,5 grados. Entonces, en este caso, serían 109,5 grados. Así que simplemente la fuerza de la repulsión lo obliga a adoptar esa forma. porque en esa forma, ese es el ángulo más grande posible que puede tener entre los 4 conjuntos de electrones de enlace o electrones que se utilizan en los enlaces, debería decir, no son realmente electrones de enlace, por supuesto que sus electrones se utilizan en el enlace entre el carbono y los cuatro hidrógenos. Entonces, es por eso que resulta que solo a partir del pulso eléctrico de fuerzas, seguirá adelante y se formará en este tipo de molécula como esa. Ahora, notación VSEPR, recuerde que ese era el concepto de repulsión de pares de electrones de la capa de valencia de cómo se forman las moléculas. En ese sentido, siempre que tenga una forma hecha de este tipo de disposición de moléculas, una en el centro y otra en los extremos de los enlaces. Entonces no hay fuerzas repulsivas allí, por lo que esto es tan limpio como un buen ejemplo.",
-      "keywords": []
-    },
-    "frameUrls": [],
-    "frameList": [],
-    "languageCode": "es",
-    "isEdited": false
-  },
-  {
-    "data": {
-      "transcript": "Okay, willkommen bei der Elektronenlinie und hier werden wir über unsere nächste Form sprechen. Es heißt tetraedrische Moleküle. Tetraedrische Moleküle haben also ein zentrales Molekül, wie Sie sehen können, und vier Moleküle, die sich ganz am Ende der vier Bindungen befinden, die es eingeht. Dies wäre also ein gutes Beispiel für das, was wir C. H. 4 nennen, was natürlich das Methanmolekül ist. Ein Kohlenstoff in der Mitte und vier Wasserstoffatome. Sie alle bilden eine schöne Bindung mit 2 Elektronen in jeder Bindung. Und beachten Sie, dass diese Elektronen so weit wie möglich voneinander entfernt sein möchten. Das ist also die Form, mit der sie enden werden. So etwas sieht aus. Es wird die tetraedrische Form genannt. Jetzt können Sie sich die Frage stellen: Warum bildet dies nicht eine einfachere Verbindung? Wären nicht alle Moleküle oder nicht die Elektronen in den Bindungen so weit wie möglich voneinander entfernt, wenn sie so sind? Denn Sie können hier sehen, dass die Bindungswinkel in diesem Fall 90 Grad betragen würden. Die Frage ist also: Warum sind es nicht 90 Grad? Es war ein einfacheres Molekül, so würde es sein. Wenn dies geschieht, beträgt der Abstand zwischen diesen gebundenen Elektronen jedoch, dass die Bindungselektronen nur 90 Grad und einen Winkel von 90 Grad betragen, und wenn sie eine solche tetraedrische Form annehmen, beträgt der Bindungswinkel 109,5 Grad. Das wären also in diesem Fall 109,5 Grad. Die Kraft der Abstoßung zwingt es also einfach in diese Form. Da dies in dieser Form der größtmögliche Winkel ist, den Sie zwischen den 4 Sätzen von Bindungselektronen oder Elektronen haben können, die in den Bindungen verwendet werden, sollte ich sagen, dass es sich nicht wirklich um Bindungselektronen handelt, natürlich um ihre Elektronen, die in der Bindung verwendet werden zwischen Kohlenstoff und den vier Wasserstoffatomen. Deshalb stellt sich heraus, dass es allein aus dem elektrischen Impuls der Kräfte hervorgehen und sich so zu einem solchen Molekül formen wird. Nun, VSEPR-Notation, denken Sie daran, dass dies das Konzept der Valenzschalen-Elektronenpaar-Abstoßung war, wie Moleküle gebildet werden. Wir haben ein Zentralatom und wir haben 4 terminale Atome. So kommen wir also zu den Methanmolekülen. In dieser Hinsicht haben Sie immer eine Form, die aus dieser Art von Anordnung von Molekülen besteht, eine in der Mitte und eine an den Enden der Bindungen. Sie erhalten die sogenannte tetraedrische Form mit den Bindungswinkeln von 109,5 Grad. An diesem Punkt ist es so weit wie möglich voneinander entfernt. Beachten Sie auch, dass die Moleküle hier, der Wasserstoff, keine freien Elektronen haben. Es gibt dort also keine abstoßenden Kräfte, also ist dies so sauber wie ein gutes Beispiel. Wenn Sie für diese Art von Form bekommen können.",
-      "summary25": "Okay, willkommen bei der Elektronenlinie und hier werden wir über unsere nächste Form sprechen. Tetraedrische Moleküle haben also ein zentrales Molekül, wie Sie sehen können, und vier Moleküle, die sich ganz am Ende der vier Bindungen befinden, die es eingeht. Dies wäre also ein gutes Beispiel für das, was wir C. H. 4 nennen, was natürlich das Methanmolekül ist. Ein Kohlenstoff in der Mitte und vier Wasserstoffatome. Das ist also die Form, mit der sie enden werden. Wenn dies geschieht, beträgt der Abstand zwischen diesen gebundenen Elektronen jedoch, dass die Bindungselektronen nur 90 Grad und einen Winkel von 90 Grad betragen, und wenn sie eine solche tetraedrische Form annehmen, beträgt der Bindungswinkel 109,5 Grad. Da dies in dieser Form der größtmögliche Winkel ist, den Sie zwischen den 4 Sätzen von Bindungselektronen oder Elektronen haben können, die in den Bindungen verwendet werden, sollte ich sagen, dass es sich nicht wirklich um Bindungselektronen handelt, natürlich um ihre Elektronen, die in der Bindung verwendet werden zwischen Kohlenstoff und den vier Wasserstoffatomen. Es gibt dort also keine abstoßenden Kräfte, also ist dies so sauber wie ein gutes Beispiel.",
-      "summary50": "Okay, willkommen bei der Elektronenlinie und hier werden wir über unsere nächste Form sprechen. Es heißt tetraedrische Moleküle. Tetraedrische Moleküle haben also ein zentrales Molekül, wie Sie sehen können, und vier Moleküle, die sich ganz am Ende der vier Bindungen befinden, die es eingeht. Dies wäre also ein gutes Beispiel für das, was wir C. H. 4 nennen, was natürlich das Methanmolekül ist. Ein Kohlenstoff in der Mitte und vier Wasserstoffatome. Sie alle bilden eine schöne Bindung mit 2 Elektronen in jeder Bindung. Und beachten Sie, dass diese Elektronen so weit wie möglich voneinander entfernt sein möchten. Das ist also die Form, mit der sie enden werden. Denn Sie können hier sehen, dass die Bindungswinkel in diesem Fall 90 Grad betragen würden. Wenn dies geschieht, beträgt der Abstand zwischen diesen gebundenen Elektronen jedoch, dass die Bindungselektronen nur 90 Grad und einen Winkel von 90 Grad betragen, und wenn sie eine solche tetraedrische Form annehmen, beträgt der Bindungswinkel 109,5 Grad. Das wären also in diesem Fall 109,5 Grad. Die Kraft der Abstoßung zwingt es also einfach in diese Form. Da dies in dieser Form der größtmögliche Winkel ist, den Sie zwischen den 4 Sätzen von Bindungselektronen oder Elektronen haben können, die in den Bindungen verwendet werden, sollte ich sagen, dass es sich nicht wirklich um Bindungselektronen handelt, natürlich um ihre Elektronen, die in der Bindung verwendet werden zwischen Kohlenstoff und den vier Wasserstoffatomen. Deshalb stellt sich heraus, dass es allein aus dem elektrischen Impuls der Kräfte hervorgehen und sich so zu einem solchen Molekül formen wird. Nun, VSEPR-Notation, denken Sie daran, dass dies das Konzept der Valenzschalen-Elektronenpaar-Abstoßung war, wie Moleküle gebildet werden. In dieser Hinsicht haben Sie immer eine Form, die aus dieser Art von Anordnung von Molekülen besteht, eine in der Mitte und eine an den Enden der Bindungen. Es gibt dort also keine abstoßenden Kräfte, also ist dies so sauber wie ein gutes Beispiel.",
-      "keywords": []
-    },
-    "frameUrls": [],
-    "frameList": [],
-    "languageCode": "de",
-    "isEdited": false
-  },
-  {
-    "data": {
-      "transcript": "Ok, benvenuto sulla linea dell'elettrone e qui parleremo della nostra prossima forma. Si chiamano molecole tetraedriche. Quindi le molecole tetraedriche hanno una molecola centrale, come puoi vedere, e quattro molecole che si trovano alle estremità dei quattro legami che crea. Quindi, questo sarebbe un buon esempio di ciò che chiamiamo C. H. 4, che è, ovviamente, la molecola del metano. Un carbonio al centro e quattro idrogeni. Formano tutti un bel legame con 2 elettroni in ogni legame. E nota che a quegli elettroni piacerà essere il più lontano possibile l'uno dall'altro. Quindi questa è la forma con cui andranno a finire. Qualcosa che assomiglia a questo. Si chiama forma tetraedrica. Ora potresti chiederti: beh, perché questo non forma un legame più chiaro come quello? Non tutte le molecole o gli elettroni nei legami non sarebbero il più distanti possibile l'uno dall'altro quando sono così. Perché puoi vedere qui che gli angoli di legame in questo caso sarebbero di 90 gradi. Quindi la domanda è: perché non sono 90 gradi? Era una molecola più semplice, ecco cosa sarebbe. Tuttavia, quando ciò accade, la distanza tra quegli elettroni legati è che gli elettroni del legame sono solo 90 gradi e l'angolo di 90 gradi e se assume una forma tetraedrica come quella, l'angolo di legame è 109,5 gradi. Quindi, in questo caso, sarebbe 109,5 gradi. Quindi semplicemente la forza della repulsione lo costringe a prendere quella forma. perché in quella forma, questo è l'angolo più grande possibile che puoi avere tra i 4 set di elettroni di legame o elettroni che sono usati nei legami, dovrei dire, non sono realmente elettroni di legame, ovviamente i loro elettroni usano nel legame tra il carbonio e i quattro idrogeni. Ecco perché risulta che dal solo impulso elettrico delle forze, andrà avanti e si formerà in questo tipo di molecola come quella. Ora, notazione VSEPR, ricorda che era il concetto di repulsione della coppia di elettroni del guscio di valenza di come si formano le molecole. Abbiamo un atomo centrale e abbiamo 4 atomi terminali. Quindi questo è ciò che finiamo con le molecole di metano. A questo proposito, ogni volta che hai una forma composta da questo tipo di disposizione di molecole una al centro e per una sulle estremità dei legami. Finirai con quella che chiamiamo forma tetraedrica con angoli di legame di 109,5 gradi. A quel punto, ci si allontana il più possibile l'uno dall'altro. Nota anche che le molecole qui, l'idrogeno, non hanno elettroni liberi. Quindi non ci sono forze repulsive lì, quindi questo è un po 'pulito come un buon esempio. Se riesci a ottenere questo tipo di forma.",
-      "summary25": "Ok, benvenuto sulla linea dell'elettrone e qui parleremo della nostra prossima forma. Quindi le molecole tetraedriche hanno una molecola centrale, come puoi vedere, e quattro molecole che si trovano alle estremità dei quattro legami che crea. Quindi, questo sarebbe un buon esempio di ciò che chiamiamo C. H. 4, che è, ovviamente, la molecola del metano. Un carbonio al centro e quattro idrogeni. Quindi questa è la forma con cui andranno a finire. Tuttavia, quando ciò accade, la distanza tra quegli elettroni legati è che gli elettroni del legame sono solo 90 gradi e l'angolo di 90 gradi e se assume una forma tetraedrica come quella, l'angolo di legame è 109,5 gradi. perché in quella forma, questo è l'angolo più grande possibile che puoi avere tra i 4 set di elettroni di legame o elettroni che sono usati nei legami, dovrei dire, non sono realmente elettroni di legame, ovviamente i loro elettroni usano nel legame tra il carbonio e i quattro idrogeni. Quindi non ci sono forze repulsive lì, quindi questo è un po 'pulito come un buon esempio.",
-      "summary50": "Ok, benvenuto sulla linea dell'elettrone e qui parleremo della nostra prossima forma. Si chiamano molecole tetraedriche. Quindi le molecole tetraedriche hanno una molecola centrale, come puoi vedere, e quattro molecole che si trovano alle estremità dei quattro legami che crea. Quindi, questo sarebbe un buon esempio di ciò che chiamiamo C. H. 4, che è, ovviamente, la molecola del metano. Un carbonio al centro e quattro idrogeni. Formano tutti un bel legame con 2 elettroni in ogni legame. E nota che a quegli elettroni piacerà essere il più lontano possibile l'uno dall'altro. Quindi questa è la forma con cui andranno a finire. Perché puoi vedere qui che gli angoli di legame in questo caso sarebbero di 90 gradi. Tuttavia, quando ciò accade, la distanza tra quegli elettroni legati è che gli elettroni del legame sono solo 90 gradi e l'angolo di 90 gradi e se assume una forma tetraedrica come quella, l'angolo di legame è 109,5 gradi. Quindi, in questo caso, sarebbe 109,5 gradi. Quindi semplicemente la forza della repulsione lo costringe a prendere quella forma. perché in quella forma, questo è l'angolo più grande possibile che puoi avere tra i 4 set di elettroni di legame o elettroni che sono usati nei legami, dovrei dire, non sono realmente elettroni di legame, ovviamente i loro elettroni usano nel legame tra il carbonio e i quattro idrogeni. Ecco perché risulta che dal solo impulso elettrico delle forze, andrà avanti e si formerà in questo tipo di molecola come quella. Ora, notazione VSEPR, ricorda che era il concetto di repulsione della coppia di elettroni del guscio di valenza di come si formano le molecole. A questo proposito, ogni volta che hai una forma composta da questo tipo di disposizione di molecole una al centro e per una sulle estremità dei legami. Quindi non ci sono forze repulsive lì, quindi questo è un po 'pulito come un buon esempio.",
-      "keywords": []
-    },
-    "frameUrls": [],
-    "frameList": [],
-    "languageCode": "it",
-    "isEdited": false
-  },
-  {
-    "data": {
-      "transcript": "<p>ठीक है, इलेक्ट्रॉन लाइन में आपका स्वागत है और यहां हम अपने अगले आकार के बारे में बात करने जा रहे हैं। इसे टेट्राहेड्रल अणु कहते हैं। तो टेट्राहेड्रल अणुओं में एक केंद्रीय अणु होता है, जैसा कि आप देख सकते हैं, और चार अणु जो उसके द्वारा बनाए गए चार बंधों के बिल्कुल सिरों पर होते हैं। तो, यह एक अच्छा उदाहरण होगा जिसे हम सीएच 4 कहते हैं, जो कि निश्चित रूप से मीथेन अणु है। केंद्र में एक कार्बन और चार हाइड्रोजन, वे सभी प्रत्येक बंधन में 2 इलेक्ट्रॉनों के साथ एक अच्छा बंधन बनाते हैं। और ध्यान दें कि वे इलेक्ट्रॉन जितना हो सके एक दूसरे से दूर रहना पसंद करेंगे। तो यह वह आकार है जिसके साथ वे समाप्त होने जा रहे हैं। कुछ ऐसा जो दिखता है। इसे चतुष्फलकीय आकार कहते हैं। अब आप अपने आप से यह प्रश्न पूछ सकते हैं: ठीक है, यह इस तरह एक सादा बंधन क्यों नहीं बनाता है? क्या सभी अणु या बांड में इलेक्ट्रॉन एक दूसरे से यथासंभव दूर नहीं होंगे जब वे इस तरह हों। क्योंकि आप यहां देख सकते हैं कि इस मामले में बांड कोण 90 डिग्री होगा। तो सवाल यह है: यह 90 डिग्री क्यों नहीं है? यह एक सादा अणु था, यही होगा। हालाँकि, जब ऐसा होता है, तो उन बॉन्ड बंधुआ इलेक्ट्रॉनों के बीच की दूरी यह होती है कि बॉन्ड इलेक्ट्रॉन केवल 90 डिग्री और 90 डिग्री का कोण होता है और यदि यह उस तरह का टेट्राहेड्रल आकार लेता है, तो बॉन्ड कोण 109.5 डिग्री होता है। तो इस मामले में, 109.5 डिग्री होगा। तो बस प्रतिकर्षण का बल उसे उस आकार में ला देता है। क्योंकि उस आकार में, बॉन्ड में उपयोग किए जाने वाले बॉन्ड इलेक्ट्रॉनों या इलेक्ट्रॉनों के 4 सेटों के बीच आपके पास सबसे बड़ा संभव कोण हो सकता है, मुझे कहना चाहिए, वे वास्तव में बॉन्ड इलेक्ट्रॉन नहीं हैं, निश्चित रूप से उनके इलेक्ट्रॉन बॉन्डिंग में उपयोग करते हैं कार्बन और चार हाइड्रोजन के बीच। इसलिए यह पता चलता है कि अकेले बलों की विद्युत स्पंदन से, यह आगे जाकर खुद को इस तरह के अणु में बना लेगा। अब, वीएसईपीआर संकेतन, याद रखें कि यह वैलेंस शेल इलेक्ट्रॉन जोड़ी प्रतिकर्षण अवधारणा थी कि अणु कैसे बनते हैं। हमारे पास एक केंद्रीय परमाणु है और हमारे पास 4 टर्मिनल परमाणु हैं। तो हम मीथेन अणुओं के साथ समाप्त होते हैं। उस संबंध में, कभी भी आपके पास अणुओं की इस तरह की व्यवस्था से एक केंद्र में और बांड के सिरों पर एक के लिए एक आकृति होती है। आप 109.5 डिग्री के बॉन्ड एंगल्स के साथ इसे टेट्राहेड्रल शेप कहते हैं। उस समय एक दूसरे से जितना हो सके दूर होता है। यह भी ध्यान दें कि यहाँ के अणुओं, हाइड्रोजन में मुक्त इलेक्ट्रॉन नहीं होते हैं। तो वहां कोई प्रतिकूल ताकत नहीं है, इसलिए यह एक अच्छे उदाहरण के रूप में साफ है। यदि आप इस तरह के आकार के लिए प्राप्त कर सकते हैं।</p>",
-      "summary25": "ठीक है, इलेक्ट्रॉन लाइन में आपका स्वागत है और यहां हम अपने अगले आकार के बारे में बात करने जा रहे हैं। तो टेट्राहेड्रल अणुओं में एक केंद्रीय अणु होता है, जैसा कि आप देख सकते हैं, और चार अणु जो उसके द्वारा बनाए गए चार बंधों के बिल्कुल सिरों पर होते हैं। तो, यह एक अच्छा उदाहरण होगा जिसे हम C. H. 4 कहते हैं, जो कि, निश्चित रूप से, मीथेन अणु है। केंद्र में एक कार्बन और चार हाइड्रोजन। तो यह वह आकार है जिसके साथ वे समाप्त होने जा रहे हैं। हालाँकि, जब ऐसा होता है, तो उन बॉन्ड बंधुआ इलेक्ट्रॉनों के बीच की दूरी यह होती है कि बॉन्ड इलेक्ट्रॉन केवल 90 डिग्री और 90 डिग्री का कोण होता है और यदि यह टेट्राहेड्रल आकार लेता है, तो बॉन्ड कोण 109.5 डिग्री है। क्योंकि उस आकार में, वह सबसे बड़ा संभव कोण है जो आपके पास बॉन्ड में उपयोग किए जाने वाले बॉन्ड इलेक्ट्रॉनों या इलेक्ट्रॉनों के 4 सेटों के बीच हो सकता है, मुझे कहना चाहिए, वे वास्तव में बॉन्ड इलेक्ट्रॉन नहीं हैं, निश्चित रूप से उनके इलेक्ट्रॉन बॉन्डिंग में उपयोग करते हैं कार्बन और चार हाइड्रोजन के बीच। तो वहां कोई प्रतिकूल ताकत नहीं है, इसलिए यह एक अच्छे उदाहरण के रूप में साफ है।",
-      "summary50": "ठीक है, इलेक्ट्रॉन लाइन में आपका स्वागत है और यहां हम अपने अगले आकार के बारे में बात करने जा रहे हैं। इसे टेट्राहेड्रल अणु कहते हैं। तो टेट्राहेड्रल अणुओं में एक केंद्रीय अणु होता है, जैसा कि आप देख सकते हैं, और चार अणु जो उसके द्वारा बनाए गए चार बंधों के बिल्कुल सिरों पर होते हैं। तो, यह एक अच्छा उदाहरण होगा जिसे हम C. H. 4 कहते हैं, जो कि, निश्चित रूप से, मीथेन अणु है। केंद्र में एक कार्बन और चार हाइड्रोजन। वे सभी प्रत्येक बंधन में 2 इलेक्ट्रॉनों के साथ एक अच्छा बंधन बनाते हैं। और ध्यान दें कि वे इलेक्ट्रॉन जितना हो सके एक दूसरे से दूर रहना पसंद करेंगे। तो यह वह आकार है जिसके साथ वे समाप्त होने जा रहे हैं। क्योंकि आप यहां देख सकते हैं कि इस मामले में बांड कोण 90 डिग्री होगा। हालाँकि, जब ऐसा होता है, तो उन बॉन्ड बंधुआ इलेक्ट्रॉनों के बीच की दूरी यह होती है कि बॉन्ड इलेक्ट्रॉन केवल 90 डिग्री और 90 डिग्री का कोण होता है और यदि यह टेट्राहेड्रल आकार लेता है, तो बॉन्ड कोण 109.5 डिग्री है। तो इस मामले में, 109.5 डिग्री होगा। तो बस प्रतिकर्षण का बल उसे उस आकार में ला देता है। क्योंकि उस आकार में, वह सबसे बड़ा संभव कोण है जो आपके पास बॉन्ड में उपयोग किए जाने वाले बॉन्ड इलेक्ट्रॉनों या इलेक्ट्रॉनों के 4 सेटों के बीच हो सकता है, मुझे कहना चाहिए, वे वास्तव में बॉन्ड इलेक्ट्रॉन नहीं हैं, निश्चित रूप से उनके इलेक्ट्रॉन बॉन्डिंग में उपयोग करते हैं कार्बन और चार हाइड्रोजन के बीच। इसलिए यह पता चलता है कि अकेले बलों की विद्युत स्पंदन से, यह आगे जाकर खुद को इस तरह के अणु में बना लेगा। अब, वीएसईपीआर नोटेशन, याद रखें कि यह वैलेंस शेल इलेक्ट्रॉन जोड़ी प्रतिकर्षण अवधारणा थी कि अणु कैसे बनते हैं। उस संबंध में, कभी भी आपके पास अणुओं की इस तरह की व्यवस्था से एक केंद्र में और बांड के सिरों पर एक के लिए एक आकृति होती है। तो वहां कोई प्रतिकूल ताकत नहीं है, इसलिए यह एक अच्छे उदाहरण के रूप में साफ है।",
-      "keywords": []
-    },
-    "frameUrls": [],
-    "frameList": [],
-    "languageCode": "hi",
-    "isEdited": false
-  },
-  {
-    "data": {
-      "transcript": "<p>Tamam, elektron çizgisine hoş geldiniz ve burada bir sonraki şeklimiz hakkında konuşacağız. Buna tetrahedral moleküller denir. Yani, tetrahedral moleküllerin, gördüğünüz gibi bir merkezi molekülü ve yaptığı dört bağın en ucunda bulunan dört molekülü vardır. Bu, CH4 dediğimiz ve tabii ki Metan molekülü için iyi bir örnek olacaktır. Merkezde bir Karbon ve dört Hidrojen, hepsi her bağda 2 elektronla güzel bir bağ oluşturur. Ve bu elektronların birbirlerinden mümkün olduğunca uzak olmayı seveceklerine dikkat edin. Yani bu onların sonunda elde edecekleri şekil. Buna benzeyen bir şey. Tetrahedral şekil denir. Şimdi kendinize şu soruyu sorabilirsiniz: Peki, bu neden böyle daha sade bir bağ oluşturmuyor? Bütün molekül ya da bağlardaki elektronlar böyle olduklarında birbirlerinden olabildiğince uzak olmaz mıydı? Çünkü burada bu durumda bağ açılarının 90 derece olacağını görebilirsiniz. Öyleyse soru şu: neden 90 derece değil? Daha sade bir moleküldü, olması gereken buydu. Ancak, bu olduğunda, bağ elektronları arasındaki mesafe, bağ elektronlarının sadece 90 derece ve 90 derecelik bir açı olduğu ve eğer böyle bir dört yüzlü bir şekil alırsa, bağ açısı 109,5 derecedir. Böylece bu durumda, 109,5 derece olur. Yani basitçe itme kuvveti onu bu şekle girmeye zorlar. Bu şekilde, 4 bağ elektronu veya bağlarda kullanılan elektronlar arasında sahip olabileceğiniz en büyük açı olduğu için, söylemeliyim ki, bunlar gerçekten bağ elektronları değil, elbette elektronları bağda kullanılır. karbon ve dört hidrojen arasında. Bu yüzden, yalnızca elektriksel güç darbelerinden yola çıkarak bu tür bir moleküle dönüşeceği ortaya çıktı. Şimdi, VSEPR gösterimi, bunun moleküllerin nasıl oluştuğunun değerlik kabuğu elektron çifti itme kavramı olduğunu hatırlayın. Bir merkezi atomumuz var ve 4 terminal atomumuz var. Böylece metan molekülleri elde etmiş oluyoruz. Bu bakımdan, her zaman, bu tür molekül dizilişlerinden oluşan bir şekle sahip olduğunuzda, biri merkezde ve bir tanesi bağların uçlarındadır. Bağ açıları 109,5 derece olan tetrahedral şekil dediğimiz şeyi elde edeceksiniz. O noktada birbirinden olabildiğince uzaktır. Ayrıca buradaki moleküllerin, hidrojenin serbest elektronları olmadığına dikkat edin. Yani orada itici güç yok, bu yüzden bu iyi bir örnek kadar temiz. Bu tür bir şekil için alabilirseniz.</p>",
-      "summary25": "Tamam, elektron çizgisine hoş geldiniz ve burada bir sonraki şeklimiz hakkında konuşacağız. Yani, tetrahedral moleküllerin, gördüğünüz gibi bir merkezi molekülü ve yaptığı dört bağın en ucunda bulunan dört molekülü vardır. Dolayısıyla bu, C. H. 4 dediğimiz, tabii ki Metan molekülü için iyi bir örnek olacaktır. Merkezde bir Karbon ve dört Hidrojen. Yani bu onların sonunda elde edecekleri şekil. Ancak, bu gerçekleştiğinde, bu bağ elektronları arasındaki mesafe, bağ elektronlarının sadece 90 derece ve 90 derecelik bir açı olduğu ve eğer böyle bir dörtyüzlü bir şekil alırsa, bağ açısı 109,5 derecedir. çünkü bu şekilde, bağlarda kullanılan 4 takım bağ elektronu veya elektron arasında sahip olabileceğiniz en büyük açıdır, söylemeliyim ki, bunlar gerçekten bağ elektronları değil, elbette elektronları bağda kullanılır. karbon ve dört hidrojen arasında. Yani orada itici güç yok, bu yüzden bu iyi bir örnek kadar temiz.",
-      "summary50": "Tamam, elektron çizgisine hoş geldiniz ve burada bir sonraki şeklimiz hakkında konuşacağız. Buna Tetrahedral moleküller denir. Yani, tetrahedral moleküllerin, gördüğünüz gibi bir merkezi molekülü ve yaptığı dört bağın en ucunda bulunan dört molekülü vardır. Dolayısıyla bu, C. H. 4 dediğimiz, tabii ki Metan molekülü için iyi bir örnek olacaktır. Merkezde bir Karbon ve dört Hidrojen. Hepsi, her bağda 2 elektron ile güzel bir bağ oluşturur. Ve bu elektronların birbirlerinden mümkün olduğunca uzak olmayı seveceklerine dikkat edin. Yani bu onların sonunda elde edecekleri şekil. Çünkü burada bu durumda bağ açılarının 90 derece olacağını görebilirsiniz. Ancak, bu gerçekleştiğinde, bu bağ elektronları arasındaki mesafe, bağ elektronlarının sadece 90 derece ve 90 derecelik bir açı olduğu ve eğer böyle bir dörtyüzlü bir şekil alırsa, bağ açısı 109,5 derecedir. Böylece bu durumda, 109,5 derece olur. Yani basitçe itme kuvveti onu bu şekle girmeye zorlar. çünkü bu şekilde, bağlarda kullanılan 4 takım bağ elektronu veya elektron arasında sahip olabileceğiniz en büyük açıdır, söylemeliyim ki, bunlar gerçekten bağ elektronları değil, elbette elektronları bağda kullanılır. karbon ve dört hidrojen arasında. Bu yüzden, yalnızca elektriksel güç darbelerinden yola çıkarak bu tür bir moleküle dönüşeceği ortaya çıktı. Şimdi, VSEPR gösterimi, bunun moleküllerin nasıl oluştuğunun değerlik kabuğu elektron çifti itme kavramı olduğunu hatırlayın. Bu bakımdan, her zaman, bu tür molekül dizilişlerinden oluşan bir şekle sahip olduğunuzda, biri merkezde ve bir tanesi bağların uçlarındadır. Yani orada itici kuvvetler yok, bu yüzden bu iyi bir örnek kadar temiz.",
-      "keywords": []
-    },
-    "frameUrls": [],
-    "frameList": [],
-    "languageCode": "tr",
-    "isEdited": false
-  }
-],
-"tenantId": "azharengineering2020",
-"ownershipId": "azharengineering2020_ut1",
-"title": "Molecule Structure Introduction (mp4)",
+       {
+"ioParameters": {
+"_Question_": ".........يمكن أن تصنع أسلاك الكهرباء من عنصر عدده الذرى",
+"Answers  2": [
+{
+"_OptionText_": "7",
+"_ChosenFeedback_": "",
+"_notChosenFeedback_": "",
+"_Tip_": ""
+},
+{
+"_OptionText_": "10",
+"_ChosenFeedback_": "",
+"_notChosenFeedback_": "",
+"_Tip_": ""
+},
+{
+"_OptionText_": "13",
+"_ChosenFeedback_": "",
+"_notChosenFeedback_": "",
+"_Tip_": ""
+},
+{
+"_OptionText_": "17",
+"_Correct_": true,
+"_ChosenFeedback_": "",
+"_notChosenFeedback_": "",
+"_Tip_": ""
+}
+]
+},
+"ioType": "Text MCQ",
+"baseType": "Text MCQ",
+"isAnswered": "r",
+"_id": "698f3803425efb7af5f10fec",
+"title": "العدد الذري",
+"url": "https://scube-applications-media54cbabfc-u3d19945rbtv.s3.eu-west-1.amazonaws.com/new-interactive-objects/objects/العدد-الذري-675c24110d13c2000311fee5.html",
+"ioCategory": "Q",
+"cognitive": "remember",
+"complexity": 1,
+"conceptName": "Interacitve Object",
+"instructionalrole": "test",
 "language": "en",
-"url": "https://scube-applications-media54cbabfc-u3d19945rbtv.s3.amazonaws.com/molecules_video_data/f469-42d5-9d45-b2abaf392d0d_80f447bb-dac0-4a8a-8613-c730f4f47e8b_Molecular_Structure_intro_video.mp4",
-"domainId": "ea593b9efe036879f9329e46051356af",
-"contentType": "video/mp4",
-"narration": [],
-"owner": "public",
 "domainName": "Scube Test Domain",
-"subDomainId": "8922af923453305fb60e39f5c205ccdb",
 "subDomainName": "Scube Test Sub Domain"
+}
+,
+{
+    "url": "https://scube-applications-media54cbabfc-u3d19945rbtv.s3.amazonaws.com/pdf_sample_data/373e37ec-f17f-4be8-844c-780a616e6b95_Respiration_in_Man.pdf",
+    "availableLanguages": [
+        {
+            "languageCode": "en",
+            "data": {
+                "transcript": "<p> Slide 1:<br>Respiration in Man, The respiratory system in man, The air enters the body through the nose or the mouth.. It is preferable from the hygienic point of view. for air to enter through the nose, because this passage is warm (, as it is lined with numerous blood capillaries. ) and m oist ( as it secretes, mucus ). It also serves as a filter ( because it contains hair which act as a filler. ) Air then passes through the pharynx which, as common passageway for both air and food., It enters the trachea through the larynx (, which is also known a s. The voice box ). The trachea wall contains a series. of cartilage 3/4 rings which prevent the trachea from collapsing, thus maintaining an open passage way for air.. The inner surface of the trachea is lined with cilia, which beat upwards tending to create air and mucus currents.. This impedes the entry of small foreign bodies and moves them to the pharynx,<br><br>Slide 2:<br>Where they may be swallowed., The trachea is divided at its lower end into two bronchi, which divide and subdivide into progressively mailer and smaller br onchiole.. Each bronchiole finally opens into one of the many alveoli ( air sacs ), of which there are about 600 million per lung.. The thin alveolar walls are considered the actual respiratory surface as they are surrounded with a large network of blood. Ca. Pillaries. Blood receives oxygen from the alveolar air and carries it to the rest of the body.. It gives out CO 2 to the alveoli in return so that it may get rid of it.. The whole group of alveoli and bronchiole connected to them, together with the huge netwo rk of capillaries, constitute the lung.. Each animal, including man, possesses two lungs, a right lung and a left one<br><br>Slide 3:<br>The respiratory system in man plays an important role in the excretion of water in the excration air contains water vapour. Man usually loses daily about 500 cm3 of water through his lungs out of the cm3 water, IJ1at 2500 of the loses daily. TI1is is due to the Evaporation of water that rnojsrens the alveoli membranes., This water is necessary for dissolving oxygen and carbon dioxide so that the exchange of gases bet ween. The air of the al.veoli and the surrounding blood in the capillaries occurs.<br><br></p>",
+                "summary25": "Respiration in Man, The respiratory system in man, The air enters the body through the nose or the mouth.It is preferable from the hygienic point of viewfor air to enter through the nose, because this passage is warm (, as it is lined with numerous blood capillaries) and m oist ( as it secretes, mucus )[...] The trachea wall contains a series[...] The inner surface of the trachea is lined with cilia, which beat upwards tending to create air and mucus currents.[...] Each bronchiole finally opens into one of the many alveoli ( air sacs ), of which there are about 600 million per lung.[...] Blood receives oxygen from the alveolar air and carries it to the rest of the body.[...] Each animal, including man, possesses two lungs, a right lung and a left one The respiratory system in man plays an important role in the excretion of water in the excration air contains water vapourMan usually loses daily about 500 cm3 of water through his lungs out of the cm3 water, IJ1at 2500 of the loses daily.",
+                "summary50": "Respiration in Man, The respiratory system in man, The air enters the body through the nose or the mouth.It is preferable from the hygienic point of viewfor air to enter through the nose, because this passage is warm (, as it is lined with numerous blood capillaries) and m oist ( as it secretes, mucus )It also serves as a filter ( because it contains hair which act as a filler) Air then passes through the pharynx which, as common passageway for both air and food., It enters the trachea through the larynx (, which is also known a sThe voice box )The trachea wall contains a seriesof cartilage 3/4 rings which prevent the trachea from collapsing, thus maintaining an open passage way for air.The inner surface of the trachea is lined with cilia, which beat upwards tending to create air and mucus currents.This impedes the entry of small foreign bodies and moves them to the pharynx, Where they may be swallowed., The trachea is divided at its lower end into two bronchi, which divide and subdivide into progressively mailer and smaller br onchiole.Each bronchiole finally opens into one of the many alveoli ( air sacs ), of which there are about 600 million per lung.The thin alveolar walls are considered the actual respiratory surface as they are surrounded with a large network of bloodBlood receives oxygen from the alveolar air and carries it to the rest of the body.It gives out CO 2 to the alveoli in return so that it may get rid of it.The whole group of alveoli and bronchiole connected to them, together with the huge netwo rk of capillaries, constitute the lung.Each animal, including man, possesses two lungs, a right lung and a left one The respiratory system in man plays an important role in the excretion of water in the excration air contains water vapourMan usually loses daily about 500 cm3 of water through his lungs out of the cm3 water, IJ1at 2500 of the loses dailyTI1is is due to the Evaporation of water that rnojsrens the alveoli membranes., This water is necessary for dissolving oxygen and carbon dioxide so that the exchange of gases bet weenThe air of the al.veoli and the surrounding blood in the capillaries occurs."
+            }
+        },
+        {
+            "languageCode": "ar",
+            "data": {
+                "transcript": "<p style=\";text-align:right;direction:rtl\">شريحة 1:<br /> التنفس عند الإنسان ، الجهاز التنفسي عند الإنسان ، يدخل الهواء إلى الجسم عن طريق الأنف أو الفم .. ويفضل من الناحية الصحية. لدخول الهواء عبر الأنف ، لأن هذا الممر دافئ (كما هو مبطن بالعديد من الشعيرات الدموية) والرذاذ (كما يفرز ، المخاط). يعمل أيضًا كمرشح (لأنه يحتوي على شعر يعمل كمواد مالئة). ثم يمر الهواء عبر البلعوم والذي ، كممر مشترك لكل من الهواء والطعام. ، يدخل القصبة الهوائية من خلال الحنجرة (والتي تعرف أيضًا بـ ق صندوق الصوت). يحتوي جدار القصبة الهوائية على سلسلة. من الغضروف 3/4 حلقات تمنع القصبة الهوائية من الانهيار ، وبالتالي تحافظ على ممر مفتوح للهواء .. السطح الداخلي للقصبة الهوائية مبطن بأهداب تنبض لأعلى لتخلق تيارات الهواء والمخاط .. وهذا يعيق الدخول الأجسام الغريبة الصغيرة وتنقلها إلى البلعوم ،<br /><br /> شريحة 2:<br /> حيث يمكن ابتلاعها. ، تنقسم القصبة الهوائية عند نهايتها السفلية إلى قصبتين تنقسمان إلى قصبتين متدرجتين وأخرى أصغر. حوالي 600 مليون لكل رئة .. تعتبر الجدران السنخية الرقيقة السطح التنفسي الفعلي لأنها محاطة بشبكة كبيرة من الدم. كاليفورنيا. الركائز. يستقبل الدم الأكسجين من الهواء السنخي ويحمله إلى باقي الجسم .. ويخرج ثاني أكسيد الكربون إلى الحويصلات الهوائية في المقابل حتى يتخلص منه .. المجموعة الكاملة من الحويصلات الهوائية والقصيبات متصلة بها معًا. مع الشبكة الضخمة من الشعيرات الدموية ، تشكل الرئة .. كل حيوان ، بما في ذلك الإنسان ، يمتلك رئتين ، رئة يمنى وأخرى يسرى.<br /><br /> الشريحة 3:<br /> يلعب الجهاز التنفسي عند الإنسان دورًا مهمًا في إفراز الماء في الهواء الذي يحتوي على بخار الماء. يفقد الإنسان عادة ما يقارب 500 سم مكعب من الماء يومياً من خلال رئتيه خارج سم 3 من الماء ، أي IJ1at 2500 من يخسر يومياً. TI1is ناتج عن تبخر الماء الذي يؤدي إلى rnojsrens الأغشية الحويصلات الهوائية. ، هذا الماء ضروري لإذابة الأكسجين وثاني أكسيد الكربون حتى تبادل الغازات بين وين. يحدث هواء الحويصلات الهوائية والدم المحيط بها في الشعيرات الدموية.<br /></p>",
+                "summary25": "التنفس الانزلاقي في الانسان ، الجهاز التنفسي عند الانسان ، يدخل الهواء الى الجسم عن طريق الانف او الفم ويفضل من الناحية الصحية دخول الهواء عبر الانف لان هذا الممر دافئ (كما هو مبطن). مع العديد من الشعيرات الدموية) و m oist (كما يفرز ، المخاط) [...] يحتوي جدار القصبة الهوائية على سلسلة [...] السطح الداخلي للقصبة الهوائية مبطن بالأهداب ، والتي تنبض لأعلى تميل إلى تكوين الهواء و تيارات مخاطية. شبكة الدم [...] Slide يلعب الجهاز التنفسي عند الإنسان دورًا مهمًا في إفراز الماء في إفراز الهواء يحتوي على بخار الماء ، يفقد الإنسان يوميًا حوالي 500 سم 3 من الماء من خلال رئتيه خارج سم 3 من الماء ، IJ1at 2500 من يخسر يوميا.",
+                "summary50": "التنفس الانزلاقي في الانسان ، الجهاز التنفسي عند الانسان ، يدخل الهواء الى الجسم عن طريق الانف او الفم ويفضل من الناحية الصحية دخول الهواء عبر الانف لان هذا الممر دافئ (كما هو مبطن). مع العديد من الشعيرات الدموية) و m oist (كما يفرز المخاط) كما أنه يعمل كمرشح (لأنه يحتوي على الشعر الذي يعمل بمثابة حشو) ثم يمر الهواء عبر البلعوم الذي يعد ممرًا مشتركًا لكل من الهواء والطعام. يدخل القصبة الهوائية من خلال الحنجرة (والتي تعرف أيضًا باسم صندوق الصوت) يحتوي جدار القصبة الهوائية على سلسلة من الغضاريف 3/4 حلقات تمنع القصبة الهوائية من الانهيار ، وبالتالي تحافظ على ممر مفتوح للهواء. تبطن القصبة الهوائية بالأهداب التي تضرب لأعلى وتميل إلى تكوين تيارات هوائية ومخاطية ، مما يعيق دخول الأجسام الغريبة الصغيرة وينقلها إلى البلعوم حيث يمكن ابتلاعها ، وتنقسم القصبة الهوائية من نهايتها السفلية إلى قسمين الشعب الهوائية التي تنقسم وتنقسم إلى قسمين بشكل تدريجي وقصبة شعيبية أصغر. تنفتح كل قصبات أخيرًا في أحد الحويصلات الهوائية العديدة (الحويصلات الهوائية) ، والتي يوجد منها حوالي 600 مليون لكل رئة ، وتعتبر الجدران السنخية الرقيقة السطح التنفسي الفعلي لأنها محاطة بـ شبكة كبيرة من الدم ، يتلقى الدم الأكسجين من الهواء السنخي وينقله إلى باقي الجسم ، ويخرج ثاني أكسيد الكربون إلى الحويصلات الهوائية في المقابل ، حتى يتخلص منه. تشكل الرئة مع الشبكة الضخمة من الشعيرات الدموية ، فكل حيوان ، بما في ذلك الإنسان ، يمتلك رئتين ، ورئة يمنى وأخرى يسرى. يحتوي على بخار الماء عادة ما يفقد الإنسان يوميًا حوالي 500 سم 3 من الماء عبر رئتيه من سم 3 ماء ، IJ1at 2500 من الخسارات اليومية TI1is ناتج عن تبخر الماء الذي يؤدي إلى rnojsrens الأغشية الحويصلات الهوائية. ، هذا الماء r ضروري لإذابة الأكسجين وثاني أكسيد الكربون بحيث يحدث تبادل الغازات بين هواء الحويصلات الهوائية والدم المحيط بها في الشعيرات الدموية."
+            }
+        }
+    ],
+    "keywords": [
+        {
+            "id": "k0",
+            "word": "excretion",
+            "youtubeLink": "https://www.youtube.com/results?search_query=excretion",
+            "wikipediaLink": "https://wikipedia.org/wiki/Special:Search?search=excretion",
+            "ekbLink": "https://study.ekb.eg/search?query=excretion",
+            "definition": ""
+        },
+        {
+            "id": "k1",
+            "word": "respiratory system",
+            "youtubeLink": "https://www.youtube.com/results?search_query=respiratory+system",
+            "wikipediaLink": "https://wikipedia.org/wiki/Special:Search?search=respiratory system",
+            "ekbLink": "https://study.ekb.eg/search?query=respiratory system",
+            "definition": "The respiratory system (also respiratory apparatus, ventilatory system) is a biological system consisting of specific organs and structures used for gas exchange in animals and plants. The anatomy and physiology that make this happen varies greatly, depending on the size of the organism, the environment in which it lives and its evolutionary history."
+        },
+        {
+            "id": "k2",
+            "word": "alveoli",
+            "youtubeLink": "https://www.youtube.com/results?search_query=alveoli",
+            "wikipediaLink": "https://wikipedia.org/wiki/Special:Search?search=alveoli",
+            "ekbLink": "https://study.ekb.eg/search?query=alveoli",
+            "definition": ""
+        }
+    ],
+    "audioList": [
+        {
+            "langCode": "en",
+            "langName": "English",
+            "url": "https://scube-applications-media54cbabfc-u3d19945rbtv.s3.amazonaws.com/pdf_sample_data/373e37ec-f17f-4be8-844c-780a616e6b95_Respiration_in_Man_en.mp3",
+            "duration": 188.088
+        },
+        {
+            "langCode": "ar",
+            "langName": "Arabic",
+            "duration": 191.88,
+            "url": "https://scube-applications-media54cbabfc-u3d19945rbtv.s3.amazonaws.com/pdf_sample_data/373e37ec-f17f-4be8-844c-780a616e6b95_Respiration_in_Man_ar.mp3"
+        }
+    ],
+    "vttList": [
+        {
+            "lang": "en",
+            "text": "English",
+            "format": "vtt",
+            "url": "https://scube-applications-media54cbabfc-u3d19945rbtv.s3.amazonaws.com/pdf_sample_data/373e37ec-f17f-4be8-844c-780a616e6b95_Respiration_in_Man_en.vtt"
+        },
+        {
+            "lang": "ar",
+            "text": "Arabic",
+            "format": "vtt",
+            "url": "https://scube-applications-media54cbabfc-u3d19945rbtv.s3.amazonaws.com/pdf_sample_data/373e37ec-f17f-4be8-844c-780a616e6b95_Respiration_in_Man_ar.vtt"
+        }
+    ],
+    "frameList": [
+        {
+            "page": 1,
+            "name": "636796c2cfa1425a643d7b6c_1.png",
+            "size": 395.371,
+            "startTime": 0,
+            "duration": 71.088,
+            "url": "https://scube-applications-media54cbabfc-u3d19945rbtv.s3.amazonaws.com/pdf_sample_data/636796c2cfa1425a643d7b6c_1_en.png",
+            "audioList": [
+                {
+                    "langCode": "en",
+                    "langName": "English",
+                    "url": "https://scube-applications-media54cbabfc-u3d19945rbtv.s3.amazonaws.com/pdf_sample_data/636796c2cfa1425a643d7b6c_1_en_en.mp3",
+                    "duration": 71.088
+                }
+            ]
+        },
+        {
+            "page": 2,
+            "name": "636796c2cfa1425a643d7b6c_2.png",
+            "size": 338.263,
+            "startTime": 76.088,
+            "duration": 65.016,
+            "url": "https://scube-applications-media54cbabfc-u3d19945rbtv.s3.amazonaws.com/pdf_sample_data/636796c2cfa1425a643d7b6c_2_en.png",
+            "audioList": [
+                {
+                    "langCode": "en",
+                    "langName": "English",
+                    "url": "https://scube-applications-media54cbabfc-u3d19945rbtv.s3.amazonaws.com/pdf_sample_data/636796c2cfa1425a643d7b6c_2_en_en.mp3",
+                    "duration": 65.016
+                }
+            ]
+        },
+        {
+            "page": 3,
+            "name": "636796c2cfa1425a643d7b6c_3.png",
+            "size": 91.712,
+            "startTime": 146.10399999999998,
+            "duration": 41.04,
+            "url": "https://scube-applications-media54cbabfc-u3d19945rbtv.s3.amazonaws.com/pdf_sample_data/636796c2cfa1425a643d7b6c_3_en.png",
+            "audioList": [
+                {
+                    "langCode": "en",
+                    "langName": "English",
+                    "url": "https://scube-applications-media54cbabfc-u3d19945rbtv.s3.amazonaws.com/pdf_sample_data/636796c2cfa1425a643d7b6c_3_en_en.mp3",
+                    "duration": 41.04
+                }
+            ]
+        }
+    ],
+    "pagesCount": 3,
+    "_id": "636796c2cfa1425a643d7b6c",
+    "title": "Respiration in Humans_edit",
+    "language": "en",
+    "cognitive": "understand",
+    "complexity": 1,
+    "instructionalrole": "explanation",
+    "contentType": "application/pdf",
+    "domainName": "Scube Test Domain",
+    "subDomainName": "Scube Test Sub Domain",
+    "conceptName": "Video Object"
 }
 
     ]

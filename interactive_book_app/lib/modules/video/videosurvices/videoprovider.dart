@@ -1,11 +1,9 @@
-import 'package:dartz/dartz.dart';
 import 'package:flutter/material.dart';
 import 'package:interactive_book_app/core/resources/ap_constants.dart';
 import 'package:interactive_book_app/models/module_video_ref.dart';
 import 'package:interactive_book_app/modules/video/models/Data.dart';
 import 'package:interactive_book_app/modules/video/videoviewmodel.dart';
 
-import 'package:provider/provider.dart';
 
 import '../models/AudioList.dart';
 import '../models/AvailableLanguages.dart';

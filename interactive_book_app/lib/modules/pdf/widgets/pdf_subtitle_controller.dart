@@ -42,11 +42,11 @@ class PdfSubtitleController {
     final chunks = <String>[];
     String current = '';
     for (var word in words) {
-      if ((current + ' ' + word).trim().length > chunkSize) {
+      if (('$current $word').trim().length > chunkSize) {
         if (current.isNotEmpty) chunks.add(current.trim());
         current = word;
       } else {
-        current = (current + ' ' + word).trim();
+        current = ('$current $word').trim();
       }
     }
     if (current.isNotEmpty) chunks.add(current.trim());
@@ -84,8 +84,9 @@ class PdfSubtitleController {
     if (langs == null) return '';
     for (var lang in langs) {
       if (lang.languageCode == langCode) {
-        if (selected == 'transcript')
+        if (selected == 'transcript') {
           return getSlideTranscript(langCode, slideIndex);
+        }
         if (selected == 'summary25') return lang.data?.summary25 ?? '';
         if (selected == 'summary50') return lang.data?.summary50 ?? '';
       }

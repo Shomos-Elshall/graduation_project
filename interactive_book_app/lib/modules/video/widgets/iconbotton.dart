@@ -7,11 +7,11 @@ class VideoControlButton extends StatelessWidget {
   final double? size;
 
   const VideoControlButton({
-    Key? key,
+    super.key,
     required this.icon,
     required this.onPressed,
     this.size,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

@@ -3,18 +3,23 @@ import 'package:interactive_book_app/modules/video/videosurvices/videoprovider.d
 
 import 'package:provider/provider.dart';
 
-import '../pdf/models/Pdfresponse.dart';
 import '../video/models/Videoresponse.dart';
 import '../video/videoveiw.dart';
 import 'content choice.dart';
 
 class TitlePage extends StatelessWidget {
-  const TitlePage();
+  const TitlePage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(backgroundColor: Colors.blue),
+      appBar: AppBar(backgroundColor: Color(0xFF1D0E53),
+        title: const Text(
+          'Learning Objects',
+          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+        ),
+        iconTheme: const IconThemeData(color: Colors.white, size: 24),
+      ),
       body: FutureBuilder<List<String>>(
         future: ContentChoice.getAllTitles(),
         builder: (context, snapshot) {
@@ -73,9 +78,6 @@ class TitlePage extends StatelessWidget {
                         var result = await ContentChoice.openContentByTitle(
                           title,
                         );
-                        print(
-                          "Result type: ${result.runtimeType}",
-                        ); // ← شوفي بيطبع إيه
 
                         if (!context.mounted) return;
 

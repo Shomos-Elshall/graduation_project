@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:interactive_book_app/core/theme/app_colors.dart';
 
-import '../models/AvailableLanguages.dart';
+
 
 class CustomDropdown extends StatelessWidget {
   final String hint;
@@ -9,7 +9,7 @@ class CustomDropdown extends StatelessWidget {
   final List<String>? items;
   final Function(String?) onChanged;
 
-  const CustomDropdown({
+  const CustomDropdown({super.key, 
     required this.hint,
     this.items,
     required this.onChanged,
@@ -36,7 +36,7 @@ class CustomDropdown extends StatelessWidget {
       value: value,
       items:
           items?.map((item) {
-            return DropdownMenuItem<String>(value: item, child: Text(item!));
+            return DropdownMenuItem<String>(value: item, child: Text(item));
           }).toList(),
       onChanged: onChanged,
     );

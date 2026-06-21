@@ -12,7 +12,7 @@ import '../../../core/resources/ap_constants.dart';
 import '../../../core/theme/app_colors.dart';
 
 class PdfView extends StatefulWidget {
-  const PdfView();
+  const PdfView({super.key});
 
   @override
   State<PdfView> createState() => _PdfViewState();
@@ -47,10 +47,11 @@ class _PdfViewState extends State<PdfView> {
     await _pdfProvider.fetchPdfData();
     _audioProvider = AudioProvider(pdfProvider: _pdfProvider);
     _subtitleController = PdfSubtitleController(pdfProvider: _pdfProvider);
-    if (mounted)
+    if (mounted) {
       setState(() {
         _initialized = true;
       });
+    }
   }
 
   void _showKeywordsDialog(BuildContext context, PdfProvider provider) {
