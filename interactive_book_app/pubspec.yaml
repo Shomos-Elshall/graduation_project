@@ -98,6 +98,7 @@ flutter:
     - assets/data/data_copy.json
     - assets/data/book3.json
     - assets/files/
+    - .env
     
      
 
