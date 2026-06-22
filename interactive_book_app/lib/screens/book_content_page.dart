@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:interactive_book_app/services/book_chat_service.dart';
+
+import 'package:interactive_book_app/services/book_context_cache.dart';
+import 'package:interactive_book_app/services/chat_history_storage.dart';
 import 'package:interactive_book_app/widgets/book_mark_button.dart';
 import 'package:interactive_book_app/widgets/pop_up_menu_button.dart';
 import '../models/book_model.dart';
@@ -6,6 +11,32 @@ import '../models/toc_model.dart';
 import '../models/content_model.dart';
 import '../widgets/book_drawer.dart';
 import 'package:interactive_book_app/widgets/content_section_widget.dart';
+
+import '../screens/book_chat_screen.dart';
+
+Future<void> openBookChat(BuildContext context, BookModel book) async {
+  // استخراج النص (أو هاته من الكاش لو مستخرج قبل كذا)
+  final bookContext = await BookContextCache.getOrBuildContext(book);
+
+  // استرجاع أي محادثة محفوظة من قبل لهذا الكتاب
+  final savedMessages = await ChatHistoryStorage.loadMessages(book.id);
+
+  // إنشاء خدمة الشات، مع تمرير المحادثة القديمة عشان الموديل
+  // يبدأ وهو "فاكر" كل اللي حصل قبل كذا
+  final chatService = BookChatService(
+    apiKey: dotenv.env['GEMINI_API_KEY']!,
+    bookContext: bookContext,
+    previousMessages: savedMessages,
+  );
+
+  // فتح شاشة الشات
+  Navigator.push(
+    context,
+    MaterialPageRoute(
+      builder: (_) => BookChatScreen(chatService: chatService, bookId: book.id),
+    ),
+  );
+}
 
 class BookContentPage extends StatefulWidget {
   final BookModel book;
@@ -77,6 +108,12 @@ class _BookContentPageState extends State<BookContentPage> {
           }
         },
       ),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: const Color(0xFF1A0054),
+        onPressed: () => openBookChat(context, widget.book),
+        // tooltip: 'اسأل عن الكتاب',
+        child: const Icon(Icons.auto_awesome, color: Colors.white, size: 28),
+      ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -132,3 +169,4 @@ class _BookContentPageState extends State<BookContentPage> {
     ),
   );
 }
+
