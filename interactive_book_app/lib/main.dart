@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:interactive_book_app/constants.dart';
@@ -19,6 +20,7 @@ import 'models/toc_model.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Hive.initFlutter();
+  await dotenv.load(fileName: ".env");
 
   // register adapters
   Hive.registerAdapter(BookModelAdapter());
