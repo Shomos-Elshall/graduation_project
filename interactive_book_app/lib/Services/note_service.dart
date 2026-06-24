@@ -42,3 +42,4 @@ class NoteService {
     return modifiedHtml;
   }
 }
+
