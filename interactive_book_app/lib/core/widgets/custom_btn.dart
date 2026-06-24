@@ -16,7 +16,6 @@ class CustomBtn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CupertinoButton(
-      minSize: 50,
       padding: const EdgeInsets.all(16),
       onPressed: onTap,
       color: AppColors.primaryColor,
@@ -36,7 +35,7 @@ class CustomBtn extends StatelessWidget {
         crossFadeState:
             isLoading ? CrossFadeState.showSecond : CrossFadeState.showFirst,
         duration: const Duration(milliseconds: 200),
-      ),
+      ), minimumSize: Size(50, 50),
     );
   }
 }
