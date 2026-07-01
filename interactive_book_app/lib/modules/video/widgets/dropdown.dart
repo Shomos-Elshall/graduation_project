@@ -33,7 +33,7 @@ class CustomDropdown extends StatelessWidget {
         //   borderSide: BorderSide(color: Colors.yellow)
         // ),
       ),
-      value: value,
+      initialValue: value,
       items:
           items?.map((item) {
             return DropdownMenuItem<String>(value: item, child: Text(item));
