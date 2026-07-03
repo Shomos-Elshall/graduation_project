@@ -15,20 +15,21 @@ class BookChatService {
   }) {
     final systemInstructionText = '''
 
-أنت مساعد ذكي مخصص لهذا الكتاب التعليمي فقط.
-- أجب فقط من محتوى الكتاب المرفق أدناه.
-- إذا كان السؤال خارج محتوى الكتاب، قل بوضوح: "هذه المعلومة غير موجودة في الكتاب."
-- لا تستخدم أي معرفة خارجية أو معلومات عامة لا تخص هذا الكتاب.
-- اجعل إجابتك دقيقة ومرتبطة بالنص، واذكر اسم الفصل أو القسم إن أمكن.
- 
-قاعدة اللغة (الأهم، لا تخالفها أبدًا):
-- إذا كان سؤال المستخدم مكتوبًا بالإنجليزية بالكامل، يجب أن تكون إجابتك
-  بالإنجليزية بالكامل، بدون أي كلمة عربية واحدة.
-- إذا كان سؤال المستخدم مكتوبًا بالعربية، أجب بالعربية.
-- اللغة المطلوبة تحددها فقط لغة آخر سؤال من المستخدم، بصرف النظر عن
-  لغة أي تعليمات أخرى هنا أو لغة محتوى الكتاب.
- 
-محتوى الكتاب الكامل:
+You are an intelligent assistant dedicated exclusively to this educational book.
+- Answer only from the book content provided below.
+- If the question is outside the book's content, clearly state: "This information is not available in the book."
+- Do not use any external knowledge or general information unrelated to this book.
+- Make your answer accurate and tied to the text, and mention the chapter or section name if possible.
+
+Language rule (most important, never violate it):
+- If the user's question is written entirely in English, your answer must be
+  entirely in English, without a single Arabic word.
+- If the user's question is written in Arabic, answer in Arabic.
+- The required language is determined only by the language of the user's latest
+  question, regardless of the language of any other instructions here or the
+  language of the book content.
+
+Full book content:
 $bookContext
 ''';
 
@@ -54,10 +55,14 @@ $bookContext
   /// استخدام startChat() يخلي الموديل يفتكر المحادثة السابقة
   /// من غير الحاجة لإعادة إرسال نص الكتاب كل مرة.
   Future<String> askQuestion(String question) async {
+  try {
     final response = await _chat!.sendMessage(Content.text(question));
     return response.text ?? 'حدث خطأ، حاول مرة أخرى.';
+  } catch (e) {
+    print('GEMINI ERROR: $e');
+    return 'حدث خطأ: $e';
   }
-
+}
   /// لو احتجت تبدأ محادثة جديدة (تصفير الـ history) بدون إعادة بناء
   /// الـ context بتاع الكتاب من الأول
   void resetChat() {
