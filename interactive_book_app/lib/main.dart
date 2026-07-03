@@ -54,7 +54,7 @@ void main() async {
       providers: [
         ChangeNotifierProvider(create: (_) => VideoProvider()),
 
-        // باقي الـ providers
+        // باقي الـ providers 
       ],
       child: InteractiveBookApp(),
     ),

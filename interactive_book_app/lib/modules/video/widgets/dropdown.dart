@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:interactive_book_app/core/theme/app_colors.dart';
 
@@ -33,7 +34,7 @@ class CustomDropdown extends StatelessWidget {
         //   borderSide: BorderSide(color: Colors.yellow)
         // ),
       ),
-      initialValue: value,
+      value: value,
       items:
           items?.map((item) {
             return DropdownMenuItem<String>(value: item, child: Text(item));
@@ -42,3 +43,4 @@ class CustomDropdown extends StatelessWidget {
     );
   }
 }
+
