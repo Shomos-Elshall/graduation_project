@@ -9,6 +9,7 @@ import '../models/book_model.dart';
 import '../models/content_model.dart';
 import '../services/highlight_service.dart';
 import '../services/note_service.dart';
+import 'QuizViewerWidget.dart';
 import 'note_dialogs.dart';
 
 class ContentSectionWidget extends StatefulWidget {
@@ -177,6 +178,16 @@ class _ContentSectionWidgetState extends State<ContentSectionWidget> {
                     ref: moduleVideo,
                   )
                       : const SizedBox.shrink();
+                },
+              ),
+              TagExtension(
+                tagsToExtend: {"custom-quiz"},
+                builder: (ctx) {
+                  // هنا بنجيب المسار اللي كتبناه في الـ HTML
+                  String path = ctx.attributes['json-path'] ?? "";
+
+                  // هنا بتعرضي الـ Widget اللي بيقرأ الجيسون وبيعرض السؤال
+                  return QuizViewerWidget(jsonPath: path);
                 },
               ),
             ],
