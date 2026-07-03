@@ -16,7 +16,6 @@ class CustomBtn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CupertinoButton(
-      minSize: 50,
       padding: const EdgeInsets.all(16),
       onPressed: onTap,
       color: AppColors.primaryColor,
