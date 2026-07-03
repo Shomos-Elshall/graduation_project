@@ -33,7 +33,6 @@ class _InlineModuleVideoState extends State<InlineModuleVideo> {
     super.initState();
     _videoProvider = VideoProvider();
     _playerProvider = VideoPlayerProvider();
-    // حمل بيانات الفيديو فقط (بدون تحميل المشغل)
     WidgetsBinding.instance.addPostFrameCallback((_) {
       if (!mounted) return;
       _loadVideoData();
@@ -59,7 +58,6 @@ class _InlineModuleVideoState extends State<InlineModuleVideo> {
 
   @override
   void dispose() {
-    // تأكد من أن الـ player تم تهيئته قبل محاولة إغلاقه
     if (_playerReady) {
       _playerProvider.player.dispose();
     }
@@ -75,18 +73,15 @@ class _InlineModuleVideoState extends State<InlineModuleVideo> {
       ],
       child: Consumer<VideoProvider>(
         builder: (context, videoProvider, child) {
-          // إذا لم يتم الضغط على الفيديو بعد، عرض الصورة المصغرة
           if (!_videoLoaded) {
             return _buildThumbnail(context, videoProvider);
           }
-          // إذا تم الضغط لكن الفيديو لم يحمل بعد
           if (videoProvider.isLoading || !_playerReady) {
             return const Padding(
               padding: EdgeInsets.all(24),
               child: Center(child: CircularProgressIndicator()),
             );
           }
-          // عرض الفيديو مع التفاصيل
           return Column(
             mainAxisSize: MainAxisSize.min,
             children: [
@@ -109,7 +104,6 @@ class _InlineModuleVideoState extends State<InlineModuleVideo> {
           child: Stack(
             alignment: Alignment.center,
             children: [
-              // صورة مصغرة (placeholder)
               Container(
                 color: Colors.grey[800],
                 child: const Icon(
@@ -118,15 +112,6 @@ class _InlineModuleVideoState extends State<InlineModuleVideo> {
                   color: Colors.white,
                 ),
               ),
-              // نص "اضغط للتشغيل"
-              // const Text(
-              //   'اضغط للتشغيل',
-              //   style: TextStyle(
-              //     color: Colors.white,
-              //     fontSize: 18,
-              //     fontWeight: FontWeight.bold,
-              //   ),
-              // ),
             ],
           ),
         ),
@@ -143,69 +128,84 @@ class _InlineModuleVideoState extends State<InlineModuleVideo> {
             alignment: Alignment.topCenter,
             children: [
               Video(controller: playerProvider.controller),
-              Row(
-                children: [
-                  VideoControlButton(
-                    icon:
-                        playerProvider.isMuted
-                            ? Icons.volume_off
-                            : Icons.volume_up,
-                    onPressed: playerProvider.toggleMute,
-                  ),
-                  VideoControlButton(
-                    icon: Icons.replay_10,
-                    onPressed: playerProvider.seekBackward,
-                  ),
-                  VideoControlButton(
-                    icon: Icons.forward_10,
-                    onPressed: playerProvider.seekForward,
-                  ),
-                  const Spacer(),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: GestureDetector(
-                      onTapDown:
-                          (details) => _tapPosition = details.globalPosition,
-                      child: Icon(
-                        Icons.headphones,
-                        color: AppColors.lightColor,
-                      ),
-                      onTap:
-                          () => _showAudioMenu(
-                            context,
-                            videoProvider,
-                            playerProvider,
+              SizedBox(
+                width: double.infinity,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    // المجموعة الأولى: التحكم في الصوت والتقديم/الترجيع
+                    Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        VideoControlButton(
+                          icon: playerProvider.isMuted
+                              ? Icons.volume_off
+                              : Icons.volume_up,
+                          onPressed: playerProvider.toggleMute,
+                        ),
+                        VideoControlButton(
+                          icon: Icons.replay_10,
+                          onPressed: playerProvider.seekBackward,
+                        ),
+                        VideoControlButton(
+                          icon: Icons.forward_10,
+                          onPressed: playerProvider.seekForward,
+                        ),
+                      ],
+                    ),
+                    // المجموعة الثانية: الصوت الخارجي والترجمة والكلمات المفتاحية
+                    Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 4.0),
+                          child: GestureDetector(
+                            onTapDown: (details) =>
+                                _tapPosition = details.globalPosition,
+                            onTap: () => _showAudioMenu(
+                              context,
+                              videoProvider,
+                              playerProvider,
+                            ),
+                            child: Icon(
+                              Icons.headphones,
+                              color: AppColors.lightColor,
+                              size: 22,
+                            ),
                           ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: GestureDetector(
-                      onTapDown:
-                          (details) => _tapPosition = details.globalPosition,
-                      child: Icon(
-                        Icons.subtitles,
-                        color: AppColors.lightColor,
-                        size: 25,
-                      ),
-                      onTap:
-                          () => _showSubtitleMenu(
-                            context,
-                            videoProvider,
-                            playerProvider,
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 4.0),
+                          child: GestureDetector(
+                            onTapDown: (details) =>
+                                _tapPosition = details.globalPosition,
+                            onTap: () => _showSubtitleMenu(
+                              context,
+                              videoProvider,
+                              playerProvider,
+                            ),
+                            child: Icon(
+                              Icons.subtitles,
+                              color: AppColors.lightColor,
+                              size: 22,
+                            ),
                           ),
+                        ),
+                        IconButton(
+                          padding: EdgeInsets.zero,
+                          constraints: const BoxConstraints(),
+                          icon: Icon(
+                            Icons.key,
+                            color: AppColors.lightColor,
+                            size: 22,
+                          ),
+                          onPressed: () =>
+                              _showKeywordsDialog(context, videoProvider),
+                        ),
+                      ],
                     ),
-                  ),
-                  IconButton(
-                    icon: Icon(
-                      Icons.key,
-                      color: AppColors.lightColor,
-                      size: 25,
-                    ),
-                    onPressed:
-                        () => _showKeywordsDialog(context, videoProvider),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ],
           ),
@@ -281,10 +281,9 @@ class _InlineModuleVideoState extends State<InlineModuleVideo> {
         Rect.fromPoints(_tapPosition!, _tapPosition!),
         Offset.zero & overlay.size,
       ),
-      items:
-          videoProvider.audiolanguageCodes
-              .map((e) => PopupMenuItem<String>(value: e, child: Text(e)))
-              .toList(),
+      items: videoProvider.audiolanguageCodes
+          .map((e) => PopupMenuItem<String>(value: e, child: Text(e)))
+          .toList(),
     );
     if (result != null) {
       setState(() => _selectedaudio = result);
@@ -314,10 +313,9 @@ class _InlineModuleVideoState extends State<InlineModuleVideo> {
         Rect.fromPoints(_tapPosition!, _tapPosition!),
         Offset.zero & overlay.size,
       ),
-      items:
-          videoProvider.subtitlelangcode!
-              .map((e) => PopupMenuItem<String>(value: e, child: Text(e)))
-              .toList(),
+      items: videoProvider.subtitlelangcode!
+          .map((e) => PopupMenuItem<String>(value: e, child: Text(e)))
+          .toList(),
     );
     if (result != null) {
       for (var vtt in videoProvider.vttList!) {
@@ -342,26 +340,25 @@ class _InlineModuleVideoState extends State<InlineModuleVideo> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.end,
               crossAxisAlignment: CrossAxisAlignment.end,
-              children:
-                  (videoProvider.keywords ?? [])
-                      .map(
-                        (e) => Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Column(
-                            children: [
-                              Text(
-                                e,
-                                style: TextStyle(
-                                  color: AppColors.darkColor,
-                                  fontSize: 20,
-                                ),
-                              ),
-                              const Divider(height: 3),
-                            ],
+              children: (videoProvider.keywords ?? [])
+                  .map(
+                    (e) => Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Column(
+                        children: [
+                          Text(
+                            e,
+                            style: TextStyle(
+                              color: AppColors.darkColor,
+                              fontSize: 20,
+                            ),
                           ),
-                        ),
-                      )
-                      .toList(),
+                          const Divider(height: 3),
+                        ],
+                      ),
+                    ),
+                  )
+                  .toList(),
             ),
           ),
         );

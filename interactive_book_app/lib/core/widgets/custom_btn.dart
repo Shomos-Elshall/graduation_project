@@ -35,7 +35,7 @@ class CustomBtn extends StatelessWidget {
         crossFadeState:
             isLoading ? CrossFadeState.showSecond : CrossFadeState.showFirst,
         duration: const Duration(milliseconds: 200),
-      ), minimumSize: Size(50, 50),
+      ),
     );
   }
 }

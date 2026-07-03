@@ -24,7 +24,7 @@ class CustomDropdown extends StatelessWidget {
         fillColor: AppColors.lightColor,
         hintText: hint,
       ),
-      initialValue: value,
+      value: value,
       items:
           items?.map((item) {
             return DropdownMenuItem<String>(value: item, child: Text(item));
