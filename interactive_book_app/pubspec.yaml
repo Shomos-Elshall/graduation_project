@@ -31,6 +31,8 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_math_fork: ^0.7.2+1
+  flutter_native_splash: ^2.4.0
+  flutter_launcher_icons: ^0.13.1
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
@@ -132,3 +134,19 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
+flutter_native_splash:
+  color: "#1C0054" # لون الخلفية البروفيشنال بتاع تطبيقك
+  image:  assets/images/logo.png # مسار لوجو الكتب بتاعك
+  
+  # الإعدادات دي عشان تظبط الشكل على أندرويد 12 فما فوق
+  android_12:
+    image:  assets/images/logo.png
+    color: "#1C0054"
+    
+  fullscreen: true # عشان الشاشة تاخد الموبايل كله بشكل شيك
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/images/Icon.jpeg"
+  adaptive_icon_background: "#1C0054" 
+  adaptive_icon_foreground: "assets/images/Icon.jpeg" 
