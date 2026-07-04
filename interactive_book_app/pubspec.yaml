@@ -140,7 +140,7 @@ flutter_native_splash:
   
   # الإعدادات دي عشان تظبط الشكل على أندرويد 12 فما فوق
   android_12:
-    image:  assets/images/logo.png
+    image:  assets/images/logo_android12.png
     color: "#1C0054"
     
   fullscreen: true # عشان الشاشة تاخد الموبايل كله بشكل شيك
