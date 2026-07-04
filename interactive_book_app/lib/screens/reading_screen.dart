@@ -240,7 +240,23 @@ class _ReadingScreenState extends State<ReadingScreen> {
             },
             itemBuilder: (context, index) {
               final tempChapter = TocModel(id: widget.sections[index].id, name: widget.sections[index].name, depth: 0, children: []);
-              return BookContentPage(book: widget.book, currentChapter: tempChapter);
+              return BookContentPage(
+  book: widget.book,
+  currentChapter: tempChapter,
+  onChapterSelectedInDrawer: (chapter) {
+    final targetIndex = widget.sections.indexWhere(
+      (section) => section.id == chapter.id,
+    );
+
+    if (targetIndex != -1) {
+      setState(() {
+        currentIndex = targetIndex;
+      });
+
+      _pageController.jumpToPage(targetIndex);
+    }
+  },
+);
             },
           ),
 
